@@ -1,0 +1,106 @@
+let mapleader =" "
+
+
+call plug#begin('~/.vim/plugged')
+
+"git workflow within m
+Plug 'jreybert/vimagit'
+Plug 'junegunn/goyo.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'lervag/vimtex'
+call plug#end()
+
+
+"Some bassics:
+	set nocompatible
+	set number relativenumber
+	syntax on
+	set encoding=utf-8
+	filetype  plugin on
+
+"Enable autocompletion:
+	set wildmode=longest,list,full
+
+"Splits open at the bottom and right:
+	set splitbelow splitright
+
+"Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
+"Spell-Check set to <leader>o, 'o' for orthography
+	map <leader>o :setlocal spell! spelllang=id<CR>
+	map <F6> :setlocal spell! spelllang=en_us<CR>
+
+"Open my bibliography file in split
+	map <leader>b :vsp<space>$BIB<CR>
+
+"Runs a script that cleans out tex build files whenever I close out of a .text file
+	autocmd VimLeave *.tex !texclear %
+
+"Ensure files are read as expected
+	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
+	autocmd Bufread,BufNewFile *.tex set filetype=tex
+
+"Copy selected text to system clipboard (requires
+	set clipboard=unnamed
+
+"Automatically deletes all trailing whitespace on save.
+	autocmd BufWritePre * %s/\s\+$//e
+
+" -   -   -   -   -   -   -   -
+"     LaTeX
+" -   -   -   -   -   -   -   -
+
+" overrule tex trying to be clever and find the difference between latex and plaintex
+" (this is useful for when you have chapters/sections of your document in different files)
+	let g:tex_flavor = "latex"
+	let g:vimtex_fold_enabled = 1
+
+" disable mesy latex indentations
+	autocmd FileType tex setlocal shiftwidth=0 "
+	autocmd FileType tex set autoindent
+
+"Allow backward search from pdf viewer to Vim by start a server
+	if has("patch-8.0.475") && empty(v:servername) && exists('*remove_startserver')
+	" Then we would like to start the server to we can do callbacks from a PDF
+	" viewer into vimtex.
+		call remote_startserver('VIM')
+	endif
+
+"Shortcutting Vimtex compilation
+	function VimtexLoadShortcuts()
+		nmap <buffer> <leader>lc <plug>(vimtex-compile)
+		nmap <buffer> <leader>le <plug>(vimtex-errors)
+		nmap <buffer> <leader>lv <plug>(vimtex-view)
+	endfunction
+
+	augroup CompileCommands
+		autocmd FileType tex,latex,bibtex :call VimtexLoadShortcuts()
+	augroup END
+
+
+" Compilation with Skim and vimtex
+	let g:vimtex_view_method = "skim"
+	let g:vimtex_view_general_viewer
+        \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+	let g:vimtex_view_general_options = '-r @line @pdf @tex'
+
+" This adds a callback hook that updates Skim after compilation
+	let g:vimtex_compiler_callback_hooks = ['UpdateSkim']
+
+	function! UpdateSkim(status)
+    		if !a:status | return | endif
+
+		let l:out = b:vimtex.out()
+		let l:tex = expand('%:p')
+    		let l:cmd = [g:vimtex_view_general_viewer, '-r']
+
+    		if !empty(system('pgrep Skim'))
+        	call extend(l:cmd, ['-g'])
+    		endif
+
+	endfunction
+
+
