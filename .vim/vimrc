@@ -8,6 +8,7 @@ Plug 'jreybert/vimagit'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
 call plug#end()
 
 
@@ -49,6 +50,15 @@ call plug#end()
 "Automatically deletes all trailing whitespace on save.
 	autocmd BufWritePre * %s/\s\+$//e
 
+"Ultisnip
+	let g:UltiSnipsExpandTrigger = '<tab>'
+    	let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+	let g:UltiSnipsEditSplit="vertical"
+
+"Custom Ultisnip file
+"	set rtp+=~/git/dotfiles
+
 " -   -   -   -   -   -   -   -
 "     LaTeX
 " -   -   -   -   -   -   -   -
@@ -70,16 +80,9 @@ call plug#end()
 	endif
 
 "Shortcutting Vimtex compilation
-	function VimtexLoadShortcuts()
-		nmap <buffer> <leader>lc <plug>(vimtex-compile)
-		nmap <buffer> <leader>le <plug>(vimtex-errors)
-		nmap <buffer> <leader>lv <plug>(vimtex-view)
-	endfunction
-
-	augroup CompileCommands
-		autocmd FileType tex,latex,bibtex :call VimtexLoadShortcuts()
-	augroup END
-
+	nmap <buffer> <leader>lc <plug>(vimtex-compile)
+	nmap <buffer> <leader>le <plug>(vimtex-errors)
+	nmap <buffer> <leader>lv <plug>(vimtex-view)
 
 " Compilation with Skim and vimtex
 	let g:vimtex_view_method = "skim"
