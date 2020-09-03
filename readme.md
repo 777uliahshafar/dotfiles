@@ -67,4 +67,11 @@ The command for install plug is :PlugInstall
 
 7). Install skim app for pdf view. Skim has great feature to reload after compilation. Which will not reload from beginning like Preview(Macos)
 
-8) Instal Vimtex Plugin for better latex workflow. Installation had already been set up in .vimrc. Just run :PlugInstall everytime system had reset. Configuration Vimtex has been setup in .vimrc as well.
+## Vim Plugin
+
+8). Instal Vimtex Plugin for better latex workflow. Installation had already been set up in .vimrc. Just run :PlugInstall everytime system had reset. Configuration Vimtex has been setup in .vimrc as well.
+
+9). Install UltiSnips. Installation had already been set up in .vimrc. Just run : PlugInstall everytime system had reset. UltiSnips mapping has been set up in .vimrc. Location snippets file in macvim/vim is in
+```
+	~/.vim/UltiSnips/[file.ext].snippets
+```
