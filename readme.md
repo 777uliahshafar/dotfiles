@@ -75,3 +75,10 @@ The command for install plug is :PlugInstall
 ```
 	~/.vim/UltiSnips/[file.ext].snippets
 ```
+
+### How to use this REPO
+	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/UltiSnips/ folder. So here a man type:
+```
+	ln -s [file_original_location] [destionation]
+	eg. ln -s ~/git/dotfiles/UltiSnips/tex.snippets ~/.vim/UltiSnips
+```
