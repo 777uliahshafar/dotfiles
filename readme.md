@@ -5,11 +5,13 @@ Hello, This a coding workflow I created to help me documentate everything I use 
 1). Install brew, Brew is a package manager that made easy for other package to be installed in mac.
 
     Installing Homebrew in Command Line Tools for Xcode :
-``` sudo xcode-select --install
+```
+[sudo](sudo) xcode-select --install
 ```
 
     Then :
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+[bin bash](/bin/bash) -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 2). Install Iterm2, Iterm2 is very similar to terminal, but with extra addition feature.
