@@ -56,9 +56,27 @@ call plug#end()
     	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	let g:UltiSnipsEditSplit="vertical"
 
-"Custom Ultisnip file
-"	set rtp+=~/git/dotfiles
 
+" -   -   -   -   -   -   -   -
+"    netrw Explorer for vim
+" -   -   -   -   -   -   -   -
+	let g:netrw_banner = 0
+	let g:netrw_liststyle = 3
+	let g:netrw_browse_split = 4
+	let g:netrw_altv = 1
+	let g:netrw_winsize = 25
+ 	augroup ProjectDrawer
+  	autocmd!
+  	autocmd VimEnter * :Vexplore
+	augroup END
+
+"Close Netrw if it's the only buffer open
+	autocm WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'qucikfix' |q|endif
+
+"Override netrw mapping
+	nmap <unique> <c-r> <Plug>NetrwRefresh
+
+let g:NetrwIsOpen=0
 " -   -   -   -   -   -   -   -
 "     LaTeX
 " -   -   -   -   -   -   -   -

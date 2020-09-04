@@ -25,5 +25,5 @@ PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 # Shortcuts
 alias pt="cd ~/Documents/Proposal\ Tesis/project\ files"
-alias vim="mvim -v"
+alias v="mvim -v"
 alias df="cd ~/git/dotfiles"
