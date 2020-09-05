@@ -12,6 +12,10 @@ Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 call plug#end()
 
+"gruvbox colorscheme
+	autocmd vimenter * colorscheme gruvbox
+	set background=light
+
 
 "Some bassics:
 	set nocompatible
