@@ -14,7 +14,7 @@ call plug#end()
 
 "gruvbox colorscheme
 	autocmd vimenter * colorscheme gruvbox
-	set background=light
+	set background=dark
 
 
 "Some bassics:
@@ -44,6 +44,7 @@ call plug#end()
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
+
 
 "Ensure files are read as expected
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
@@ -150,3 +151,5 @@ let g:NetrwIsOpen=0
               endif
             endfunction
 
+"Hide Warning in error windw eg. hbox
+let g:vimtex_quickfix_open_on_warning = 0
