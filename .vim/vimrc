@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 "git workflow within m
 Plug 'jreybert/vimagit'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
@@ -74,7 +75,14 @@ call plug#end()
 	autocm WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'qucikfix' |q|endif
 
 "Override netrw mapping
-	nmap <unique> <c-r> <Plug>NetrwRefresh
+	augroup netrw_mapping
+  	autocmd!
+  	autocmd filetype netrw call NetrwMapping()
+	augroup END
+
+	function! NetrwMapping()
+  		nnoremap <buffer> <c-l> :wincmd l<cr>
+	endfunction
 
 let g:NetrwIsOpen=0
 " -   -   -   -   -   -   -   -
@@ -98,10 +106,11 @@ let g:NetrwIsOpen=0
 	endif
 
 "Shortcutting Vimtex compilation
-	function VimtexLoadShortcuts()
+	function! VimtexLoadShortcuts()
 	nmap <buffer> <leader>lc <plug>(vimtex-compile)
 	nmap <buffer> <leader>le <plug>(vimtex-errors)
 	nmap <buffer> <leader>lv <plug>(vimtex-view)
+	nmap <buffer> <leader>ls <plug>(vimtex-toggle-main)
 	endfunction
 
 	augroup CompileCommands
