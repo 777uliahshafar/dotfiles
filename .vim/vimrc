@@ -36,6 +36,7 @@ call plug#end()
 	syntax on
 	set encoding=utf-8
 	filetype  plugin on
+	set visualbell
 
 " Map j and k to go down a visual line rather than an actual line
 	nnoremap j gj
