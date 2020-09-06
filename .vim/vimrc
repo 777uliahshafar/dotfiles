@@ -31,7 +31,8 @@ call plug#end()
 
 "Some bassics:
 	set nocompatible
-	set number relativenumber
+	set number
+	hi LineNr guibg=grey
 	syntax on
 	set encoding=utf-8
 	filetype  plugin on
@@ -42,7 +43,6 @@ call plug#end()
 
 
 "Goyo
-	let g:goyo_linenr=0
 	let g:goyo_height= '85%'
 	let g:goyo_width=104
 
@@ -52,9 +52,8 @@ call plug#end()
    	silent !tmux set status off
     	silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   	endif
-	set noshowmode
+	set number
 	set linespace=7
-	set number relativenumber
 	set scrolloff=999
 	endfunction
 
@@ -63,12 +62,13 @@ call plug#end()
     	silent !tmux set status on
     	silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
   	endif
-  	set scrolloff=5
-	set showmode
+	set linespace=0
+	set scrolloff=5
 	endfunction
 
 	autocmd! User GoyoEnter nested call <SID>goyo_enter()
 	autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 
 
 "Enable autocompletion:
@@ -205,14 +205,14 @@ let g:vimtex_quickfix_open_on_warning = 0
 " -   -   -   -   -   -   -   -
 "     Zotero Bibliography - Cite as You write
 " -   -   -   -   -   -   -   -
-	function! ZoteroCite()
+"	function! ZoteroCite()
   " pick a format based on the filetype (customize at will)
-  	let format = &filetype =~ '.*tex' ? 'cite' : 'pandoc'
-  	let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
-	let ref = system('curl -s '.shellescape(api_call))
-  	return ref
-	endfunction
+ " 	let format = &filetype =~ '.*tex' ? 'cite' : 'pandoc'
+  "	let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
+"	let ref = system('curl -s '.shellescape(api_call))
+ " 	return ref
+"	endfunction
 
-	inoremap <leader>z <C-r>=ZoteroCite()<CR>
+"	inoremap <leader>z <C-r>=ZoteroCite()<CR>
 
 
