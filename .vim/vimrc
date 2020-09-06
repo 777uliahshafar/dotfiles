@@ -36,6 +36,10 @@ call plug#end()
 	set encoding=utf-8
 	filetype  plugin on
 
+" Map j and k to go down a visual line rather than an actual line
+	nnoremap j gj
+	nnoremap k gk
+
 "Enable autocompletion:
 	set wildmode=longest,list,full
 
@@ -165,3 +169,19 @@ let g:NetrwIsOpen=0
 
 "Hide Warning in error windw eg. hbox
 let g:vimtex_quickfix_open_on_warning = 0
+
+
+" -   -   -   -   -   -   -   -
+"     Zotero Bibliography - Cite as You write
+" -   -   -   -   -   -   -   -
+	function! ZoteroCite()
+  " pick a format based on the filetype (customize at will)
+  	let format = &filetype =~ '.*tex' ? 'cite' : 'pandoc'
+  	let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
+	let ref = system('curl -s '.shellescape(api_call))
+  	return ref
+	endfunction
+
+	inoremap <leader>z <C-r>=ZoteroCite()<CR>
+
+

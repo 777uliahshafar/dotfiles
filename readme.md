@@ -75,6 +75,8 @@ The command for install plug is :PlugInstall
 ```
 	~/.vim/UltiSnips/[file.ext].snippets
 ```
+10). Background shell iterm/zsh was not good enough. Install gruvbox to handle the background. sAll configuration has already set up in vimrc.
+
 
 ### How to use this REPO
 	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/UltiSnips/ folder. So here a man type:
