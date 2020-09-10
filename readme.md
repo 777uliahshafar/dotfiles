@@ -79,7 +79,12 @@ The command for install plug is :PlugInstall
 
 11). You have installed Goyo in step 6, but this is show you a configuration that make goyo work better.
 
+###How to deal with Swap Warning
 
+1). Recover the swap file(r)
+2). If the content looks right, Save(:w) and Reopen(:e).
+3). If the content older, Reopen without Save(:r!)
+4). Delete swap file (d) or manually from zsh.
 
 ### How to use this REPO
 	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/UltiSnips/ folder. So here a man type:
