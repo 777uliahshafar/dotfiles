@@ -22,9 +22,15 @@ zstyle ':vcs_info:git:*' formats 'on branch %b'
 setopt PROMPT_SUBST
 PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
+#Colorized dir/ ls command
+
+export CLICOLOR=1
+export LSCOLORS=gxfxcxDxBxegedabagaced
+
 
 # Shortcuts
 alias pt="cd ~/Documents/Proposal\ Tesis/project\ files"
 alias mars="cd ~/Documents/Magister/project\ files"
 alias v="mvim -v"
 alias df="cd ~/git/dotfiles"
+alias ls="ls -G"
