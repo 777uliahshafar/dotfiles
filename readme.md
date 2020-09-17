@@ -79,6 +79,16 @@ The command for install plug is :PlugInstall
 
 11). You have installed Goyo in step 6, but this is show you a configuration that make goyo work better.
 
+Vimagit
+
+### Exclude files from git
+The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
+
+```
+git config --global core.excludefiles ~/git/dotfiles/.gitognore
+
+```
+
 ###How to deal with Swap Warning
 
 1). Recover the swap file(r)
