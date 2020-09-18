@@ -79,7 +79,9 @@ The command for install plug is :PlugInstall
 
 11). You have installed Goyo in step 6, but this is show you a configuration that make goyo work better.
 
-Vimagit
+12). Install Vimagit
+
+13). Install vim-myhelp in my repo by git clone to ~/.vim/plugged/. After that install plug via vimplug by write 777uliahshafar/vim-myhelp then :PlugInstall. :h myhelp shoudl works.
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
