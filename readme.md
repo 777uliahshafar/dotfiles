@@ -1,6 +1,7 @@
 # Configuration for better terminal,vim,vimlatex workflow
 Hello, This a coding workflow I created to help me documentate everything I use in order to get fast and comfortable workflow.
 
+Before to go: You might change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
 
 1). Install brew, Brew is a package manager that made easy for other package to be installed in mac.
 
