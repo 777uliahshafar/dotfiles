@@ -105,6 +105,24 @@ snippet ali "Align" bA
 .\end{align*}
 endsnippet
 
+######################
+# Text Formatting #
+#####################
+
+snippet it "italic" i
+\textit{${1:${VISUAL}}}$0
+endsnippet
+
+snippet bf "bold" i
+\textbf{${1:${VISUAL}}}$0
+endsnippet
+
+snippet ul "underline" i
+\underline{${1:${VISUAL}}}$0
+endsnippet
+
+#End of Text Formatting
+
 snippet plot "Plot" w
 \begin{figure}[$1]
 	\centering
