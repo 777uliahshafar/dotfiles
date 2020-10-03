@@ -84,6 +84,9 @@ The command for install plug is :PlugInstall
 
 13). Install vim-myhelp in my repo by git clone to ~/.vim/plugged/. After that install plug via vimplug by write 777uliahshafar/vim-myhelp then :PlugInstall. :h myhelp shoudl works.
 
+14). Instal fern(tree viewer), all configuration already in .vimrc. Just run :Plug Install like any other plugin.
+
+
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
 
