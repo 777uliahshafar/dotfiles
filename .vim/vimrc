@@ -91,7 +91,7 @@ call plug#end()
 	map <F6> :setlocal spell! spelllang=en_us<CR>
 
 "Open my bibliography file in split
-	map <leader>b :sp<space>*.bib<CR>
+	map <leader>b :sp<space>$bib<CR>
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
@@ -138,7 +138,7 @@ function! s:hijack_directory() abort
 endfunction
 
 "Custom settings and mappings
-let g:fern#drawer_width = 30
+let g:fern#drawer_width = 25
 let g:fern#default_hidden = 1
 let g:fern#disable_default_mappings = 1
 
