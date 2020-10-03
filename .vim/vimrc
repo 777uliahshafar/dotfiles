@@ -144,7 +144,7 @@ let g:fern#disable_default_mappings = 1
 
 augroup my-fern-startup
   autocmd! *
-  autocmd VimEnter * ++nested Fern ~/
+  autocmd VimEnter * ++nested Fern .
 augroup END
 
 noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle <CR><C-w>
