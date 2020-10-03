@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 "git workflow within m
 Plug 'jreybert/vimagit'
+Plug 'lambdalisue/fern.vim'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
@@ -90,7 +91,7 @@ call plug#end()
 	map <F6> :setlocal spell! spelllang=en_us<CR>
 
 "Open my bibliography file in split
-	map <leader>b :vsp<space>$BIB<CR>
+	map <leader>b :sp<space>*.bib<CR>
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
@@ -114,32 +115,68 @@ call plug#end()
 
 
 " -   -   -   -   -   -   -   -
-"    netrw Explorer for vim
+"    Fern Explorer for vim
 " -   -   -   -   -   -   -   -
-	let g:netrw_banner = 0
-	let g:netrw_liststyle = 3
-	let g:netrw_browse_split = 4
-	let g:netrw_altv = 1
-	let g:netrw_winsize = 25
- 	augroup ProjectDrawer
-  	autocmd!
-  	autocmd VimEnter * :Vexplore
-	augroup END
+" Disable netrw.
+let g:loaded_netrw  = 1
+let g:loaded_netrwPlugin = 1
+let g:loaded_netrwSettings = 1
+let g:loaded_netrwFileHandlers = 1
 
-"Close Netrw if it's the only buffer open
-	autocm WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'qucikfix' |q|endif
+augroup my-fern-hijack
+  autocmd!
+  autocmd BufEnter * ++nested call s:hijack_directory()
+augroup END
 
-"Override netrw mapping
-	augroup netrw_mapping
-  	autocmd!
-  	autocmd filetype netrw call NetrwMapping()
-	augroup END
+function! s:hijack_directory() abort
+  let path = expand('%:p')
+  if !isdirectory(path)
+    return
+  endif
+  bwipeout %
+  execute printf('Fern %s', fnameescape(path))
+endfunction
 
-	function! NetrwMapping()
-  		nnoremap <buffer> <c-l> :wincmd l<cr>
-	endfunction
+"Custom settings and mappings
+let g:fern#drawer_width = 30
+let g:fern#default_hidden = 1
+let g:fern#disable_default_mappings = 1
 
-let g:NetrwIsOpen=0
+augroup my-fern-startup
+  autocmd! *
+  autocmd VimEnter * ++nested Fern ~/
+augroup END
+
+noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle <CR><C-w>
+
+function! FernInit() abort
+  nmap <buffer><expr>
+        \ <Plug>(fern-my-open-expand-collapse)
+        \ fern#smart#leaf(
+        \   "\<Plug>(fern-action-open:select)",
+        \   "\<Plug>(fern-action-expand)",
+        \   "\<Plug>(fern-action-collapse)",
+        \ )
+  nmap <buffer> <CR> <Plug>(fern-my-open-expand-collapse)
+  nmap <buffer> b <Plug>(fern-action-open:split)
+  nmap <buffer> v <Plug>(fern-action-open:vsplit)
+  nmap <buffer> M <Plug>(fern-action-rename)
+  nmap <buffer> m <Plug>(fern-action-move)
+  nmap <buffer> c <Plug>(fern-action-new-copy)
+  nmap <buffer> n <Plug>(fern-action-new-path)
+  nmap <buffer> h <Plug>(fern-action-hidden-toggle)
+  nmap <buffer> d <Plug>(fern-action-remove)
+  nmap <buffer> r <Plug>(fern-action-reload)
+  nmap <buffer> <leader> <Plug>(fern-action-mark-toggle)
+  nmap <buffer><nowait> < <Plug>(fern-action-leave)
+  nmap <buffer><nowait> > <Plug>(fern-action-enter)
+endfunction
+
+augroup FernGroup
+  autocmd!
+  autocmd FileType fern call FernInit()
+augroup END
+
 " -   -   -   -   -   -   -   -
 "     LaTeX
 " -   -   -   -   -   -   -   -
