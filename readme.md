@@ -15,6 +15,7 @@ Before to go: You might change keyboard key for Caps Lock to escape mode. Go to 
 [bin bash](/bin/bash) -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
+
 2). Install Iterm2, Iterm2 is very similar to terminal, but with extra addition feature.
 
 to Install Iterm2:
@@ -84,8 +85,35 @@ The command for install plug is :PlugInstall
 
 13). Install vim-myhelp in my repo by git clone to ~/.vim/plugged/. After that install plug via vimplug by write 777uliahshafar/vim-myhelp then :PlugInstall. :h myhelp shoudl works.
 
-14). Instal fern(tree viewer), all configuration already in .vimrc. Just run :Plug Install like any other plugin.
+14). Install Coc-Explorer extention by Coc(Conquer of Completion).
+a). Install COC (Intellisense engine), run by javascript code, so we need install Node.js by using Homebrew then type in zsh terminal:
+```
+brew install node
+```
 
+b). Install COC Plugin of VIM with VimPlug by type in Vim:
+```
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+```
+then run :PlugInstall,
+
+
+c). Install COC explorer as Tree Viewer in VIM, by type command :
+```
+:CocInstall coc-explorer
+```
+Configuration for opening coc-explorer have already set up in vimrc, just open tree viewer coc-explorer by keybinding <space>e.
+
+d). CocConfig settings
+Enable intellisense for coc-settings.json with:
+```
+:CocInstall coc-json
+```
+in your vim
+
+Symlink Coc Configuration(coc-settings.json) file from git/dotfiles  to ./vim, After that you can call that configuration by type :CocConfig
+
+e). All basic configuration and cocConfig(advanced) have already in your .vimrc and CocConfig.
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
