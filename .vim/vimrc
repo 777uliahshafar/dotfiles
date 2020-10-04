@@ -48,6 +48,12 @@ call plug#end()
 	nnoremap j gj
 	nnoremap k gk
 
+
+" -   -   -   -   -   -   -   -
+"   FZF Configuration
+"
+" -   -   -   -   -   -   -   -
+
 " This is the default extra key bindings of FZF fuzzy finder
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -207,6 +213,9 @@ augroup ProjectDrawer
    	autocmd!
    	autocmd VimEnter * :CocCommand explorer
  	augroup END
+
+"Quit Coc Explorer When it's only one buffer left
+	autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 nmap <space>e :CocCommand explorer<CR>
 
