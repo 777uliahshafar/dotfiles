@@ -91,7 +91,8 @@ call plug#end()
 	map <F6> :setlocal spell! spelllang=en_us<CR>
 
 "Open my bibliography file in split
-	map <leader>b :sp<space>$bib<CR>
+	map <leader>b :Fern $BIB -opener=split -reveal=%
+
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
@@ -137,6 +138,7 @@ function! s:hijack_directory() abort
   execute printf('Fern %s', fnameescape(path))
 endfunction
 
+
 "Custom settings and mappings
 let g:fern#drawer_width = 25
 let g:fern#default_hidden = 1
@@ -144,10 +146,10 @@ let g:fern#disable_default_mappings = 1
 
 augroup my-fern-startup
   autocmd! *
-  autocmd VimEnter * ++nested Fern .
+  autocmd VimEnter * ++nested Fern . -drawer -reveal=%
 augroup END
 
-noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle <CR><C-w>
+noremap <silent> <Leader>f :Fern . -drawer -reveal=% -toggle <CR>
 
 function! FernInit() abort
   nmap <buffer><expr>
@@ -168,8 +170,21 @@ function! FernInit() abort
   nmap <buffer> d <Plug>(fern-action-remove)
   nmap <buffer> r <Plug>(fern-action-reload)
   nmap <buffer> <leader> <Plug>(fern-action-mark-toggle)
-  nmap <buffer><nowait> < <Plug>(fern-action-leave)
-  nmap <buffer><nowait> > <Plug>(fern-action-enter)
+  nmap <buffer><expr>
+        \ <Plug>(fern-my-expand-or-enter)
+        \ fern#smart#leaf(
+        \   "\<Plug>(fern-open-or-expand)",
+        \   "\<Plug>(fern-open-or-enter)",
+        \   "\<Plug>(fern-action-tcd:root)",
+        \ )
+  nmap <buffer><expr>
+        \ <Plug>(fern-my-collapse-or-leave)
+        \ fern#smart#leaf(
+        \   "\<Plug>(fern-action-collapse)",
+        \   "\<Plug>(fern-action-leave)",
+        \ )
+  nmap <buffer><nowait> l <Plug>(fern-my-expand-or-enter)
+  nmap <buffer><nowait> h <Plug>(fern-my-collapse-or-leave)
 endfunction
 
 augroup FernGroup
