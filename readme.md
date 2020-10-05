@@ -91,14 +91,14 @@ a). Install COC (Intellisense engine), run by javascript code, so we need instal
 brew install node
 ```
 
-b). Install COC Plugin of VIM with VimPlug by type in Vim:
+b). Install COC Plugin of VIM with VimPlug, installation have written in vimrc:
 ```
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 ```
 then run :PlugInstall,
 
 
-c). Install COC explorer as Tree Viewer in VIM, by type command :
+c). Install COC explorer as Tree Viewer in VIM, by type command (Coc Explorer is an extention of Coc Plugin):
 ```
 :CocInstall coc-explorer
 ```
@@ -114,6 +114,18 @@ in your vim
 Symlink Coc Configuration(coc-settings.json) file from git/dotfiles  to ./vim, After that you can call that configuration by type :CocConfig
 
 e). All basic configuration and cocConfig(advanced) have already in your .vimrc and CocConfig.
+
+15). Install Fzf Fuzzy Finder in order to search file easily. Instalation have written in vimrc, there 4 instalation needed:
+```
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+```
+Fzf or Ag command requires ripgrep, installation can be done by type in zsh command line:
+```
+brew install ripgrep
+```
+
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
