@@ -72,7 +72,7 @@ map <C-f> :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
-nnoremap <leader>m :Marks<CR>
+"nnoremap <leader>m :Marks<CR> \\used by Vimagit
 
 
 let g:fzf_tags_command = 'ctags -R'
@@ -191,6 +191,9 @@ command! -bang -nargs=* GGrep
     	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	let g:UltiSnipsEditSplit="vertical"
 
+"ViMagit
+autocmd User VimagitEnterCommit startinsert
+nnoremap <leader>m :MagitOnly<CR>
 " -   -   -   -   -   -   -   -
 "   Basic Coc Configuration File
 "   advanced CocConfig file in /.vim
