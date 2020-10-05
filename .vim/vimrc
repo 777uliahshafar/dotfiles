@@ -192,8 +192,13 @@ command! -bang -nargs=* GGrep
 	let g:UltiSnipsEditSplit="vertical"
 
 "ViMagit
-autocmd User VimagitEnterCommit startinsert
 nnoremap <leader>m :MagitOnly<CR>
+autocmd User VimagitEnterCommit startinsert
+autocmd User VimagitEnterCommit setlocal textwidth=72
+autocmd User VimagitLeaveCommit setlocal textwidth=0
+"Let ViMagit autoclose when state & unstage empty
+let g:magit_auto_close=1
+
 " -   -   -   -   -   -   -   -
 "   Basic Coc Configuration File
 "   advanced CocConfig file in /.vim
