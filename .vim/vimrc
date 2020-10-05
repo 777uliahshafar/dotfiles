@@ -3,7 +3,7 @@ let mapleader =" "
 
 call plug#begin('~/.vim/plugged')
 
-"git workflow within m
+"git workflow within vim
 Plug 'jreybert/vimagit'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -47,7 +47,6 @@ call plug#end()
 " Map j and k to go down a visual line rather than an actual line
 	nnoremap j gj
 	nnoremap k gk
-
 
 " -   -   -   -   -   -   -   -
 "   FZF Configuration
@@ -193,7 +192,31 @@ command! -bang -nargs=* GGrep
 "   Basic Coc Configuration File
 "   advanced CocConfig file in /.vim
 " -   -   -   -   -   -   -   -
-" prettier command for coc
+" Disable netrw.
+ let g:loaded_netrw  = 1
+ let g:loaded_netrwPlugin = 1
+ let g:loaded_netrwSettings = 1
+ let g:loaded_netrwFileHandlers = 1
+
+"Enter desirable explorer when enter VIM
+augroup my-fern-startup
+  autocmd! *
+  autocmd VimEnter * ++nested CocCommand explorer
+augroup END
+" 	/*OR*/
+"	augroup ProjectDrawer
+"   	autocmd!
+"   	autocmd VimEnter * :CocCommand explorer
+" 	augroup END
+
+"Quit Coc Explorer When it's only one buffer left
+	autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+"Opening Coc Explorer
+nmap <space>e :CocCommand explorer<CR>
+
+
+ " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
 	\ 'coc-snippets',
@@ -209,15 +232,6 @@ let g:coc_global_extensions = [
 	\ ]
 
 
-augroup ProjectDrawer
-   	autocmd!
-   	autocmd VimEnter * :CocCommand explorer
- 	augroup END
-
-"Quit Coc Explorer When it's only one buffer left
-	autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-
-nmap <space>e :CocCommand explorer<CR>
 
 " From Coc Readme
 set updatetime=300
