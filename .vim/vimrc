@@ -46,11 +46,13 @@ call plug#end()
 	set encoding=utf-8
 	filetype  plugin on
 	set visualbell
-	set signcolumn=yes
+	set title
+	set shortmess=atI
 
 "Long lines
 	set wrap
 	"set linebreak
+
 "Ignore case when searching
 	set ignorecase
 
