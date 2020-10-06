@@ -25,7 +25,9 @@ call plug#end()
 	function! ToggleDark()
   	if g:scheme_bg == "dark"
     	set background=light
-    	let g:scheme_bg = "light"
+	set cursorline
+	hi CursorLine cterm=bold term=bold ctermbg=NONE guibg=NONE
+	let g:scheme_bg = "light"
   	else
     	set background=dark
     	let g:scheme_bg = "dark"
@@ -34,15 +36,23 @@ call plug#end()
 
 	map <C-b> :call ToggleDark()<CR>
 
-
-"Some bassics:
+" -   -   -   -   -   -   -   -
+"   Some Basic Configuration
+"
+" -   -   -   -   -   -   -   -
 	set nocompatible
 	set number
-	hi LineNr guibg=grey
 	syntax on
 	set encoding=utf-8
 	filetype  plugin on
 	set visualbell
+	set signcolumn=yes
+
+"Long lines
+	set wrap
+	"set linebreak
+"Ignore case when searching
+	set ignorecase
 
 " Map j and k to go down a visual line rather than an actual line
 	nnoremap j gj
