@@ -47,6 +47,11 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 after instal, You might want to edit its line in .zshrc to be on top of every line. After that you can configure all setting you prefere by type: p10k configure
 
+Additional Feature of terminal or iterm2 should be changed for convenient:
+a). Change profile text by go to Preference -> Profile -> Text -> Change Font to MesloLGS -> Restart Iterm2.
+b).  Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
+c). Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
+
 5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
 
 To install vim : brew install macvim
