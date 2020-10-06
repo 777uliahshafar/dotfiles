@@ -1,4 +1,15 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "tex",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python"
+  ],
   "suggest.autoTrigger":"none",
   "explorer.quitOnOpen": true,
   "explorer.position": "left",
