@@ -1,4 +1,5 @@
 {
+  "suggest.autoTrigger":"none",
   "explorer.quitOnOpen": true,
   "explorer.position": "left",
   "explorer.width": 25,
