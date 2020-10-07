@@ -78,10 +78,14 @@ The command for install plug is :PlugInstall
 
 8). Instal Vimtex Plugin for better latex workflow. Installation had already been set up in .vimrc. Just run :PlugInstall everytime system had reset. Configuration Vimtex has been setup in .vimrc as well.
 
-9). Install UltiSnips. Installation had already been set up in .vimrc. Just run : PlugInstall everytime system had reset. UltiSnips mapping has been set up in .vimrc. Location snippets file in macvim/vim is in
+9). Install UltiSnips. Installation had already been set up in .vimrc. Just run : PlugInstall everytime system had reset. UltiSnips mapping has been set up in .vimrc. Since Coc has snippet extentions, we also install it by:
+
 ```
-	~/.vim/UltiSnips/[file.ext].snippets
+	:CocInstall coc-snippets
 ```
+The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
+
+
 10). Background shell iterm/zsh was not good enough. Install gruvbox to handle the background. sAll configuration has already set up in vimrc.
 
 11). You have installed Goyo in step 6, but this is show you a configuration that make goyo work better.
@@ -148,8 +152,8 @@ git config --global core.excludefiles ~/git/dotfiles/.gitognore
 4). Delete swap file (d) or manually from zsh.
 
 ### How to use this REPO
-	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/UltiSnips/ folder. So here a man type:
+	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/plugged/ultisnips/ folder. So here a man type:
 ```
 	ln -s [file_original_location] [destionation]
-	eg. ln -s ~/git/dotfiles/UltiSnips/tex.snippets ~/.vim/UltiSnips
+	eg. ln -s ~/git/dotfiles/UltiSnips/tex.snippets ~/.config/coc/ultisnips
 ```

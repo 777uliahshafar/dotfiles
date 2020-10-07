@@ -81,13 +81,25 @@ let g:fzf_buffers_jump = 1
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 map <C-f> :Files<CR>
+nnoremap <silent> <C-p> :FZF ~/<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
 nnoremap <leader>t :Tags<CR>
+
+
 "nnoremap <leader>m :Marks<CR> \\used by Vimagit
+"map <silent> <unique> <Leader>foo <Plug>RooterChangeToRootDirectory
 
+"if !exists('g:rooter_manual_only') || !g:rooter_manual_only
+"   augroup rooter
+"     autocmd!
+"     autocmd VimEnter,BufEnter * nested Rooter
+"     autocmd VimEnter,BufReadPost,BufEnter * nested Rooter
+"     autocmd BufWritePost * nested call setbufvar('%', 'rootDir', '') | Rooter
+"   augroup END
+" endif
 
-let g:fzf_tags_command = 'ctags -R'
+ let g:fzf_tags_command = 'ctags -R'
 " Border color
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
@@ -198,7 +210,7 @@ command! -bang -nargs=* GGrep
 	autocmd BufWritePre * %s/\s\+$//e
 
 "Ultisnip
-	let g:UltiSnipsExpandTrigger = '<tab>'
+	let g:UltiSnipsExpandTrigger = '<nop>'
     	let g:UltiSnipsJumpForwardTrigger = '<tab>'
     	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	let g:UltiSnipsEditSplit="vertical"
@@ -254,7 +266,10 @@ let g:coc_global_extensions = [
 	\ 'coc-vimtex'
 	\ ]
 
-
+" Coc-snippet keybinding
+imap <silent> <C-l> <Plug>(coc-snippets-expand)
+let g:coc_snippet_prev = '<s-tab>'
+let g:coc_snippet_next = '<tab>'
 
 " From Coc Readme
 set updatetime=300
@@ -283,7 +298,10 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <c-space> coc#refresh()
+" Use <c-@> to trigger completion in vim with ctrl+space
+ inoremap <silent><expr> <c-@> coc#refresh()
+
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
