@@ -27,7 +27,8 @@ call plug#end()
   	if g:scheme_bg == "dark"
     	set background=light
 	set cursorline
-	hi CursorLine cterm=bold term=bold ctermbg=NONE guibg=NONE
+	hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
+	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
 	let g:scheme_bg = "light"
   	else
     	set background=dark
