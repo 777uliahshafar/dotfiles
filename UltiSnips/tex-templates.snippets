@@ -20,3 +20,37 @@ ${0}
 
 \end{document}
 endsnippet
+
+
+snippet templ-beamer "Template: Standard beamer article" b
+\documentclass{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\setbeamertemplate{frame numbering}[fraction]
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usecolortheme{spruce}
+\setbeamercolor{background canvas}{bg=white}
+\definecolor{mygreen}{rgb}{.125,.5,.25}
+
+\title{${1:title}}
+\author{${2:author}}
+\institute{\large \textbf{${3:desc}}: \\[6pt] ${4:desccontent}}
+\date{\today}
+
+\begin{document}
+\metroset{block=fill}
+
+\maketitle
+
+\begin{frame}[t]{Title}{4pt}
+
+	Hello
+
+\end{frame}
+
+
+\end{document}
+endsnippet
+
+# vim:ft=snippets
