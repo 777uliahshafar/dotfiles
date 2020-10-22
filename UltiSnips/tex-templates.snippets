@@ -10,7 +10,8 @@ endsnippet
 
 snippet templ-article "Template: standard article" b
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} %Pdflatex package
+\usepackage{fontspec} %Lualatex package
 \usepackage{graphicx}
 ${1}
 
@@ -24,7 +25,7 @@ endsnippet
 
 snippet templ-beamer "Template: Standard beamer article" b
 \documentclass{beamer}
-
+\usetheme{Warsaw}
 \usetheme[progressbar=frametitle]{metropolis}
 \setbeamertemplate{frame numbering}[fraction]
 \useoutertheme{metropolis}
@@ -33,24 +34,61 @@ snippet templ-beamer "Template: Standard beamer article" b
 \setbeamercolor{background canvas}{bg=white}
 \definecolor{mygreen}{rgb}{.125,.5,.25}
 
-\title{${1:title}}
-\author{${2:author}}
-\institute{\large \textbf{${3:desc}}: \\[6pt] ${4:desccontent}}
-\date{\today}
+\usepackage{fontspec} %Lualatex package
+\usepackage{graphicx}
 
+
+\title{Insert Title Here}
+\author{}
+\institute{\large \textbf{Objective}:Objective of Presentation}
+\date{}
+
+${1}
 \begin{document}
 \metroset{block=fill}
 
-\maketitle
 
-\begin{frame}[t]{Title}{4pt}
+%--------------------------%
+% Title Page
+%--------------------------%
 
-	Hello
-
+\begin{frame}
+\titlepage
 \end{frame}
+
+%--------------------------%
+% Content Page
+% Full width
+%--------------------------%
+
+\begin{frame}[t]{Title} \vspace{4pt}
+
+	Hello${0}
+\end{frame}
+
+%--------------------------%
+% Content Page
+% Half width
+%--------------------------%
+\begin{frame}[t]{Title} \vspace{4pt}
+		\begin{columns}[onlytextwidth]
+
+		\column{0.5\textwidth}
+Hello left
+		\column{0.5\textwidth}
+Hellof right
+%\includegraphics[height=.85\textheight]{}
+
+	\end{columns}
+\end{frame}
+
 
 
 \end{document}
 endsnippet
+
+
+
+
 
 # vim:ft=snippets
