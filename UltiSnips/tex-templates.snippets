@@ -88,7 +88,15 @@ Hellof right
 endsnippet
 
 
+snippet templ-subfile "Template: Standard Subfiles Template" b
+\documentclass[../${1:main.tex}]{subfiles}
 
+\begin{document}
+${0}
 
+%\onlyinsubfile{\biblio}
+\end{document}
+
+endsnippet
 
 # vim:ft=snippets
