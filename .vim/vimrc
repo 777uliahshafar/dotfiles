@@ -438,6 +438,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
  		autocmd FileType tex,latex,bibtex :call VimtexLoadShortcuts()
  	augroup END
 
+"Changes Compiler Engine to new robust Lualates
 	let g:vimtex_compiler_latexmk_engines = { '_' : '-lualatex' }
 
 " Compilation with Skim and vimtex
