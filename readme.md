@@ -143,6 +143,24 @@ The .gitignore have already exist. In order to configure excludefiles as Global 
 git config --global core.excludefiles ~/git/dotfiles/.gitognore
 
 ```
+### How to customize package
+Pkg customazation is datetime2 for dateformatting, and helpers4ht for better conversion to html.Those was can be use by these following:
+
+1). Make dir/folder texmf/tex/latex
+
+```
+mkdir -p $(kpsewhich -var-value TEXMFHOME)/tex/latex/pkgname
+```
+This will create the directory structure you need, presumably at ~/Library/texmf/
+
+2). Symlink folder in above location.
+3). If the pkg are in github,assume you have done step 1, you can install it by for example.
+
+```
+cd ~/Library/texmf/tex/latex
+git clone https://github.com/777uliahshafar/helpers4ht.git
+```
+4). helpers4ht package need configuration which already set up in make4ht template.
 
 ###How to deal with Swap Warning
 
