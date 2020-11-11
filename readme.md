@@ -135,6 +135,11 @@ Fzf or Ag command requires ripgrep, installation can be done by type in zsh comm
 brew install ripgrep
 ```
 
+16). Install vim-easyalign for align tab. Instalation have written in vimrc:
+```
+Plug 'junegunn/vim-easy-align'
+```
+
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
