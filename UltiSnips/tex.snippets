@@ -57,16 +57,17 @@ snippet table "Table environment" b
 	\caption{${2:caption}}
 	\label{tab:${3:label}}
 	\begin{tabular}{${5:c}}
-	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+	${0:${VISUAL}}
 	\end{tabular}
 \end{table}
 endsnippet
 
 snippet ltable "Longtable environment" b
-\begin{longtable}{${1:c}}
-	\caption{${2:caption}} \\\
-	\label{tab:${3:label}} \\\
-	$0${1/((?<=.)c|l|r)|./(?1: & )/g}
+\begin{longtable}{${1:p{.5\textwidth}} ${2:p{.5\textwidth}}}
+	\caption{${3:caption}} \\\
+	\label{tab:${4:label}} \\\
+	text & \multicolumn{1}{i{${5:.5\textwidth}}}{\item text \item text}\\\
+	${0:${VISUAL}}
 \end{longtable}
 endsnippet
 
