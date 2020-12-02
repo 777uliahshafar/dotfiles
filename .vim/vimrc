@@ -2,24 +2,32 @@ let mapleader =" "
 
 
 call plug#begin('~/.vim/plugged')
-
-"git workflow within vim
-Plug 'jreybert/vimagit'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Global
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
-Plug 'morhetz/gruvbox'
-Plug 'justinmk/vim-sneak'
+
+" Writing/Authoring Tools
 Plug 'reedes/vim-pencil'
 Plug 'junegunn/goyo.vim'
+
+" Development Tools
+Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
+Plug '777uliahshafar/vim-myhelp'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
+Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
-Plug '777uliahshafar/vim-myhelp'
 
 call plug#end()
+
+" -   -   -   -   -   -   -   -
+"   FUNCTION
+"
+" -   -   -   -   -   -   -   -
 
 "gruvbox colorscheme
 	autocmd vimenter * colorscheme gruvbox
@@ -157,6 +165,18 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+" Vim Pencil
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType tex         call pencil#init()
+augroup END
+
+" Pencil / Writing Controls
+let g:pencil#wrapModeDefault = 'soft'
+
 
 " Git grep
 command! -bang -nargs=* GGrep

@@ -72,9 +72,14 @@ After install, You can add and configure plug in .vimrc with:
 ```
 The command for install plug is :PlugInstall
 
+Uninstall Plugin by remove plug line or comment it, then restart or :so .vimrc then type :PlugClean
+
+To get Information about status of plugin type :PlugStatus
+
 7). Install skim app for pdf view. Skim has great feature to reload after compilation. Which will not reload from beginning like Preview(Macos)
 
 ## Vim Plugin
+
 
 8). Instal Vimtex Plugin for better latex workflow. Installation had already been set up in .vimrc. Just run :PlugInstall everytime system had reset. Configuration Vimtex has been setup in .vimrc as well.
 
@@ -139,6 +144,13 @@ brew install ripgrep
 ```
 Plug 'junegunn/vim-easy-align'
 ```
+
+17). Install vim pencil for best formatting soft line brake. Instalation have written in vimrc:
+
+```
+Plug 'junegunn/vim-easy-align'
+```
+
 
 
 ### Exclude files from git
