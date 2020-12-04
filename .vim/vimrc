@@ -349,6 +349,9 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+" Disable completion suggestions only
+autocmd FileType markdown,tex let b:coc_suggest_disable = 1
+
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>

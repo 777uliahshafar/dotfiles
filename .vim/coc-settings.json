@@ -10,7 +10,7 @@
     "json",
     "python"
   ],
-  "suggest.autoTrigger": "none",
+  "suggest.autoTrigger": "always",
   "suggest.snippetIndicator": "[+] ",
   "explorer.quitOnOpen": true,
   "explorer.position": "left",
