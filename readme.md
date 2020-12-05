@@ -35,7 +35,7 @@ setopt PROMPT_SUBST
 PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 ~~~
-4). Of cource, Standard customization iterm2 or zsh shell terminal will not give you such best convinient. In order to modify your text in the terminal usually editing .zshrc but it is not enough, there is a theme that can run faster than zsh shell which can be install by type:
+4A). Of cource, Standard customization iterm2 or zsh shell terminal will not give you such best convinient. In order to modify your text in the terminal usually editing .zshrc but it is not enough, there is a theme that can run faster than zsh shell which can be install by type:
 
 Before install powerlever10k theme, it's highly recomended install MesloLGS font which you can find in source of repo:
 	https://github.com/romkatv/powerlevel10k
@@ -51,6 +51,24 @@ Additional Feature of terminal or iterm2 should be changed for convenient:
 a). Change profile text by go to Preference -> Profile -> Text -> Change Font to MesloLGS -> Restart Iterm2.
 b).  Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
 c). Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
+
+4B). Install tmux through Homebrew by type:
+```
+brew install tmux
+```
+
+After that using oh-my-tmux for customization and optimal keybinding by type:
+```
+cd
+git clone https://github.com/gpakosz/.tmux.git
+```
+After we clone it, we might want to remove its remote origin, just run `git remote rm origin`. Then, you can symylink as below:
+
+```
+ln -s -f .tmux/.tmux.conf
+ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
+```
+Instead of altering the ~/.tmux.conf file and diverging from upstream, the proper way is to edit the ~/.tmux.conf.local file.
 
 5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
 
