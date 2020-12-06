@@ -70,6 +70,12 @@ ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ```
 Instead of altering the ~/.tmux.conf file and diverging from upstream, the proper way is to edit the ~/.tmux.conf.local file. !!! Warning: if you set iterm2 for maximaze, there would be instan red message in tmux status bar when enter tmux. Change profile style window from maximaze.
 
+Shows existing sessions and gives me OPTION to re-attach or create a new one. Navigate to “Preferences > Profiles > PROFILE >Command > Send text at start” and set it to:
+
+```
+tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
+```
+
 5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
 
 To install vim : brew install macvim
