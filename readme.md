@@ -68,7 +68,7 @@ After we clone it, we might want to remove its remote origin, just run `git remo
 ln -s -f .tmux/.tmux.conf
 ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ```
-Instead of altering the ~/.tmux.conf file and diverging from upstream, the proper way is to edit the ~/.tmux.conf.local file.
+Instead of altering the ~/.tmux.conf file and diverging from upstream, the proper way is to edit the ~/.tmux.conf.local file. !!! Warning: if you set iterm2 for maximaze, there would be instan red message in tmux status bar when enter tmux. Change profile style window from maximaze.
 
 5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
 
