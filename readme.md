@@ -190,6 +190,8 @@ Plug 'junegunn/vim-easy-align'
 }
 
 ```
+3). To look better at code use syntax. Install vim-javascript and jsx.
+Instalation and config have written in vimrc, just run :PlugInstall.
 
 
 
