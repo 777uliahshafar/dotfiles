@@ -17,6 +17,7 @@
     "javascriptreact",
     "typescript.tsx"
   ],
+  "prettier.disableSuccessMessage": true,
   "suggest.autoTrigger": "always",
   "suggest.snippetIndicator": "[+] ",
   "suggest.maxCompleteItemCount": 20,
@@ -26,7 +27,7 @@
   "explorer.file.showHiddenFiles": true,
   "explorer.file.column.clip.copy": "",
   "explorer.file.column.clip.cut": "",
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "gk": "expandablePrev",
     "gj": "expandableNext",
 
