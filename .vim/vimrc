@@ -16,6 +16,8 @@ Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 Plug '777uliahshafar/vim-myhelp'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
@@ -71,6 +73,9 @@ call plug#end()
 " Map j and k to go down a visual line rather than an actual line
 	nnoremap j gj
 	nnoremap k gk
+" Syntax vim-javascript and vim-jsx
+let g:jsx_ext_required = 0
+
 
 " -   -   -   -   -   -   -   -
 "  Vim Easy-Align Config
