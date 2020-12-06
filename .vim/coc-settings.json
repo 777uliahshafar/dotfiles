@@ -10,8 +10,16 @@
     "json",
     "python"
   ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
   "suggest.autoTrigger": "always",
   "suggest.snippetIndicator": "[+] ",
+  "suggest.maxCompleteItemCount": 20,
   "explorer.quitOnOpen": true,
   "explorer.position": "left",
   "explorer.width": 25,

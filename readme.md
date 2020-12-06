@@ -170,6 +170,12 @@ Plug 'junegunn/vim-easy-align'
 ```
 
 
+# Configuration for web development
+1). Install eslint for linting javascript and typescript, prerequisites is nodejs10. You might install by running npm :
+`npm install eslint --save-dev`. Then, make configuration file for it from terminal: `./node_modules/.bin/eslint --init`. You can modify its configuration that being made in home directory. In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`.
+
+
+
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
