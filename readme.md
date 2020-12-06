@@ -174,6 +174,23 @@ Plug 'junegunn/vim-easy-align'
 1). Install eslint for linting javascript and typescript, prerequisites is nodejs10. You might install by running npm :
 `npm install eslint --save-dev`. Then, make configuration file for it from terminal: `./node_modules/.bin/eslint --init`. You can modify its configuration that being made in home directory. In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`.
 
+2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier` Then, update ESLint configuration in home dir, make sure the prettier put last line look like something like the following:
+```
+{
+  “extends”: [
+    “eslint:recommended”,
+    “prettier”
+  ],
+  “plugins”: [
+    “prettier”
+  ],
+  “rules”: {
+    “prettier/prettier”: “error”
+  }
+}
+
+```
+
 
 
 
