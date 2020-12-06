@@ -339,8 +339,8 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 
-bind k confirm kill-window
-bind K confirm kill-server
+bind K confirm kill-window
+#bind k confirm kill-server #Unfortunetely use for navigation
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the
