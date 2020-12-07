@@ -178,9 +178,11 @@ Plug 'junegunn/vim-easy-align'
 
 # Configuration for web development
 1). Install eslint for linting javascript and typescript, prerequisites is nodejs10. You might install by running npm :
-`npm install eslint --save-dev`. Then, make configuration file for it from terminal: `./node_modules/.bin/eslint --init`. You can modify its configuration that being made in home directory. In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`.
+`npm install eslint --save-dev`(local/recommend). Then, set configuration file for it from terminal: `./node_modules/.bin/eslint --init`. After that, you can run ESLint on any file or directory like this: `cd project && eslint --init`. You can modify its configuration that being made in any files or directory.
 
-2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier` Then, update ESLint configuration in home dir, make sure the prettier put last line look like something like the following:
+In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`. This must be done before run ESLint in any projects.
+
+2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier`.make sure the prettier is set in eslint conf(eslintrc) in PROJECT DIR not in homedir, put last line look like something like the following:
 ```
 {
   “extends”: [
@@ -196,6 +198,7 @@ Plug 'junegunn/vim-easy-align'
 }
 
 ```
+
 3). To look better at code use syntax. Install vim-javascript and jsx.
 Instalation and config have written in vimrc, just run :PlugInstall.
 
