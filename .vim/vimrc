@@ -58,10 +58,13 @@ call plug#end()
 	set number
 	syntax on
 	set encoding=utf-8
-	filetype  plugin on
+	filetype  plugin indent on
 	set visualbell
 	set title
 	set shortmess=atI
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
 
 "Long lines
 	set wrap
