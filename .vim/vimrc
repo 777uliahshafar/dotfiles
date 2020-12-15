@@ -253,7 +253,7 @@ let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 
 " Folding level set rules
-let g:vim_markdown_folding_level = 2
+let g:vim_markdown_folding_level = 3
 
 " support front matter of various format
 let g:vim_markdown_frontmatter = 1  " for YAML format
