@@ -244,6 +244,8 @@ command! -bang -nargs=* GGrep
 
 "Ensure files are read as expected
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
+    let g:vimwiki_list = [{ 'syntax': 'markdown', 'ext': '.md'}]
+    au FileType vimwiki setlocal shiftwidth=6 tabstop=6 noexpandtab syntax=clear
 	autocmd Bufread,BufNewFile *.tex set filetype=tex
 
 "Copy selected text to system clipboard (requires
