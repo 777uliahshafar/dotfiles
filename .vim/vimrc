@@ -18,6 +18,7 @@ Plug '777uliahshafar/vim-myhelp'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
@@ -58,7 +59,7 @@ call plug#end()
 	set number
 	syntax on
 	set encoding=utf-8
-	filetype  plugin indent on
+	filetype plugin indent on
 	set visualbell
 	set title
 	set shortmess=atI
@@ -324,13 +325,45 @@ augroup END
 nmap <space>e :CocCommand explorer<CR>
 
 
- " prettier command for coc
+" -   -   -   -   -   -   -   -
+"  Linting and Fixing
+"
+" -   -   -   -   -   -   -   -
+" Ale config
+let g:ale_disable_lsp = 1
+let g:jsx_ext_required = 0
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_lint_on_text_changed = 'never'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--no-semi --single-quote --trailing-comma none'
+nnoremap <leader>af :ALEFix<cr>
+
+"Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+
+" prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
 	\ 'coc-snippets',
 	\ 'coc-pairs',
 	\ 'coc-prettier',
-	\ 'coc-eslint',
 	\ 'coc-tsserver',
 	\ 'coc-html',
 	\ 'coc-css',
@@ -387,8 +420,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+"nmap <silent> [g <Plug>(coc-diagnostic-prev)
+"nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -530,5 +563,3 @@ let g:vimtex_quickfix_open_on_warning = 0
 "	endfunction
 
 "	inoremap <leader>z <C-r>=ZoteroCite()<CR>
-
-
