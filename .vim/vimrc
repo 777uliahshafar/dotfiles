@@ -176,16 +176,16 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-" Vim Pencil
+" Pencil / Writing Controls
+let g:pencil#wrapModeDefault = 'soft'
 
+" Vim Pencil
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType tex         call pencil#init()
 augroup END
 
-" Pencil / Writing Controls
-let g:pencil#wrapModeDefault = 'soft'
 
 
 " Git grep
@@ -242,26 +242,29 @@ command! -bang -nargs=* GGrep
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
 
-
+" -   -   -   -   -   -   -   -
+"   Vimwiki and VimMarkdown
+"
+" -   -   -   -   -   -   -   -
 "Ensure files are read as expected
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 	autocmd Bufread,BufNewFile *.tex set filetype=tex
 
-" VIm-markdown -- Disable math tex conceal feature
+" Disable math tex conceal feature
 let g:tex_conceal = ""
 let g:vim_markdown_math = 1
 
-" Folding level set rules
-let g:vim_markdown_folding_level = 3
-
-" support front matter of various format
+" Support front matter of various format
 let g:vim_markdown_frontmatter = 1  " for YAML format
 
-"Copy selected text to system clipboard (requires
+" Copy selected text to system clipboard (requires
 	set clipboard=unnamed
 
-"Flying with buffer list
+" Folding
+    let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_level = 2
+" Flying with buffer list
 	set hidden 	"open other buffer without write the current"
 	nnoremap <C-b> :ls<CR>:b<Space>
 	nnoremap <Leader>h :bprevious<CR>
