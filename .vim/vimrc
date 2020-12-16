@@ -262,8 +262,8 @@ let g:vim_markdown_frontmatter = 1  " for YAML format
 	set clipboard=unnamed
 
 " Folding
-    let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_folding_level = 2
+    au FileType markdown setlocal foldlevel=99
+
 " Flying with buffer list
 	set hidden 	"open other buffer without write the current"
 	nnoremap <C-b> :ls<CR>:b<Space>
