@@ -182,7 +182,7 @@ Plug 'junegunn/vim-easy-align'
 
 In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`. This must be done before run ESLint in any projects.
 
-2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier`.make sure the prettier is set in eslint conf(eslintrc) in PROJECT DIR not in homedir, put last line look like something like the following:
+2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier`. Make sure the prettier is set in eslint conf(eslintrc) in PROJECT DIR not in homedir, put last line look like something like the following:
 ```
 {
   “extends”: [
@@ -198,6 +198,85 @@ In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`
 }
 
 ```
+2). Install packages by run
+
+npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react
+
+see the eslintrc #1
+
+{
+  "plugins": ["prettier", "react"],
+  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detetect"
+    }
+  }
+}
+
+
+
+
+see the eslintrc #2
+
+
+
+
+2). First install the necessary ESLint dependencies in home directory.
+```
+npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react
+
+```
+Create a config file for ESLint
+`touch .eslintrc.json`
+Add this configuration to file:
+```
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "plugins": ["prettier", "react"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "prettier/react",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "ecmaFeatures": { "jsx": true },
+        "sourceType": "module"
+    },
+
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "detetect"
+        }
+    }
+}
+
+```
+And also you cann add a .prettierrc file:
+```
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2
+}
+```
+
+The ALE Plugin helps with linting and fixing JavaScript files in VIM. The plugin have already set in your vimrc.
+
 
 3). To look better at code use syntax. Install vim-javascript and jsx.
 Instalation and config have written in vimrc, just run :PlugInstall.
