@@ -242,27 +242,8 @@ command! -bang -nargs=* GGrep
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
 
-" -   -   -   -   -   -   -   -
-"   Vimwiki and VimMarkdown
-"
-" -   -   -   -   -   -   -   -
-"Ensure files are read as expected
-	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
-	autocmd Bufread,BufNewFile *.tex set filetype=tex
-
-" Disable math tex conceal feature
-let g:tex_conceal = ""
-let g:vim_markdown_math = 1
-
-" Support front matter of various format
-let g:vim_markdown_frontmatter = 1  " for YAML format
-
 " Copy selected text to system clipboard (requires
 	set clipboard=unnamed
-
-" Folding
-    au FileType markdown setlocal foldlevel=99
 
 " Flying with buffer list
 	set hidden 	"open other buffer without write the current"
@@ -286,6 +267,27 @@ autocmd User VimagitEnterCommit setlocal textwidth=72
 autocmd User VimagitLeaveCommit setlocal textwidth=0
 "Let ViMagit autoclose when state & unstage empty
 let g:magit_auto_close=1
+
+" -   -   -   -   -   -   -   -
+"   Vimwiki and VimMarkdown
+"
+" -   -   -   -   -   -   -   -
+"Ensure files are read as expected
+	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+	autocmd Bufread,BufNewFile *.tex set filetype=tex
+
+" Disable math tex conceal feature
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+" Support front matter of various format
+let g:vim_markdown_frontmatter = 1  " for YAML format
+
+" Folding Markdown
+    au FileType markdown setlocal foldlevel=99
+
+
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
