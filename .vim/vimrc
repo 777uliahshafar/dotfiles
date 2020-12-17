@@ -80,6 +80,9 @@ call plug#end()
 " Syntax vim-javascript and vim-jsx
 let g:jsx_ext_required = 0
 
+" Syntax scss from coc-css
+autocmd FileType scss setl iskeyword+=@-@
+
 " Do easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
@@ -334,11 +337,15 @@ let g:jsx_ext_required = 0
 
 let g:ale_linters = {
 \   'javascript': ['standard'],
+\   'css': ['prettier'],
+\   'scss': ['prettier'],
 \}
 
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'css': ['prettier'],
+\   'scss': ['prettier'],
 \}
 
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
