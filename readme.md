@@ -244,6 +244,12 @@ In the scripts section add an *scss command*, under the *test command*, as it’
 ```
 Before you run this script, create folder scss and file styles.scss and styles.css on it. Then, Run this by `npm run scss` in Project Dir.
 
+4). Making browser live previewing save file from html, css or js. In order to do that install [Browser-sync](https://browsersync.io) by npm globally: `npm install -g browser-sync`. From your project dir you can run:
+
+```
+browser-sync start --server --files "*.html, scss/*.css"
+```
+
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
