@@ -29,11 +29,13 @@ export LSCOLORS=gxfxcxDxBxegedabagaced
 
 
 # Shortcuts
-alias pt="cd ~/Documents/Proposal\ Tesis/project\ files"
 alias v="mvim -v"
+alias compilescss="npm run scss"
 alias df="cd ~/git/dotfiles"
 alias ls="ls -G"
 alias vimwiki="vim -c VimwikiIndex"
+alias pt="cd ~/Documents/Proposal\ Tesis/project\ files"
+alias bm="cd ~/Documents/Blog\ Monetizing"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

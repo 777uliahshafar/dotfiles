@@ -239,7 +239,7 @@ In the scripts section add an *scss command*, under the *test command*, as it’
 ```
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "scss": "node-sass --w scss/styles.scss scss/styles.css"*
+  "scss": "node-sass --w scss/styles.scss scss/styles.css"
 }
 ```
 Before you run this script, create folder scss and file styles.scss and styles.css on it. Then, Run this by `npm run scss` in Project Dir.
