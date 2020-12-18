@@ -177,62 +177,14 @@ Plug 'junegunn/vim-easy-align'
 
 
 # Configuration for web development
-1). Install eslint for linting javascript and typescript, prerequisites is nodejs10. You might install by running npm :
-`npm install eslint --save-dev`(local/recommend). Then, set configuration file for it from terminal: `./node_modules/.bin/eslint --init`. After that, you can run ESLint on any file or directory like this: `cd project && eslint --init`. You can modify its configuration that being made in any files or directory.
-
-In order to work with vim, instal Coc-eslint in our vim `:CocInstall coc-eslint`. This must be done before run ESLint in any projects.
-
-2). Install npm prettier(not Coc-prettier) for get ESlint reporting about Prettier errors. In order to do that, install by run: `npm install -D prettier eslint-plugin-prettier eslint-config-prettier`. Make sure the prettier is set in eslint conf(eslintrc) in PROJECT DIR not in homedir, put last line look like something like the following:
-```
-{
-  “extends”: [
-    “eslint:recommended”,
-    “prettier”
-  ],
-  “plugins”: [
-    “prettier”
-  ],
-  “rules”: {
-    “prettier/prettier”: “error”
-  }
-}
-
-```
-2). Install packages by run
-
-npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react
-
-see the eslintrc #1
-
-{
-  "plugins": ["prettier", "react"],
-  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
-  "rules": {
-    "prettier/prettier": "error"
-  },
-  "settings": {
-    "react": {
-      "version": "detetect"
-    }
-  }
-}
-
-
-
-
-see the eslintrc #2
-
-
-
-
-2). First install the necessary ESLint dependencies in home directory.
+1). This step is for linting and fixing code. First install the necessary ESLint dependencies in *Home Directory* ~/.
 ```
 npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react
 
 ```
-Create a config file for ESLint
-`touch .eslintrc.json`
-Add this configuration to file:
+* Create a config file for ESLint in *Project Dir*: `touch .eslintrc.json`
+
+* Add this configuration to file:
 ```
 {
     "env": {
@@ -265,7 +217,7 @@ Add this configuration to file:
 }
 
 ```
-And also you cann add a .prettierrc file:
+* And also you can add a .prettierrc file:
 ```
 {
   "trailingComma": "es5",
@@ -278,10 +230,19 @@ And also you cann add a .prettierrc file:
 The ALE Plugin helps with linting and fixing JavaScript files in VIM. The plugin have already set in your vimrc.
 
 
-3). To look better at code use syntax. Install vim-javascript and jsx.
+2). To look better at code use syntax. Install vim-javascript and jsx.
 Instalation and config have written in vimrc, just run :PlugInstall.
 
-
+3). Working with css and scss is better workflow, this step is to compile scss file to css continuously while save(watch). Install dependency by type `npm install --save-dev node-sass` in *home dir*.
+Add compile command 'scss' in package.json file, if file isn't exist create by `npm init` in *project dir*.
+In the scripts section add an *scss command*, under the *test command*, as it’s shown below:
+```
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "scss": "node-sass --w scss/styles.scss scss/styles.css"*
+}
+```
+Before you run this script, create folder scss and file styles.scss and styles.css on it. Then, Run this by `npm run scss` in Project Dir.
 
 
 ### Exclude files from git
