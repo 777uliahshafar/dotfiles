@@ -73,7 +73,7 @@ Instead of altering the ~/.tmux.conf file and diverging from upstream, the prope
 Shows existing sessions and gives me OPTION to re-attach or create a new one. Navigate to “Preferences > Profiles > PROFILE >Command > Send text at start” and set it to:
 
 ```
-tmux ls && read tmux_session && tmux attach -t ${tmux_session:-default} || tmux new -s ${tmux_session:-default}
+tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
 5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
