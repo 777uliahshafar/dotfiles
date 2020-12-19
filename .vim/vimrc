@@ -42,6 +42,9 @@ call plug#end()
 	set cursorline
 	hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
 	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
+    hi CocExplorerGitModified ctermfg=172 guifg=#d79921
+    hi CocExplorerGitUntracked ctermfg=106 guifg=#98971a
+    hi CocExplorerGitContentChange ctermfg=172 guifg=#d79921
 	let g:scheme_bg = "light"
   	else
     	set background=dark
@@ -303,6 +306,9 @@ highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
 " -   -   -   -   -   -   -   -
 "   Basic Coc Configuration File
 "   advanced CocConfig file in /.vim
+" -   -   -   -   -   -   -   -
+"   Coc-explorer
+"
 " -   -   -   -   -   -   -   -
 " Disable netrw.
  let g:loaded_netrw  = 1
