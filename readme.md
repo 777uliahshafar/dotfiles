@@ -172,7 +172,7 @@ Plug 'junegunn/vim-easy-align'
 17). Install vim pencil for best formatting soft line brake. Instalation have written in vimrc:
 
 ```
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-pencil'
 ```
 
 
@@ -250,6 +250,7 @@ Before you run this script, create folder scss and file styles.scss and styles.c
 browser-sync start --server --files "*.html, scss/*.css"
 ```
 
+5). Install vim-surround. It's Already configure in vimrc, just install Vim Plug.
 
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:

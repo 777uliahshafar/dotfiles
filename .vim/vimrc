@@ -20,6 +20,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
