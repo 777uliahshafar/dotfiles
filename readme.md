@@ -11,11 +11,13 @@ Then Homebrew itself:
 [bin bash](/bin/bash) -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-1. Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
+2. Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
 
-2. Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
+3. Zsh auto-suggestion, install it using homebrew `brew install zsh-autosuggestions`.
 
-3. Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
+4. Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
+
+5. Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
@@ -27,9 +29,9 @@ For accessing configuration file run this command `p10k configure`.Additional Fe
 -  Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
 - Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
 
-4. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
+6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
-5. Tmux for multiplex terminal.
+7. Tmux for multiplex terminal.
 - Install using homebrew by `brew install tmux`.
 - Customize it with oh-my-tmux, install it by :
 ```
@@ -52,7 +54,7 @@ tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new 
 ```
 
 
-6. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
+7. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
 ```
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

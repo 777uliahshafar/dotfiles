@@ -22,11 +22,22 @@ zstyle ':vcs_info:git:*' formats 'on branch %b'
 setopt PROMPT_SUBST
 PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
-#Colorized dir/ ls command
+# Colorized dir/ ls command
 
 export CLICOLOR=1
 export LSCOLORS=gxfxcxDxBxegedabagaced
 
+# Turn off all beeps
+unsetopt BEEP
+# Turn off autocomplete beeps
+# unsetopt LIST_BEEP
+
+# Keybinding for zsh autosuggest
+bindkey '^ ' autosuggest-accept
+
+# Disable autosuggestion for large buffers
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Shortcuts
 export LOCAL_IP=`ipconfig getifaddr en0`
@@ -43,3 +54,6 @@ alias bm="cd ~/Documents/Blog\ Monetizing"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Adding autosuggestions in your Zsh shell.
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
