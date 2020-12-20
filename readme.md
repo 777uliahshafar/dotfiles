@@ -252,6 +252,8 @@ browser-sync start --server --files "*.html, scss/*.css"
 
 5). Install vim-surround. It's Already configure in vimrc, just install Vim Plug.
 
+6). Install emmet-vim. It's Already configure in vimrc, just install Vim Plug.
+
 ### Exclude files from git
 The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
 
