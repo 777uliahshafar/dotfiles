@@ -1,183 +1,105 @@
-# Configuration for better terminal,vim,vimlatex workflow
-Hello, This a coding workflow I created to help me documentate everything I use in order to get fast and comfortable workflow.
+*Start*: Change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
 
-Before to go: You might change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
+# Setting up VIM as text editor
 
-1). Install brew, Brew is a package manager that made easy for other package to be installed in mac.
-
-    Installing Homebrew in Command Line Tools for Xcode :
+1. Homebrew is a *package manager* that made easy for other package to be installed in MacOS. It requires Xcode, can be installed by:
 ```
 [sudo](sudo) xcode-select --install
 ```
-
-    Then :
+Then Homebrew itself:
 ```
 [bin bash](/bin/bash) -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
+1. Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
 
-2). Install Iterm2, Iterm2 is very similar to terminal, but with extra addition feature.
+2. Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
 
-to Install Iterm2:
-brew install Iterm2
-
-3). Customize prompt in zsh and iterm2 can be achived by add code below in ~/.zshrc. This will add branch name git into your prompt.
-~~~
-# Load version control information
-autoload -Uz vcs_info
-precmd() { vcs_info }
-
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats 'on branch %b'
-
-# Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
-PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
-
-~~~
-4A). Of cource, Standard customization iterm2 or zsh shell terminal will not give you such best convinient. In order to modify your text in the terminal usually editing .zshrc but it is not enough, there is a theme that can run faster than zsh shell which can be install by type:
-
-Before install powerlever10k theme, it's highly recomended install MesloLGS font which you can find in source of repo:
-	https://github.com/romkatv/powerlevel10k
-
-Then Install by clone :
-```	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+3. Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 ```
 
-after instal, You might want to edit its line in .zshrc to be on top of every line. After that you can configure all setting you prefere by type: p10k configure
+For accessing configuration file run this command `p10k configure`.Additional Feature of terminal or iterm2 should be changed for convenient:
 
-Additional Feature of terminal or iterm2 should be changed for convenient:
-a). Change profile text by go to Preference -> Profile -> Text -> Change Font to MesloLGS -> Restart Iterm2.
-b).  Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
-c). Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
+- Change profile text by go to Preference -> Profile -> Text -> Change Font to MesloLGS -> Restart Iterm2.
+-  Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
+- Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
 
-4B). Install tmux through Homebrew by type:
-```
-brew install tmux
-```
+4. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
-After that using oh-my-tmux for customization and optimal keybinding by type:
+5. Tmux for multiplex terminal.
+- Install using homebrew by `brew install tmux`.
+- Customize it with oh-my-tmux, install it by :
 ```
 cd
 git clone https://github.com/gpakosz/.tmux.git
 ```
-After we clone it, we might want to remove its remote origin, just run `git remote rm origin`. Then, you can symylink as below:
-
+- Remove its remote origin by `git remote rm origin`
+- Symlink from that repo to homedir:
 ```
 ln -s -f .tmux/.tmux.conf
 ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ```
-Instead of altering the ~/.tmux.conf file and diverging from upstream, the proper way is to edit the ~/.tmux.conf.local file. !!! Warning: if you set iterm2 for maximaze, there would be instan red message in tmux status bar when enter tmux. Change profile style window from maximaze.
 
-Shows existing sessions and gives me OPTION to re-attach or create a new one. Navigate to “Preferences > Profiles > PROFILE >Command > Send text at start” and set it to:
+- Instead of altering the ~/.tmux.conf file and diverging from upstream, *the proper way is to edit the ~/.tmux.conf.local file. !!!* **!Warning**: If you set iterm2 for maximaze, there would be instant red message in tmux status bar when enter tmux. Change profile style window from maximaze to normal.
+
+- Shows existing sessions and gives me OPTION to re-attach or create a new one. Navigate to “Preferences > Profiles > PROFILE >Command > Send text at start” and set it to:
 
 ```
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
-5). Install Macvim, macVim is siply  a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between macvim and vim is that macvim enable you using mouse and arrow in the workflow. By the way, vim has already installed in mac but in outdate version.
 
-To install vim : brew install macvim
-
-after instal, configure how to access macvim by type mvim -v or shorten it using alias in .vzhrc. Add alias vim="mvim -v".
-
-6). Vim-plug is plugin manager for vim. This require curl to be installed though it already installed on the system. To install vim-plug just type:
+6. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
 ```
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-After install, You can add and configure plug in .vimrc with:
-```
-	call plug#begin('~/.vim/plugged')
-   	Plug 'jreybert/vimagit'
-	Plug 'junegunn/goyo.vim'
-	call plug#end()
-```
-The command for install plug is :PlugInstall
+Run `:PlugInstall` to install plugin vimrc.
+Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
+Run: `:PlugStatus` to know information about plugin.
 
-Uninstall Plugin by remove plug line or comment it, then restart or :so .vimrc then type :PlugClean
+# Vim plugin used in this repo.
 
-To get Information about status of plugin type :PlugStatus
+Install all below plugin by running vim-plug `:PlugInstall`
 
-7). Install skim app for pdf view. Skim has great feature to reload after compilation. Which will not reload from beginning like Preview(Macos)
+* Vimtex Plugin for better latex workflow.
+* UltiSnips and coc-snippets for adding snippet. The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
+* Gruvbox for colorscheme background.
+* Goyo for free writing distraction.
+* Vimagit for git local execution.
+* Vim-myhelp for cheatsheet :h. This has its own config in my repo '777uliahshafar/vim-myhelp'.
+* COC(Conquer of Completion) for LSP and others extention. Require a Node.js so it can works. All extentions automatically installed using coc_global_extentions within vimrc, if it was not works run `:Coc Install extentions`. Configuration file(coc-settings.json) located in runtime ./vim, please symlink from dotfiles. Access those file by `:CocConfig`
+    \ 'coc-snippets',
+	\ 'coc-pairs',
+	\ 'coc-prettier',
+	\ 'coc-tsserver',
+	\ 'coc-html',
+	\ 'coc-css',
+	\ 'coc-json',
+	\ 'coc-angular',
+	\ 'coc-explorer',
+	\ 'coc-vimtex'
 
-## Vim Plugin
-
-
-8). Instal Vimtex Plugin for better latex workflow. Installation had already been set up in .vimrc. Just run :PlugInstall everytime system had reset. Configuration Vimtex has been setup in .vimrc as well.
-
-9). Install UltiSnips. Installation had already been set up in .vimrc. Just run : PlugInstall everytime system had reset. UltiSnips mapping has been set up in .vimrc. Since Coc has snippet extentions, we also install it by:
-
-```
-	:CocInstall coc-snippets
-```
-The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
-
-
-10). Background shell iterm/zsh was not good enough. Install gruvbox to handle the background. sAll configuration has already set up in vimrc.
-
-11). You have installed Goyo in step 6, but this is show you a configuration that make goyo work better.
-
-12). Install Vimagit
-
-13). Install vim-myhelp in my repo by git clone to ~/.vim/plugged/. After that install plug via vimplug by write 777uliahshafar/vim-myhelp then :PlugInstall. :h myhelp shoudl works.
-
-14). Install Coc-Explorer extention by Coc(Conquer of Completion).
-a). Install COC (Intellisense engine), run by javascript code, so we need install Node.js by using Homebrew then type in zsh terminal:
-```
-brew install node
-```
-
-b). Install COC Plugin of VIM with VimPlug, installation have written in vimrc:
-```
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-```
-then run :PlugInstall,
+* Fzf Fuzzy Finder for browse file instantly. This use vim-rooter and ripgrep, ripgrep can be install using Homebrew `brew install ripgrep`
+* Vim-Easy Align for align delimeters.
+* Vim-Pencil for formating text with soft and hard break.
+* Vim-surround for quoting/parenthesizing made simple.*(Webdevlopment)*
+* Emmet-vim for expanding abbreviation in html and css.*(Webdevlopment)*
+* Vim-javascript and jsx for javascript code syntax.
 
 
-c). Install COC explorer as Tree Viewer in VIM, by type command (Coc Explorer is an extention of Coc Plugin):
-```
-:CocInstall coc-explorer
-```
-Configuration for opening coc-explorer have already set up in vimrc, just open tree viewer coc-explorer by keybinding <space>e.
 
-d). CocConfig settings
-Enable intellisense for coc-settings.json with:
-```
-:CocInstall coc-json
-```
-in your vim
+## Vimtex software preview.
 
-Symlink Coc Configuration(coc-settings.json) file from git/dotfiles  to ./vim, After that you can call that configuration by type :CocConfig
-
-e). All basic configuration and cocConfig(advanced) have already in your .vimrc and CocConfig.
-
-15). Install Fzf Fuzzy Finder in order to search file easily. Instalation have written in vimrc, there 4 instalation needed:
-```
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
-```
-Fzf or Ag command requires ripgrep, installation can be done by type in zsh command line:
-```
-brew install ripgrep
-```
-
-16). Install vim-easyalign for align tab. Instalation have written in vimrc:
-```
-Plug 'junegunn/vim-easy-align'
-```
-
-17). Install vim pencil for best formatting soft line brake. Instalation have written in vimrc:
-
-```
-Plug 'junegunn/vim-pencil'
-```
+* Skim for auto-refresh previewer pdf Latex.
 
 
-# Configuration for web development
-1). This step is for linting and fixing code. First install the necessary ESLint dependencies in *Home Directory* ~/.
+# Setting up vim for web development.
+
+1. This step is for linting and fixing code. First install the necessary ESLint dependencies in *Home Directory* ~/.
 ```
 npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react
 
@@ -227,68 +149,59 @@ npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslin
 }
 ```
 
-The ALE Plugin helps with linting and fixing JavaScript files in VIM. The plugin have already set in your vimrc.
+* The ALE Vim Plugin helps with linting and fixing code files in VIM.
 
-
-2). To look better at code use syntax. Install vim-javascript and jsx.
-Instalation and config have written in vimrc, just run :PlugInstall.
-
-3). Working with css and scss is better workflow, this step is to compile scss file to css continuously while save(watch). Install dependency by type `npm install --save-dev node-sass` in *home dir*.
-Add compile command 'scss' in package.json file, if file isn't exist create by `npm init` in *project dir*.
-In the scripts section add an *scss command*, under the *test command*, as it’s shown below:
+2. Working with CSS and SCSS are better workflow, this step is to compile SCSS file to CSS continuously while save (watch). Install dependency by type `npm install --save-dev node-sass` in *home dir*.
+* Add compile command 'scss' in **package.json** file, if the file isn't exist create by `npm init` in *project dir*.
+* In the scripts section within that file add an *scss command*, under the *test command*, as it’s shown below:
 ```
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "scss": "node-sass --w scss/styles.scss scss/styles.css"
 }
 ```
-Before you run this script, create folder scss and file styles.scss and styles.css on it. Then, Run this by `npm run scss` in Project Dir.
+* Before you run this script, create folder scss and file styles.scss and styles.css on it. Then, Run this by `npm run scss` in Project Dir.
 
-4). Making browser live previewing save file from html, css or js. In order to do that install [Browser-sync](https://browsersync.io) by npm globally: `npm install -g browser-sync`. From your project dir you can run:
-
+3. Browser-sync for live previewing save file from html, css or js in browser. Install [Browser-sync](https://browsersync.io) by run npm globally: `npm install -g browser-sync`. Alias command **serve** to live priviewing in *project dir*, manual command is:
 ```
 browser-sync start --server --files "*.html, scss/*.css"
 ```
 
-5). Install vim-surround. It's Already configure in vimrc, just install Vim Plug.
-
-6). Install emmet-vim. It's Already configure in vimrc, just install Vim Plug.
-
-### Exclude files from git
-The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
+# ?Some help
+## Exclude files from git
+* The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
 
 ```
 git config --global core.excludefiles ~/git/dotfiles/.gitognore
-
 ```
-### How to customize package
-Pkg customazation is datetime2 for dateformatting, and helpers4ht for better conversion to html.Those was can be use by these following:
+## How to customize package
+* Package customazation is datetime2 for dateformatting, and helpers4ht for better conversion to html. Those was can be used by these following:
 
-1). Make dir/folder texmf/tex/latex
+1. Make dir/folder texmf/tex/latex
 
 ```
 mkdir -p $(kpsewhich -var-value TEXMFHOME)/tex/latex/pkgname
 ```
-This will create the directory structure you need, presumably at ~/Library/texmf/
+* This will create the directory structure you need, presumably at ~/Library/texmf/
 
-2). Symlink folder in above location.
-3). If the pkg are in github,assume you have done step 1, you can install it by for example.
+2. Symlink folder in above location.
+3. If the pkg are in github, assume you have done step 1, you can install it by for example.
 
 ```
 cd ~/Library/texmf/tex/latex
 git clone https://github.com/777uliahshafar/helpers4ht.git
 ```
-4). helpers4ht package need configuration which already set up in make4ht template.
+4. helpers4ht package need configuration which already set up in make4ht template.
 
-###How to deal with Swap Warning
+## How to deal with Swap Warning
 
-1). Recover the swap file(r)
-2). If the content looks right, Save(:w) and Reopen(:e).
-3). If the content older, Reopen without Save(:r!)
-4). Delete swap file (d) or manually from zsh.
+1. Recover the swap file(r)
+2. If the content looks right, Save(:w) and Reopen(:e).
+3. If the content older, Reopen without Save(:r!)
+4. Delete swap file (d) or manually from zsh.
 
-### How to use this REPO
-	This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/plugged/ultisnips/ folder. So here a man type:
+## How to use this REPO
+This repo has a collection of awesome configuration code. Each time a man clone this, should Symlink each file config to coresponding location. For example snippets file in ~/git/dotfiles/Ultisnips/ will be read on ~/.vim/plugged/ultisnips/ folder. So here a man type:
 ```
 	ln -s [file_original_location] [destionation]
 	eg. ln -s ~/git/dotfiles/UltiSnips/tex.snippets ~/.config/coc/ultisnips
