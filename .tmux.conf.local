@@ -17,6 +17,9 @@
 
 # -- windows & pane creation ---------------------------------------------------
 
+# Disable status line tmux
+set -g status off
+
 # new window retains current path, possible values are:
 #   - true
 #   - false (default)
