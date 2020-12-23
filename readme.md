@@ -1,4 +1,6 @@
-*Start*: Change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
+*Start*:
+* Change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
+* Add keyboard shortcut to move window to left or right side. Go to App shortcut in keyboard, add shortcut with title **Move Window to Left Side of Screen*.
 
 # Setting up VIM as text editor
 
