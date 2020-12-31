@@ -6,11 +6,11 @@
 
 1. Homebrew is a *package manager* that made easy for other package to be installed in MacOS. It requires Xcode, can be installed by:
 ```
-[sudo](sudo) xcode-select --install
+xcode-select --install
 ```
 Then Homebrew itself:
 ```
-[bin bash](/bin/bash) -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 2. Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
@@ -55,8 +55,14 @@ ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
+7. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
+* To view listing package run the command `npm ls --depth=0`.
+* To install node run the command `nvm install 10.18.0`
 
-7. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
+8. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
 ```
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -153,7 +159,7 @@ npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslin
 }
 ```
 
-* The ALE Vim Plugin helps with linting and fixing code files in VIM.
+* The ALE Vim Plugin helps with linting and fixing code files in VIM. If the ale fails to show error, update the plugin.
 
 2. Working with CSS and SCSS are better workflow, this step is to compile SCSS file to CSS continuously while save (watch). Install dependency by type `npm install --save-dev node-sass` in *home dir*.
 * Add compile command 'scss' in **package.json** file, if the file isn't exist create by `npm init` in *project dir*.
