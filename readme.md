@@ -161,7 +161,7 @@ npm install --save-dev eslint prettier babel-eslint eslint-config-prettier eslin
 
 * The ALE Vim Plugin helps with linting and fixing code files in VIM. If the ale fails to show error, update the plugin.
 
-2. Working with CSS and SCSS are better workflow, this step is to compile SCSS file to CSS continuously while save (watch). Install dependency by type `npm install --save-dev node-sass` in *home dir*.
+2. Working with CSS and SCSS are better workflow, this step is to compile SCSS file to CSS continuously while save (watch). Install dependency by type `npm install --save-dev node-sass` in *project dir*.
 * Add compile command 'scss' in **package.json** file, if the file isn't exist create by `npm init` in *project dir*.
 * In the scripts section within that file add an *scss command*, under the *test command*, as it’s shown below:
 ```
