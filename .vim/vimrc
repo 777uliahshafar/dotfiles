@@ -42,7 +42,7 @@ call plug#end()
   	if g:scheme_bg == "dark"
     	set background=light
 	set cursorline
-	hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
+	hi CursorLineNr   term=bold ctermfg=239 ctermbg=223 gui=bold guifg=#ebdbb2
 	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
     hi CocExplorerGitModified ctermfg=172 guifg=#d79921
     hi CocExplorerGitUntracked ctermfg=106 guifg=#98971a
@@ -227,6 +227,8 @@ command! -bang -nargs=* GGrep
 	set nonumber
 	set linespace=4
 	set scrolloff=999
+    set cursorcolumn
+    hi cursorcolumn cterm=none term=none ctermbg=223 guibg=#ebdbb2
 	endfunction
 
 	function! s:goyo_leave()
