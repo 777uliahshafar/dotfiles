@@ -32,6 +32,11 @@ unsetopt BEEP
 # Turn off autocomplete beeps
 # unsetopt LIST_BEEP
 
+
+#Solved perl warning in ssh server
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Keybinding for zsh autosuggest
 bindkey '^ ' autosuggest-accept
 
@@ -43,12 +48,13 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export LOCAL_IP=`ipconfig getifaddr en0`
 alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
 
+alias graph="git log --all --decorate --oneline --graph"
 alias v="mvim -v"
 alias compilescss="npm run scss"
 alias df="cd ~/git/dotfiles"
 alias ls="ls -G"
 alias vimwiki="vim -c VimwikiIndex"
-alias pt="cd ~/Documents/Proposal\ Tesis/project\ files"
+alias pt="cd ~/Documents/Magister/project\ files/proposalTesis"
 alias bm="cd ~/Documents/Blog\ Monetizing"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
