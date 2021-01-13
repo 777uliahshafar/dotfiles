@@ -11,6 +11,7 @@ Plug 'airblade/vim-rooter'
 Plug 'reedes/vim-pencil'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Development Tools
 "Plug 'jreybert/vimagit'
@@ -37,20 +38,27 @@ call plug#end()
 "gruvbox colorscheme
 	autocmd vimenter * colorscheme gruvbox
 	let g:scheme_bg = "dark"
+    let g:limelight_conceal_ctermfg = 236
+    let g:limelight_conceal_guifg = '#32302f'
 
 	function! ToggleDark()
   	if g:scheme_bg == "dark"
-    	set background=light
+    set background=light
+	let g:scheme_bg = "light"
+    let g:limelight_conceal_ctermfg = 228
+    let g:limelight_conceal_guifg = '#f2e5bc'
 	set cursorline
 	hi CursorLineNr   term=bold ctermfg=239 ctermbg=223 gui=bold guifg=#ebdbb2
 	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
     hi CocExplorerGitModified ctermfg=172 guifg=#d79921
     hi CocExplorerGitUntracked ctermfg=106 guifg=#98971a
     hi CocExplorerGitContentChange ctermfg=172 guifg=#d79921
-	let g:scheme_bg = "light"
   	else
     	set background=dark
     	let g:scheme_bg = "dark"
+        let g:limelight_conceal_ctermfg = 236
+        let g:limelight_conceal_guifg = '#32302f'
+
   	endif
 	endfunction
 
@@ -136,7 +144,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 map <C-f> :Files<CR>
 nnoremap <silent> <C-p> :FZF ~/<CR>
 map <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>
+nnoremap <leader>r :Rg<CR>
 nnoremap <leader>t :Tags<CR>
 
 
@@ -215,7 +223,7 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 "Goyo
-	map <C-g> :Goyo<CR>
+	map <leader>g :Goyo<CR>
 	let g:goyo_width=90
 
 "Goyo Customazation
@@ -228,7 +236,7 @@ command! -bang -nargs=* GGrep
 	set linespace=4
 	set scrolloff=999
     set cursorcolumn
-    hi cursorcolumn cterm=none term=none ctermbg=223 guibg=#ebdbb2
+    Limelight
 	endfunction
 
 	function! s:goyo_leave()
@@ -239,6 +247,7 @@ command! -bang -nargs=* GGrep
 	set number
 	set linespace=0
 	set scrolloff=5
+    Limelight!
 	endfunction
 
 	autocmd! User GoyoEnter nested call <SID>goyo_enter()
