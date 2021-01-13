@@ -13,7 +13,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 
 " Development Tools
-Plug 'jreybert/vimagit'
+"Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
 Plug '777uliahshafar/vim-myhelp'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -281,12 +281,12 @@ command! -bang -nargs=* GGrep
 	let g:UltiSnipsEditSplit="vertical"
 
 "ViMagit
-nnoremap <leader>m :MagitOnly<CR>
-autocmd User VimagitEnterCommit startinsert
-autocmd User VimagitEnterCommit setlocal textwidth=72
-autocmd User VimagitLeaveCommit setlocal textwidth=0
+"nnoremap <leader>m :MagitOnly<CR>
+"autocmd User VimagitEnterCommit startinsert
+"autocmd User VimagitEnterCommit setlocal textwidth=72
+"autocmd User VimagitLeaveCommit setlocal textwidth=0
 "Let ViMagit autoclose when state & unstage empty
-let g:magit_auto_close=1
+"let g:magit_auto_close=1
 
 " -   -   -   -   -   -   -   -
 "   Vimwiki and VimMarkdown
