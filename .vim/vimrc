@@ -38,15 +38,15 @@ call plug#end()
 "gruvbox colorscheme
 	autocmd vimenter * colorscheme gruvbox
 	let g:scheme_bg = "dark"
-    let g:limelight_conceal_ctermfg = 236
-    let g:limelight_conceal_guifg = '#32302f'
+    let g:limelight_conceal_ctermfg = 239
+    let g:limelight_conceal_guifg = '#504945'
 
 	function! ToggleDark()
   	if g:scheme_bg == "dark"
     set background=light
 	let g:scheme_bg = "light"
-    let g:limelight_conceal_ctermfg = 228
-    let g:limelight_conceal_guifg = '#f2e5bc'
+    let g:limelight_conceal_ctermfg = 250
+    let g:limelight_conceal_guifg = '#d5c4a1'
 	set cursorline
 	hi CursorLineNr   term=bold ctermfg=239 ctermbg=223 gui=bold guifg=#ebdbb2
 	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
@@ -56,8 +56,8 @@ call plug#end()
   	else
     	set background=dark
     	let g:scheme_bg = "dark"
-        let g:limelight_conceal_ctermfg = 236
-        let g:limelight_conceal_guifg = '#32302f'
+        let g:limelight_conceal_ctermfg = 239
+        let g:limelight_conceal_guifg = '#504945'
 
   	endif
 	endfunction
