@@ -97,11 +97,12 @@ set statusline+=%r                        " readonly flag
 set statusline+=%m                        " modified [+] flag
 
 set statusline+=%=              " right align
-set statusline+=%#CursorLine#   " colour
+set statusline+=%#CursorLineNr#   " colour
 set statusline+=\ %Y\                   " file type
-set statusline+=%#Cursor#       " colour
+set statusline+=%#Cursor#   " colour
 set statusline+=\ %3p%%\                " percentage
-
+set statusline+=%#CursorLine#       " colour
+set statusline+=\ %{wordcount().words}\ words
 
 "Long lines
 	set wrap
@@ -303,7 +304,8 @@ command! -bang -nargs=* GGrep
 " -   -   -   -   -   -   -   -
 "Ensure files are read as expected
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+    let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+    au BufNewFile ~/vimwiki/diary/*.md :silent 0r !~/.vim/bin/generate-vimwiki-diary-template '%'
 	autocmd Bufread,BufNewFile *.tex set filetype=tex
 
 " Disable math tex conceal feature
