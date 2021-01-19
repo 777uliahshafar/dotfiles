@@ -1,4 +1,5 @@
 let mapleader =" "
+let maplocalleader =","
 
 
 call plug#begin('~/.vim/plugged')
@@ -28,6 +29,11 @@ Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
+
+
+" Statistic Prog. Tools
+Plug 'jalvesaq/Nvim-R'
+
 
 call plug#end()
 
@@ -114,11 +120,15 @@ set statusline+=\ %{wordcount().words}\ words
 " Map j and k to go down a visual line rather than an actual line
 	nnoremap j gj
 	nnoremap k gk
+
 " Syntax vim-javascript and vim-jsx
 let g:jsx_ext_required = 0
 
 " Syntax scss from coc-css
 autocmd FileType scss setl iskeyword+=@-@
+
+" Tabstop using R
+autocmd FileType r setl softtabstop=2 shiftwidth=2 noexpandtab
 
 " Do easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
@@ -419,6 +429,7 @@ let g:coc_global_extensions = [
 	\ 'coc-css',
 	\ 'coc-json',
 	\ 'coc-angular',
+    \ 'coc-r-lsp',
 	\ 'coc-explorer',
 	\ 'coc-vimtex'
 	\ ]

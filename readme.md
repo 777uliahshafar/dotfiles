@@ -71,6 +71,11 @@ Run `:PlugInstall` to install plugin vimrc.
 Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
 Run: `:PlugStatus` to know information about plugin.
 
+9. Xquartz for viewing table from R.
+```
+brew install --cask xquartz
+```
+
 # Vim plugin used in this repo.
 
 Install all below plugin by running vim-plug `:PlugInstall`
@@ -99,7 +104,9 @@ Install all below plugin by running vim-plug `:PlugInstall`
 * Vim-surround for quoting/parenthesizing made simple.*(Webdevlopment)*
 * Emmet-vim for expanding abbreviation in html and css.*(Webdevlopment)*
 * Vim-javascript and jsx for javascript code syntax.
-
+* Nvim-R for working with R
+    - coc-r-lsp for autocompletion (required package languageserver)
+    - ale for linting (required package lintr)
 
 
 ## Vimtex software preview.
