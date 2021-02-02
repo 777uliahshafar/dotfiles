@@ -128,7 +128,7 @@ let g:jsx_ext_required = 0
 autocmd FileType scss setl iskeyword+=@-@
 
 " Tabstop using R
-autocmd FileType r setl softtabstop=2 shiftwidth=2 noexpandtab
+autocmd FileType r setl softtabstop=4 shiftwidth=4 noexpandtab
 
 " Do easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
@@ -393,6 +393,7 @@ let g:ale_linters = {
 \   'javascript': ['standard'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
+\   'r': ['lintr']
 \}
 
 let g:ale_fixers = {
@@ -400,6 +401,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
+\   'r': ['styler']
 \}
 
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
