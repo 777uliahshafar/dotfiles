@@ -136,15 +136,23 @@ nmap ga <Plug>(EasyAlign)
 " -   -   -   -   -   -   -   -
 " Tabstop using R
     autocmd FileType r setl softtabstop=4 shiftwidth=4 noexpandtab
+
 " Start Automatically R
 let R_auto_start = 2
+
+" Run external terminal emu R
+"    let R_in_buffer=0
+"    let R_external_term = 1
+
 " Syntax Highlight in R
-let R_hl_term = 0
+    let R_hl_term = 0 " Require command library(colorout) in R
+
 " Use Space for Send line
-    vmap <Space> <Plug>RDSendSelection
-    nmap <Space> <Plug>RDSendLine
+    vmap <leader><Space> <Plug>RDSendSelection
+    nmap <leader><Space> <Plug>RDSendLine
+
 " Use jk for enter normal mode from terminal mode
-tnoremap jk <C-\><C-n>
+    tnoremap jk <C-\><C-n>
 " -   -   -   -   -   -   -   -
 "   FZF Configuration
 "

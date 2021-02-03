@@ -71,10 +71,19 @@ Run `:PlugInstall` to install plugin vimrc.
 Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
 Run: `:PlugStatus` to know information about plugin.
 
-9. Xquartz for viewing table from R.
+# Setting up Vim for R
+
+1. Xquartz for viewing table from R.
 ```
 brew install --cask xquartz
 ```
+
+1. Install colorout for colorized R terminal. This required to load `library(colorout)` in R.
+```
+git clone https://github.com/jalvesaq/colorout.git
+R CMD INSTALL colorout
+```
+
 
 # Vim plugin used in this repo.
 
