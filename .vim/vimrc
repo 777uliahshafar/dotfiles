@@ -127,12 +127,24 @@ let g:jsx_ext_required = 0
 " Syntax scss from coc-css
 autocmd FileType scss setl iskeyword+=@-@
 
-" Tabstop using R
-autocmd FileType r setl softtabstop=4 shiftwidth=4 noexpandtab
-
 " Do easyalign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" -   -   -   -   -   -   -   -
+"  NVIM-R
+"
+" -   -   -   -   -   -   -   -
+" Tabstop using R
+    autocmd FileType r setl softtabstop=4 shiftwidth=4 noexpandtab
+" Start Automatically R
+let R_auto_start = 2
+" Syntax Highlight in R
+let R_hl_term = 0
+" Use Space for Send line
+    vmap <Space> <Plug>RDSendSelection
+    nmap <Space> <Plug>RDSendLine
+" Use jk for enter normal mode from terminal mode
+tnoremap jk <C-\><C-n>
 " -   -   -   -   -   -   -   -
 "   FZF Configuration
 "
