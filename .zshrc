@@ -56,7 +56,7 @@ alias ls="ls -G"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
 alias pt="cd ~/Documents/Magister/project\ files/proposalTesis"
-alias rt="cd ~/rtutor"
+alias dpt="cd ~/Documents/Magister/project\ files/draftpt"
 alias bm="cd ~/Documents/Blog\ Monetizing"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

@@ -116,12 +116,12 @@ Install all below plugin by running vim-plug `:PlugInstall`
 * Nvim-R for working with R
     - coc-r-lsp for autocompletion (required package languageserver)
     - ale for linting (required package lintr)
-
+    - configure sync-Tex in skim. See manual(NvimR).
 
 ## Vimtex software preview.
 
 * Skim for auto-refresh previewer pdf Latex.
-
+* SplitShow for dual-head presentation of PDF slides. Use beamer.
 
 # Setting up vim for web development.
 
