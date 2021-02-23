@@ -121,7 +121,7 @@ Install all below plugin by running vim-plug `:PlugInstall`
 ## Vimtex software preview.
 
 * Skim for auto-refresh previewer pdf Latex.
-* SplitShow for dual-head presentation of PDF slides. Use beamer.
+* SplitShow for dual-head presentation of PDF slides. Important note: Sync navigation slide only work with arrow key.
 
 # Setting up vim for web development.
 
