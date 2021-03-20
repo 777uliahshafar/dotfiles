@@ -141,8 +141,17 @@ nmap ga <Plug>(EasyAlign)
     let R_auto_start = 2
 
 " Run external terminal emu R
-"    let R_in_buffer=0
 "    let R_external_term = 1
+
+" Emulate Tmux ^az
+    function ZoomWindow()
+        let cpos = getpos(".")
+        tabnew %
+        redraw
+        call cursor(cpos[1], cpos[2])
+        normal! zz
+    endfunction
+    nmap gz :call ZoomWindow()<CR>
 
 " Syntax Highlight in R
     let R_hl_term = 0 " Require command library(colorout) in R
@@ -150,9 +159,10 @@ nmap ga <Plug>(EasyAlign)
 " Open rout file in a new split window
     let R_routnotab = 1
 
-" Use Space for Send line
-    vmap <leader><Space> <Plug>RDSendSelection
+" Use Space for Send Line and lp replace gp
     nmap <leader><Space> <Plug>RDSendLine
+    vmap <leader><Space> <Plug>RDSendSelection
+    nmap <localleader>lp <Plug>RSyncFor
 
 " Use jk for enter normal mode from terminal mode
     tnoremap jk <C-\><C-n>
@@ -249,6 +259,7 @@ augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType tex         call pencil#init()
+  autocmd FileType rnoweb         call pencil#init()
 augroup END
 
 " Git grep
@@ -340,7 +351,8 @@ command! -bang -nargs=* GGrep
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
     let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
     au BufNewFile ~/vimwiki/diary/*.md :silent 0r !~/.vim/bin/generate-vimwiki-diary-template '%'
-	autocmd Bufread,BufNewFile *.tex set filetype=tex
+	au Bufread,BufNewFile *.tex set filetype=tex
+    au BufRead,BufNewFile *.Rnw  set filetype=rnoweb.tex
 
 " Disable math tex conceal feature
 let g:tex_conceal = ""
@@ -478,8 +490,8 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-" Disable completion suggestions only
-autocmd FileType markdown,tex let b:coc_suggest_disable = 1
+" Disable completion suggestions only(disable because already disable in coc-config)
+autocmd FileType markdown,tex,rnoweb let b:coc_suggest_disable = 1
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -584,10 +596,11 @@ autocmd FileType html,css EmmetInstall
 " (this is useful for when you have chapters/sections of your document in different files)
 	let g:tex_flavor = "latex"
 	let g:vimtex_fold_enabled = 1
+	let g:vimtex_fold_manual = 1 "Enable this can refresh folding to avoid slow by zx or zX
 
 " disable mesy latex indentations
-	autocmd FileType tex setlocal shiftwidth=0 "
-	autocmd FileType tex set autoindent
+	autocmd FileType tex,rnoweb setlocal shiftwidth=0 "
+	autocmd FileType tex,rnoweb set autoindent
 
 "Allow backward search from pdf viewer to Vim by start a server
 	if has("patch-8.0.475") && empty(v:servername) && exists('*remove_startserver')

@@ -55,13 +55,18 @@ alias df="cd ~/git/dotfiles"
 alias ls="ls -G"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
-alias pt="cd ~/Documents/Magister/project\ files/proposalTesis"
-alias dpt="cd ~/Documents/Magister/project\ files/draftpt"
-alias bm="cd ~/Documents/Blog\ Monetizing"
+alias pt=" cd /Volumes/hdd/proposalTesis"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+alias ps="cd /Volumes/hdd/proposalStudio"
+alias dpt="cd /Volumes/hdd/Magister/project\ files/draftpt"
+alias pec="cd /Volumes/hdd/homeSaja"
+
+# Configuration path PythonA
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 
 # Adding autosuggestions in your Zsh shell.
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

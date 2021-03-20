@@ -194,6 +194,9 @@ browser-sync start --server --files "*.html, scss/*.css"
 ```
 
 # ?Some help
+## Lag/Slow writing a long line and large file especially in Goyo
+Activate vimtex_fold_manual see :h vimtex_fold_manual. You use the manual folding and explicitly use zx to refresh.
+
 ## Exclude files from git
 * The .gitignore have already exist. In order to configure excludefiles as Global environment. You could type:
 
