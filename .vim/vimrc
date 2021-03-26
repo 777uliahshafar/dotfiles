@@ -46,7 +46,6 @@ call plug#end()
 	let g:scheme_bg = "dark"
     let g:limelight_conceal_ctermfg = 239
     let g:limelight_conceal_guifg = '#504945'
-
 	function! ToggleDark()
   	if g:scheme_bg == "dark"
     set background=light
@@ -144,14 +143,28 @@ nmap ga <Plug>(EasyAlign)
 "    let R_external_term = 1
 
 " Emulate Tmux ^az
-    function ZoomWindow()
-        let cpos = getpos(".")
-        tabnew %
-        redraw
-        call cursor(cpos[1], cpos[2])
-        normal! zz
-    endfunction
-    nmap gz :call ZoomWindow()<CR>
+"    function ZoomWindow()
+"        let cpos = getpos(".")
+"        tabnew %
+"        redraw
+"        call cursor(cpos[1], cpos[2])
+"        normal! zz
+"    endfunction
+"    nmap gz :call ZoomWindow()<CR>
+
+function! s:ZoomToggle() abort
+    if exists('t:zoomed') && t:zoomed
+        execute t:zoom_winrestcmd
+        let t:zoomed = 0
+    else
+        let t:zoom_winrestcmd = winrestcmd()
+        resize
+        vertical resize
+        let t:zoomed = 1
+    endif
+endfunction
+command! ZoomToggle call s:ZoomToggle()
+nnoremap <silent> gz :ZoomToggle<CR>
 
 " Syntax Highlight in R
     let R_hl_term = 0 " Require command library(colorout) in R

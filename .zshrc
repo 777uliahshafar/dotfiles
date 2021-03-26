@@ -51,15 +51,19 @@ alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000
 alias graph="git log --all --decorate --oneline --graph"
 alias v="mvim -v"
 alias compilescss="npm run scss"
-alias df="cd ~/git/dotfiles"
 alias ls="ls -G"
+
+alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
+alias df="cd ~/git/dotfiles"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
-alias pt=" cd /Volumes/hdd/proposalTesis"
 
+alias pt=" cd /Volumes/hdd/proposalTesis"
 alias ps="cd /Volumes/hdd/proposalStudio"
-alias dpt="cd /Volumes/hdd/Magister/project\ files/draftpt"
+alias ms="cd /Volumes/hdd/Magister/project\ files"
 alias pec="cd /Volumes/hdd/homeSaja"
+
+
 
 # Configuration path PythonA
 alias python="/usr/local/bin/python3"
