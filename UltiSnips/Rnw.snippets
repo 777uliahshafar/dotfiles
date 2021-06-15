@@ -142,6 +142,10 @@ snippet cip "citep" i
 \citep{${1:${VISUAL}}}$0
 endsnippet
 
+snippet cia "citeauthor" i
+\citeauthor{${1:${VISUAL}}}$0
+endsnippet
+
 snippet re "cross-refference" i
 \ref{${1:${VISUAL}}}$0
 endsnippet
@@ -196,9 +200,6 @@ snippet gra "Featured" b
 endsnippet
 
 snippet cur "Current" i
-[label=current]
+[label=${1:current}]
 endsnippet
-
-
-
 # vim:ft=snippets
