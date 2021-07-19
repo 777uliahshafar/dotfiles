@@ -94,7 +94,7 @@ Install all below plugin by running vim-plug `:PlugInstall`
 * Gruvbox for colorscheme background.
 * Goyo for free writing distraction.
 * Vimagit for git local execution.
-* Vim-myhelp for cheatsheet :h. This has its own config in my repo '777uliahshafar/vim-myhelp'.
+* Vim-myhelp for cheatsheet :h. This has its own config in my repo '777uliahshafar/vim-myhelp'. You can modify/add this somewhere that Vim looks when loading plugins. eg ~/.vim/plugged/..
 * COC(Conquer of Completion) for LSP and others extention. Require a Node.js so it can works. All extentions automatically installed using coc_global_extentions within vimrc, if it was not works run `:Coc Install extentions`. Configuration file(coc-settings.json) located in runtime ./vim, please symlink from dotfiles. Access those file by `:CocConfig`
     \ 'coc-snippets',
 	\ 'coc-pairs',

@@ -58,13 +58,8 @@ alias df="cd ~/git/dotfiles"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
 
-alias pt="cd /Volumes/hdd/proposalTesis"
-alias kt="cd /Volumes/hdd/Magister/project\ files/keynoteTesis1"
-alias ps="cd /Volumes/hdd/proposalStudio"
-alias ms="cd /Volumes/hdd/Magister/project\ files"
-alias pus="cd /Volumes/hdd/sttblog/src/markdown"
-
-
+alias tt="cd /Volumes/hdd/tesis"
+alias ge="cd /Volumes/hdd/sttblog/src/markdown"
 
 # Configuration path PythonA
 alias python="/usr/local/bin/python3"
