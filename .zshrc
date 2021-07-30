@@ -59,7 +59,7 @@ alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
 
 alias tt="cd /Volumes/hdd/tesis"
-alias ge="cd /Volumes/hdd/sttblog/src/markdown"
+alias ip="cd /Volumes/hdd/sttblog/src/markdown"
 
 # Configuration path PythonA
 alias python="/usr/local/bin/python3"
