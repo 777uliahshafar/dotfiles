@@ -41,33 +41,20 @@ call plug#end()
 "   FUNCTION
 "
 " -   -   -   -   -   -   -   -
-"gruvbox colorscheme
-	autocmd vimenter * colorscheme gruvbox
-	let g:scheme_bg = "dark"
-    let g:limelight_conceal_ctermfg = 239
-    let g:limelight_conceal_guifg = '#504945'
-	function! ToggleDark()
-  	if g:scheme_bg == "dark"
+"solarized colorscheme
+    let g:solarized_termcolors=256
+    syntax enable
+
+autocmd vimenter * colorscheme solarized
     set background=light
-	let g:scheme_bg = "light"
-    let g:limelight_conceal_ctermfg = 250
-    let g:limelight_conceal_guifg = '#d5c4a1'
-	set cursorline
-	hi CursorLineNr   term=bold ctermfg=239 ctermbg=223 gui=bold guifg=#ebdbb2
-	hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
-    hi CocExplorerGitModified ctermfg=172 guifg=#d79921
-    hi CocExplorerGitUntracked ctermfg=106 guifg=#98971a
-    hi CocExplorerGitContentChange ctermfg=172 guifg=#d79921
-  	else
-    	set background=dark
-    	let g:scheme_bg = "dark"
-        let g:limelight_conceal_ctermfg = 239
-        let g:limelight_conceal_guifg = '#504945'
-
-  	endif
+function! ToggleDark()
+  	if  &background == "light"
+    execute ":set background=dark"
+else
+    execute ":set background=light"
+endif
 	endfunction
-
-	map <C-s> :call ToggleDark()<CR>
+map <C-s> :call ToggleDark()<CR>
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration

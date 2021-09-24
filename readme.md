@@ -33,7 +33,16 @@ For accessing configuration file run this command `p10k configure`.Additional Fe
 
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
-7. Tmux for multiplex terminal.
+
+7. Vim-colors-solarized is a scheme for vim. This colors does not support vim-plugin, manual installation required as follows:
+
+```
+$ cd git/dotfiles/vim-colors-solarized/colors
+$ mv solarized.vim ~/.vim/colors/
+```
+Solarized.vim could not be symlinked.
+
+8. Tmux for multiplex terminal.
 - Install using homebrew by `brew install tmux`.
 - Customize it with oh-my-tmux, install it by :
 ```
@@ -55,14 +64,14 @@ ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
-7. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
+9. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 ```
 * To view listing package run the command `npm ls --depth=0`.
 * To install node run the command `nvm install 10.18.0`
 
-8. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
+10. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
 ```
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -91,7 +100,6 @@ Install all below plugin by running vim-plug `:PlugInstall`
 
 * Vimtex Plugin for better latex workflow.
 * UltiSnips and coc-snippets for adding snippet. The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
-* Gruvbox for colorscheme background.
 * Goyo for free writing distraction.
 * Vimagit for git local execution.
 * Vim-myhelp for cheatsheet :h. This has its own config in my repo '777uliahshafar/vim-myhelp'. You can modify/add this somewhere that Vim looks when loading plugins. eg ~/.vim/plugged/..
