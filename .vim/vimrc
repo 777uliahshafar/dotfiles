@@ -295,7 +295,7 @@ command! -bang -nargs=* GGrep
 	set linespace=4
 	set scrolloff=999
     set cursorcolumn
-    Limelight
+"    Limelight
 	endfunction
 
 	function! s:goyo_leave()
@@ -306,7 +306,7 @@ command! -bang -nargs=* GGrep
 	set number
 	set linespace=0
 	set scrolloff=5
-    Limelight!
+"    Limelight!
 	endfunction
 
 	autocmd! User GoyoEnter nested call <SID>goyo_enter()
