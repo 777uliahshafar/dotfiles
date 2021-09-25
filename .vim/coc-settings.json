@@ -14,7 +14,7 @@
   "prettier.disableSuccessMessage": true,
   "suggest.autoTrigger": "always",
   "suggest.snippetIndicator": "[+] ",
-  "suggest.maxCompleteItemCount": 20,
+  "suggest.maxCompleteItemCount": 12,
   "explorer.quitOnOpen": true,
   "explorer.position": "left",
   "explorer.width": 25,

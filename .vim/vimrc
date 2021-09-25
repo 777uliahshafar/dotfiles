@@ -24,12 +24,11 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
-Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
-
 
 " Statistic Prog. Tools
 Plug 'jalvesaq/Nvim-R'
@@ -41,21 +40,10 @@ call plug#end()
 "   FUNCTION
 "
 " -   -   -   -   -   -   -   -
-"solarized colorscheme
-    let g:solarized_termcolors=256
-    let g:solarized_contrast ="high"
-    syntax enable
+syntax enable
+colorscheme dracula
 
-autocmd vimenter * colorscheme solarized
-    set background=light
-function! ToggleDark()
-  	if  &background == "light"
-    execute ":set background=dark"
-else
-    execute ":set background=light"
-endif
-	endfunction
-map <C-s> :call ToggleDark()<CR>
+
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
@@ -491,10 +479,9 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-" Disable completion suggestions only(disable because already disable in coc-config)
+" Disable completion suggestions only (disable because already disable in coc-config)
 autocmd FileType markdown,tex,rnoweb let b:coc_suggest_disable = 1
 
-" Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
 			\ pumvisible() ? "\<C-n>" :
@@ -502,16 +489,16 @@ inoremap <silent><expr> <TAB>
 			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+" Use tab for trigger completion with characters ahead and navigate.
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 "inoremap <silent><expr> <c-space> coc#refresh()
 " Use <c-@> to trigger completion in vim with ctrl+space
  inoremap <silent><expr> <c-@> coc#refresh()
-
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.

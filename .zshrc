@@ -4,8 +4,6 @@ fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# I add code below by myself
-source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
