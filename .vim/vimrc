@@ -484,7 +484,7 @@ autocmd FileType markdown,tex,rnoweb let b:coc_suggest_disable = 1
 
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-o>" :
+			\ pumvisible() ? "\<C-n>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -502,8 +502,9 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-"autocompletion cite bib
-let g:vimtex_complete_bib = {'simple':  '1'}
+"autocompletion cite bib trigger by <c-x> <c-o>
+"let g:vimtex_complete_bib = {'simple':  '1'}
+let g:vimtex_complete_bib= {'match_str_fmt': '@key [@type] @author_all (@year), "@title"'}
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
