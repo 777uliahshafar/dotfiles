@@ -42,23 +42,15 @@ bindkey '^ ' autosuggest-accept
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
+export EDITOR=vim
+export VISUAL="$EDITOR"
+
 # Shortcuts
 export LOCAL_IP=`ipconfig getifaddr en0`
 alias serve="browser-sync start -s -f . --no-notify --host $LOCAL_IP --port 9000"
 
-alias graph="git log --all --decorate --oneline --graph"
-alias v="mvim -v"
-alias compilescss="npm run scss"
-alias ls="ls -G"
-
-alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
-alias df="cd ~/git/dotfiles"
-alias md="vim -c VimwikiMakeDiaryNote"
-alias ww="vim -c VimwikiIndex"
-alias wi="vim -c VimwikiDiaryIndex"
-
-alias tt="cd /Volumes/hdd/tesis"
-alias ks="cd /Volumes/hdd/kuesioner"
+# Custom aliases
+. ~/git/dotfiles/.aliases
 
 # Configuration path PythonA
 alias python="/usr/local/bin/python3"
