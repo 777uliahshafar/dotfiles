@@ -53,12 +53,12 @@ alias ls="ls -G"
 
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
 alias df="cd ~/git/dotfiles"
+alias md="vim -c VimwikiMakeDiaryNote"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
 
 alias tt="cd /Volumes/hdd/tesis"
 alias ks="cd /Volumes/hdd/kuesioner"
-alias ip="cd /Volumes/hdd/sttblog/src/markdown"
 
 # Configuration path PythonA
 alias python="/usr/local/bin/python3"
