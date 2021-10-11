@@ -34,13 +34,7 @@ For accessing configuration file run this command `p10k configure`.Additional Fe
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
 
-7. Vim-colors-solarized is a scheme for vim. This colors does not support vim-plugin, manual installation required as follows:
-
-```
-$ cd git/dotfiles/vim-colors-solarized/colors
-$ mv solarized.vim ~/.vim/colors/
-```
-Solarized.vim could not be symlinked.
+7. Dracula is a scheme for vim.
 
 8. Tmux for multiplex terminal.
 - Install using homebrew by `brew install tmux`.
