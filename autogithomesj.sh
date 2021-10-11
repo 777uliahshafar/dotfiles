@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
+# Copyright 2021 Happy Coder
+# Exit immediately if   one fails
+set -eu
 
 cd /Volumes/hdd/sttblog
+
+gatsby build
 
 git add .
 
