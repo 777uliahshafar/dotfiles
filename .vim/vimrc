@@ -45,6 +45,23 @@ syntax enable
 set background=light
 colorscheme PaperColor
 
+"switch colorscheme
+	autocmd vimenter * colorscheme PaperColor
+	let g:scheme_bg = "dark"
+	function! ToggleDark()
+  	if g:scheme_bg == "dark"
+    	set background=light
+	    set cursorline
+"	    hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
+"	    hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
+	let g:scheme_bg = "light"
+  	else
+    	set background=dark
+    	let g:scheme_bg = "dark"
+  	endif
+	endfunction
+	map <C-s> :call ToggleDark()<CR>
+
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
 "
