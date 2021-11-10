@@ -24,7 +24,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
@@ -41,9 +41,9 @@ call plug#end()
 "
 " -   -   -   -   -   -   -   -
 syntax enable
-colorscheme dracula
 
-
+set background=light
+colorscheme PaperColor
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
