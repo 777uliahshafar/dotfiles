@@ -50,6 +50,8 @@ let g:PaperColor_Theme_Options = {
   \         'folded_bg' : ['#d7875f', ''],
   \         'folded_fg' : ['#444444', ''],
   \         'color04' : ['#444444', ''],
+  \         'tabline_bg' : ['#d7875f', ''],
+  \         'tabline_inactive_bg' : ['#d7875f', ''],
   \       }
   \     }
   \   }
