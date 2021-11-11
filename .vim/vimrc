@@ -41,6 +41,20 @@ call plug#end()
 "
 " -   -   -   -   -   -   -   -
 syntax enable
+
+"override color
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default.light': {
+  \       'override' : {
+  \         'folded_bg' : ['#d7875f', ''],
+  \         'folded_fg' : ['#444444', ''],
+  \         'color04' : ['#444444', ''],
+  \       }
+  \     }
+  \   }
+  \ }
+
 "switch colorscheme
 	autocmd vimenter * colorscheme PaperColor
 	let g:scheme_bg = "dark"
@@ -48,6 +62,7 @@ syntax enable
   	if g:scheme_bg == "dark"
     	set background=light
 	    set cursorline
+        hi CursorIM cterm=none term=none ctermbg=166 guibg=#d7875f
 "	    hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
 "	    hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
 	let g:scheme_bg = "light"
@@ -78,22 +93,22 @@ syntax enable
 " Status line(bar) VIM
 set statusline=
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#CursorLine#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
-set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#DiffChange#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=\ %n\           " buffer number
 
-set statusline+=%#Cursor#               " colour
+set statusline+=%#DiffChange#               " colour
 set statusline+=%#CursorLine#     " colour
 set statusline+=\ %t\
-set statusline+=%#CursorIM#     " colour
+set statusline+=%#CursorLineNr#     " colour
 set statusline+=%r                        " readonly flag
 set statusline+=%m                        " modified [+] flag
 
 set statusline+=%=              " right align
-set statusline+=%#CursorLineNr#   " colour
+set statusline+=%#CursorLine#   " colour
 set statusline+=\ %Y\                   " file type
-set statusline+=%#Cursor#   " colour
+set statusline+=%#DiffChange#   " colour
 set statusline+=\ %3p%%\                " percentage
 set statusline+=%#CursorLine#       " colour
 set statusline+=\ %{wordcount().words}\ words
