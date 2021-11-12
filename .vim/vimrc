@@ -14,6 +14,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
+
 " Development Tools
 "Plug 'jreybert/vimagit'
 Plug 'vimwiki/vimwiki'
@@ -24,7 +25,6 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
@@ -42,42 +42,7 @@ call plug#end()
 " -   -   -   -   -   -   -   -
 syntax enable
 
-"override color
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default.light': {
-  \       'override' : {
-  \         'color07' : ['#444444', ''],
-  \         'folded_fg' : ['#444444', ''],
-  \         'color04' : ['#444444', ''],
-  \         'tabline_bg' : ['#878787', ''],
-  \         'tabline_inactive_bg' : ['#878787', ''],
-  \         'cursorlinenr_fg' : ['#5fafd7', ''],
-  \       }
-  \     }
-  \   }
-  \ }
-
-"switch colorscheme
-	autocmd vimenter * colorscheme PaperColor
-	let g:scheme_bg = "dark"
-	function! ToggleDark()
-  	if g:scheme_bg == "dark"
-    	set background=light
-	    set cursorline
-        hi CursorIM cterm=none term=none ctermbg=252 guibg=#d0d0d0
-
-        hi CursorColumn cterm=none term=none ctermbg=195 guibg=#d7ffff
-"	    hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
-	    hi CursorLine cterm=none term=none ctermbg=254 guibg=#e4e4e4
-	let g:scheme_bg = "light"
-  	else
-    	set background=dark
-    	let g:scheme_bg = "dark"
-  	endif
-	endfunction
-	map <C-s> :call ToggleDark()<CR>
-
+colorscheme mac_classic
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
 "
@@ -97,25 +62,23 @@ let g:PaperColor_Theme_Options = {
 
 " Status line(bar) VIM
 set statusline=
-set statusline+=%#CursorLineNR#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
-set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
-set statusline+=%#Folded#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=\ %n\           " buffer number
-
-set statusline+=%#tabline#               " colour
-set statusline+=%#CursorIM#     " colour
+set statusline+=%#Cursor#               " colour
+set statusline+=%#CursorLine#     " colour
 set statusline+=\ %t\
-set statusline+=%#tabline#     " colour
+set statusline+=%#Cursor#     " colour
 set statusline+=%r                        " readonly flag
 set statusline+=%m                        " modified [+] flag
-
 set statusline+=%=              " right align
-set statusline+=%#Folded#   " colour
+set statusline+=%#CursorLineNr#   " colour
 set statusline+=\ %Y\                   " file type
-set statusline+=%#tabline#   " colour
+set statusline+=%#Cursor#   " colour
 set statusline+=\ %3p%%\                " percentage
-set statusline+=%#CursorIM#       " colour
+set statusline+=%#CursorLine#       " colour
 set statusline+=\ %{wordcount().words}\ words
 
 "Long lines
@@ -292,7 +255,7 @@ command! -bang -nargs=* GGrep
 
 "Goyo & Limelight
 	map <leader>g :Goyo<CR>
-	let g:goyo_width=70
+"	let g:goyo_width=80
 
     let g:limelight_default_coefficient = 0.8
     let g:limelight_bop = '^\s'
@@ -305,7 +268,7 @@ command! -bang -nargs=* GGrep
     	silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   	endif
 	set nonumber
-	set linespace=7
+	set linespace=2
 	set scrolloff=999
 "    set cursorcolumn
     Limelight
@@ -316,10 +279,12 @@ command! -bang -nargs=* GGrep
     	silent !tmux set status off
     	silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
   	endif
+
 	set number
 	set linespace=0
 	set scrolloff=5
     Limelight!
+
 	endfunction
 
 	autocmd! User GoyoEnter nested call <SID>goyo_enter()
