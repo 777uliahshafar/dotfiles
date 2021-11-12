@@ -47,11 +47,12 @@ let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.light': {
   \       'override' : {
-  \         'folded_bg' : ['#d7875f', ''],
+  \         'color07' : ['#444444', ''],
   \         'folded_fg' : ['#444444', ''],
   \         'color04' : ['#444444', ''],
-  \         'tabline_bg' : ['#d7875f', ''],
-  \         'tabline_inactive_bg' : ['#d7875f', ''],
+  \         'tabline_bg' : ['#878787', ''],
+  \         'tabline_inactive_bg' : ['#878787', ''],
+  \         'cursorlinenr_fg' : ['#5fafd7', ''],
   \       }
   \     }
   \   }
@@ -64,9 +65,11 @@ let g:PaperColor_Theme_Options = {
   	if g:scheme_bg == "dark"
     	set background=light
 	    set cursorline
-        hi CursorIM cterm=none term=none ctermbg=166 guibg=#d7875f
+        hi CursorIM cterm=none term=none ctermbg=252 guibg=#d0d0d0
+
+        hi CursorColumn cterm=none term=none ctermbg=195 guibg=#d7ffff
 "	    hi CursorLineNr   term=bold ctermfg=172 ctermbg=230 gui=bold guifg=#d79921
-"	    hi CursorLine cterm=none term=none ctermbg=230 guibg=#f9f5d7
+	    hi CursorLine cterm=none term=none ctermbg=254 guibg=#e4e4e4
 	let g:scheme_bg = "light"
   	else
     	set background=dark
@@ -94,25 +97,25 @@ let g:PaperColor_Theme_Options = {
 
 " Status line(bar) VIM
 set statusline=
-set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-set statusline+=%#CursorLine#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#CursorLineNR#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
-set statusline+=%#DiffChange#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#Folded#%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=\ %n\           " buffer number
 
-set statusline+=%#DiffChange#               " colour
-set statusline+=%#CursorLine#     " colour
+set statusline+=%#tabline#               " colour
+set statusline+=%#CursorIM#     " colour
 set statusline+=\ %t\
-set statusline+=%#CursorLineNr#     " colour
+set statusline+=%#tabline#     " colour
 set statusline+=%r                        " readonly flag
 set statusline+=%m                        " modified [+] flag
 
 set statusline+=%=              " right align
-set statusline+=%#CursorLine#   " colour
+set statusline+=%#Folded#   " colour
 set statusline+=\ %Y\                   " file type
-set statusline+=%#DiffChange#   " colour
+set statusline+=%#tabline#   " colour
 set statusline+=\ %3p%%\                " percentage
-set statusline+=%#CursorLine#       " colour
+set statusline+=%#CursorIM#       " colour
 set statusline+=\ %{wordcount().words}\ words
 
 "Long lines
