@@ -43,11 +43,27 @@ call plug#end()
 " -   -   -   -   -   -   -   -
 syntax enable
 
+" COLOR SCHEME
 " Use multiple or just single colorscheme
 colorscheme mac_classic
 
 " autocmd BufEnter * colorscheme dracula
 " autocmd BufEnter *.Rnw colorscheme mac_classic
+"
+
+"swtich colorscheme
+"
+"
+function ToggleColors()
+    if (g:colors_name == "mac_classic")
+        colorscheme dracula
+    else
+        colorscheme mac_classic
+    endif
+endfunction
+
+    nnoremap <F5> :call ToggleColors()<CR>
+"	map <C-s> :call ToggleColors()<CR>
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
