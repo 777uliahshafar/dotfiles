@@ -23,7 +23,8 @@ let g:colors_name = "mac_classic"
 " #3C4C72 - BLUE/GREY - cursor, rails helpers
 " #0000A2 - D.BLUE - numbers & function names
 " #1E39F6 - BLUE
-" #0066FF - L.BLUE - Comments, TODOs and folds
+" #0066FF - L.BLUE - TODOs and folds
+" #878787 - D. GRAY - Comment
 " #6E79F1 - L.PURPLE - Booleans, Ruby Constants & CSS definitions
 " #318495 - BLUE/GREEN - Ruby instance/global/pseudo variables
 " #007B22 - D.GREEN - Strings, Labels and code blocks in Markdown
@@ -67,7 +68,7 @@ hi Search  guibg=#FFE6BB ctermbg=223
 hi Normal  guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15
 hi Boolean  guifg=#6E79F1 ctermfg=69 gui=bold
 hi Character  guifg=#D51015 ctermfg=160 gui=bold
-hi Comment  guifg=#0066FF ctermfg=27 gui=italic
+hi Comment  guibg=bg guifg=#878787 ctermbg=bg ctermfg=102 gui=italic
 hi Conditional  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Constant  guifg=#D51015 ctermfg=160 gui=bold
 hi Define  guifg=#1E39F6 ctermfg=27 gui=bold
@@ -87,6 +88,7 @@ hi StorageClass  guifg=#1E39F6 ctermfg=27 gui=bold
 hi String  guifg=#007B22 ctermfg=28
 hi Title  guifg=#000000 ctermfg=0 gui=bold
 hi Todo  guifg=#0066FF ctermfg=27 gui=inverse,bold,italic
+hi Delimiter guifg=#00afaf guibg=NONE guisp=NONE gui=NONE ctermfg=37 ctermbg=NONE cterm=NONE
 hi Underlined  gui=underline
 
 " Invisible character colors
@@ -171,7 +173,7 @@ hi javaScriptSpecial  guifg=#00BC41 ctermfg=35 gui=NONE
 " syntax file does not create matches for some items. In
 " particular:
 " * javaScriptArgument - e.g. function(argument)
-" * javaScriptFuncName for object literal style functions - e.g.: 
+" * javaScriptFuncName for object literal style functions - e.g.:
 "     myFunction: function() { ... }
 
 " YAML: {{{1
@@ -214,6 +216,13 @@ hi markdownBold gui=bold
 hi markdownItalic gui=italic
 hi markdownCode  guifg=#007B22 ctermfg=28
 hi link markdownCodeBlock markdownCode
+
+
+" Coc-explorer: {{{1
+
+hi CocExplorerGitAdded guifg=#007B22 ctermfg=2
+hi CocExplorerGitModified guifg=#D51015 ctermfg=160
+hi CocExplorerGitUntracked guifg=#6E79F1 ctermfg=69
 
 " Outliner: {{{1
 hi BT1 guifg=#808080 ctermfg=244 gui=italic

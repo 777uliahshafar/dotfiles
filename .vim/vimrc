@@ -27,6 +27,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
 
@@ -42,7 +43,10 @@ call plug#end()
 " -   -   -   -   -   -   -   -
 syntax enable
 
-colorscheme mac_classic
+
+autocmd BufEnter * colorscheme dracula
+autocmd BufEnter *.Rnw colorscheme mac_classic
+
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
 "
@@ -408,6 +412,7 @@ augroup END
 
 "Opening Coc Explorer
 nmap <space>e :CocCommand explorer<CR>
+
 
 " -   -   -   -   -   -   -   -
 "  Linting and Fixing
