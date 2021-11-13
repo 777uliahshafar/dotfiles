@@ -599,8 +599,10 @@ autocmd FileType html,css EmmetInstall
 " overrule tex trying to be clever and find the difference between latex and plaintex
 " (this is useful for when you have chapters/sections of your document in different files)
 	let g:tex_flavor = "latex"
-	let g:vimtex_fold_enabled = 1
-	let g:vimtex_fold_manual = 1 "Enable this can refresh folding to avoid slow by zx or zX
+
+"Deals with slow folding
+    set foldmethod=expr
+	let g:vimtex_fold_manual = 1 "Enable this can recalculate folding to avoid slow by zx and zX
 
 " disable mesy latex indentations
 	autocmd FileType tex,rnoweb setlocal shiftwidth=0 "
