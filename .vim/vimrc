@@ -43,9 +43,11 @@ call plug#end()
 " -   -   -   -   -   -   -   -
 syntax enable
 
+" Use multiple or just single colorscheme
+colorscheme mac_classic
 
-autocmd BufEnter * colorscheme dracula
-autocmd BufEnter *.Rnw colorscheme mac_classic
+" autocmd BufEnter * colorscheme dracula
+" autocmd BufEnter *.Rnw colorscheme mac_classic
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
