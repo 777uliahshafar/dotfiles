@@ -47,23 +47,10 @@ syntax enable
 " Use multiple or just single colorscheme
 colorscheme mac_classic
 
-" autocmd BufEnter * colorscheme dracula
-" autocmd BufEnter *.Rnw colorscheme mac_classic
+"switch colorscheme
 "
-
-"swtich colorscheme
-"
-"
-function ToggleColors()
-    if (g:colors_name == "mac_classic")
-        colorscheme dracula
-    else
-        colorscheme mac_classic
-    endif
-endfunction
-
-    nnoremap <F5> :call ToggleColors()<CR>
-"	map <C-s> :call ToggleColors()<CR>
+nnoremap <silent> <F5> :exec "color " .
+    \ ((g:colors_name == "mac_classic") ? "dracula" : "mac_classic")<CR>
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
