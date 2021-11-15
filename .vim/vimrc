@@ -27,7 +27,6 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
 
@@ -44,13 +43,17 @@ call plug#end()
 syntax enable
 
 " COLOR SCHEME
-" Use multiple or just single colorscheme
+" Molokai settings
+let g:molokai_original = 1
+let g:rehash256 = 1
+
+" Determine main color scheme
 colorscheme mac_classic
 
 "switch colorscheme
 "
 nnoremap <silent> <F5> :exec "color " .
-    \ ((g:colors_name == "mac_classic") ? "dracula" : "mac_classic")<CR>
+    \ ((g:colors_name == "mac_classic") ? "molokai" : "mac_classic")<CR>
 
 " -   -   -   -   -   -   -   -
 "   Some Basic Configuration
