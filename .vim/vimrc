@@ -316,7 +316,7 @@ command! -bang -nargs=* GGrep
 	map <C-l> <C-w>l
 "Spell-Check set to <leader>o, 'o' for orthography
 	map <leader>o :setlocal spell! spelllang=id<CR>
-	map <F6> :setlocal spell! spelllang=en_us<CR>
+	map <F7> :setlocal spell! spelllang=en_us<CR>
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
@@ -613,7 +613,7 @@ autocmd FileType html,css EmmetInstall
 " enable fold
     let g:vimtex_fold_enabled = 1
 " incorporate fastfold plugin as developer recommend
-    nmap <F9> <Plug>(FastFoldUpdate)
+    nmap <F6> <Plug>(FastFoldUpdate)
 
     let g:fastfold_fold_command_suffixes = [] "stop update whenever close or open fold / can slow opening or closing
     let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
