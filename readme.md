@@ -95,6 +95,7 @@ R CMD INSTALL colorout
 Install all below plugin by running vim-plug `:PlugInstall`
 
 * Vimtex Plugin for better latex workflow.
+* FastFold for better and fast folding
 * UltiSnips and coc-snippets for adding snippet. The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
 * Goyo for free writing distraction.
 * Vimagit for git local execution.

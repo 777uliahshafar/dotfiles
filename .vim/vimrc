@@ -610,7 +610,7 @@ autocmd FileType html,css EmmetInstall
 
 " Unfolded when first opening file
     au FileType tex,rnoweb,markdown setlocal foldlevel=99
-"enable fold
+" enable fold
     let g:vimtex_fold_enabled = 1
 " incorporate fastfold plugin as developer recommend
     nmap <F9> <Plug>(FastFoldUpdate)
@@ -618,7 +618,6 @@ autocmd FileType html,css EmmetInstall
     let g:fastfold_fold_command_suffixes = [] "stop update whenever close or open fold / can slow opening or closing
     let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
     let g:fastfold_savehook = 0 "prevent update fold when saving
-
 
 " disable mesy latex indentations
 	autocmd FileType tex,rnoweb setlocal shiftwidth=0 "
