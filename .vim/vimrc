@@ -25,6 +25,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
+Plug 'Konfekt/FastFold'
 Plug 'lervag/vimtex'
 Plug 'justinmk/vim-sneak'
 Plug 'sirver/ultisnips'
@@ -365,8 +366,6 @@ let g:vim_markdown_math = 1
 " Support front matter of various format
 let g:vim_markdown_frontmatter = 1  " for YAML format
 
-" Folding Markdown
-    au FileType markdown setlocal foldlevel=99
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
@@ -606,9 +605,20 @@ autocmd FileType html,css EmmetInstall
 " (this is useful for when you have chapters/sections of your document in different files)
 	let g:tex_flavor = "latex"
 
-"Deals with slow folding
-    set foldmethod=expr
-	let g:vimtex_fold_manual = 1 "Enable this can recalculate folding to avoid slow by zx and zX
+" FOLDING
+" Folding is took care by LaTex because folding could not deal with large file such latx file.
+
+" Unfolded when first opening file
+    au FileType tex,rnoweb,markdown setlocal foldlevel=99
+"enable fold
+    let g:vimtex_fold_enabled = 1
+" incorporate fastfold plugin as developer recommend
+    nmap <F9> <Plug>(FastFoldUpdate)
+
+    let g:fastfold_fold_command_suffixes = [] "stop update whenever close or open fold / can slow opening or closing
+    let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+    let g:fastfold_savehook = 0 "prevent update fold when saving
+
 
 " disable mesy latex indentations
 	autocmd FileType tex,rnoweb setlocal shiftwidth=0 "
