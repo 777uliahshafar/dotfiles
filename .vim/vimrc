@@ -82,7 +82,7 @@ set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=\ %n\           " buffer number
 set statusline+=%#Cursor#               " colour
 set statusline+=%#CursorLine#     " colour
-set statusline+=\ %t\
+set statusline+=%{expand('%:p:h:t')}/%t\
 set statusline+=%#Cursor#     " colour
 set statusline+=%r                        " readonly flag
 set statusline+=%m                        " modified [+] flag
