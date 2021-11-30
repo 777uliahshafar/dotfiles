@@ -214,9 +214,40 @@ hi helpSpecial guifg=#6E79F1 ctermfg=69
 " Markdown: {{{1
 hi markdownBold gui=bold
 hi markdownItalic gui=italic
-hi markdownCode  guifg=#007B22 ctermfg=28
-hi link markdownCodeBlock markdownCode
 
+
+hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
+hi markdownHxBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
+hi markdownHyBold  term=bold ctermfg=69 gui=bold guifg=#6E79F1 cterm=bold
+hi markdownHzBold  ctermfg=19  guifg=#0000A2
+
+hi link markdownBlockquote String
+
+hi markdownCode  guifg=#E18AC7 ctermfg=176
+hi markdownCodeBlock guifg=#E18AC7 ctermfg=176
+hi markdownCodeDelimiter term=bold guifg=#E18AC7 ctermfg=176 cterm=bold
+
+hi link markdownHeadingDelimiter Delimiter
+hi link markdownHeadingRule markdownHHBold
+
+hi link markdownH1 markdownHxBold
+hi link markdownH2 markdownHxBold
+hi link markdownH3 markdownHyBold
+hi link markdownH4 markdownHyBold
+hi link markdownH5 markdownHzBold
+
+hi link markdownId Normal
+hi link markdownIdDeclaration Normal
+hi link markdownIdDelimiter Normal
+
+
+hi link markdownLinkDelimiter Normal
+hi link markdownLinkText Delimiter
+hi link markdownListMarker Delimiter
+hi link markdownOrderedListMarker Delimiter
+
+hi link markdownUrl markdownItalic
+hi link markdownRule markdownHHBold
 
 " Coc-explorer: {{{1
 
