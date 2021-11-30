@@ -212,9 +212,8 @@ hi vimCommentTitle  guifg=#3C4C72 ctermfg=240 gui=bold
 hi helpSpecial guifg=#6E79F1 ctermfg=69
 
 " Markdown: {{{1
-hi markdownBold gui=bold
-hi markdownItalic gui=italic
-
+hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
+hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=italic
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
 hi markdownHxBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
