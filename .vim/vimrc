@@ -352,11 +352,13 @@ command! -bang -nargs=* GGrep
 "
 " -   -   -   -   -   -   -   -
 "Ensure files are read as expected
+    let g:vimwiki_global_ext=0
 	let g:vimwiki_ext2syntax = {'Rmd' : 'markdown', 'rmd' : 'markdown', 'md' : 'markdown', '.markdown' : 'markdown', '.mdown' : 'markdown'}
     let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
     au BufNewFile ~/vimwiki/diary/*.md :silent 0r !~/.vim/bin/generate-vimwiki-diary-template '%'
 	au Bufread,BufNewFile *.tex set filetype=tex
     au BufRead,BufNewFile *.Rnw  set filetype=rnoweb.tex
+    au FileType vimwiki set syntax=markdown "read vimwiki as md in first place
 
 " Disable math tex conceal feature
 let g:tex_conceal = ''
