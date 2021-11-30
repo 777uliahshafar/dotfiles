@@ -360,7 +360,7 @@ command! -bang -nargs=* GGrep
     au BufRead,BufNewFile *.Rnw  set filetype=rnoweb.tex
     au FileType vimwiki set syntax=markdown "read vimwiki as md in first place
 
-nmap <Leader>wx <Plug>VimwikiSplitLink
+nmap <Leader>ws <Plug>VimwikiSplitLink
 
 " Disable math tex conceal feature
 let g:tex_conceal = ''
