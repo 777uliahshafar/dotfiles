@@ -123,7 +123,7 @@ nmap ga <Plug>(EasyAlign)
     autocmd FileType r setl softtabstop=4 shiftwidth=4 noexpandtab
 
 " Start Automatically R
-"    let R_auto_start = 2
+    let R_auto_start = 2
 
 " Run external terminal emu R
 "    let R_external_term = 1
