@@ -166,6 +166,10 @@ nnoremap <silent> gz :ZoomToggle<CR>
 " Use jk for enter normal mode from terminal mode
     tnoremap jk <C-\><C-n>
 
+" Other remapping
+    nmap <localleader>ln <Plug>RNextRChunk
+    nmap <localleader>lN <Plug>RPreviousRChunk
+
 " -   -   -   -   -   -   -   -
 "   FZF Configuration
 "
