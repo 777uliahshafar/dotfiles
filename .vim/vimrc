@@ -10,7 +10,7 @@ Plug 'airblade/vim-rooter'
 
 " Writing/Authoring Tools
 Plug 'reedes/vim-pencil'
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -33,8 +33,6 @@ Plug 'junegunn/vim-easy-align'
 
 " Statistic Prog. Tools
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-"Plug 'jalvesaq/Nvim-R'
-
 
 call plug#end()
 
@@ -457,8 +455,9 @@ let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 let g:ale_lint_on_text_changed = 'never'
-highlight ALEErrorSign ctermbg=NONE ctermfg=red
-highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+highlight ALEWarning  guibg=#FFFFD7 ctermbg=230
+"highlight ALEErrorSign ctermbg=NONE ctermfg=red
+"highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
