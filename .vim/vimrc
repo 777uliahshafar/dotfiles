@@ -111,6 +111,7 @@ let g:jsx_ext_required = 0
 autocmd FileType scss setl iskeyword+=@-@
 
 " Do easyalign for a motion/text object (e.g. gaip)
+xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " -   -   -   -   -   -   -   -
