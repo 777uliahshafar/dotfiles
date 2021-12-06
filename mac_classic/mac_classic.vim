@@ -255,6 +255,12 @@ hi CocExplorerGitAdded guifg=#007B22 ctermfg=2
 hi CocExplorerGitModified guifg=#D51015 ctermfg=160
 hi CocExplorerGitUntracked guifg=#6E79F1 ctermfg=69
 
+
+" ALE-linters: {{{1
+highlight ALEWarning guibg=#FFFFD7 ctermbg=230
+"highlight ALEErrorSign ctermbg=NONE ctermfg=red
+"highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
 " Outliner: {{{1
 hi BT1 guifg=#808080 ctermfg=244 gui=italic
 hi OL1 guifg=#000000 ctermfg=0 gui=bold
