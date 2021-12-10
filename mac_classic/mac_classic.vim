@@ -217,9 +217,10 @@ hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
 hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=italic
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi markdownHxBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
-hi markdownHyBold  term=bold ctermfg=69 gui=bold guifg=#6E79F1 cterm=bold
-hi markdownHzBold  ctermfg=19  guifg=#0000A2
+hi markdownHxBold  term=bold ctermfg=125 gui=bold guifg=#AF005F cterm=bold
+hi markdownHyBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
+hi markdownHzBold  term=bold  ctermfg=28 gui=bold guifg=#007B22 cterm=bold
+hi markdownHx ctermfg=28 guifg=#007B22
 
 hi link markdownBlockquote String
 
@@ -227,14 +228,14 @@ hi markdownCode  guifg=#E18AC7 ctermfg=176
 hi markdownCodeBlock guifg=#E18AC7 ctermfg=176
 hi markdownCodeDelimiter term=bold guifg=#E18AC7 ctermfg=176 cterm=bold
 
-hi link markdownHeadingDelimiter Delimiter
+hi markdownHeadingDelimiter guifg=#005F87 ctermfg=24 gui=bold
 hi link markdownHeadingRule markdownHHBold
 
 hi link markdownH1 markdownHxBold
-hi link markdownH2 markdownHxBold
-hi link markdownH3 markdownHyBold
-hi link markdownH4 markdownHyBold
-hi link markdownH5 markdownHzBold
+hi link markdownH2 markdownHyBold
+hi link markdownH3 markdownHzBold
+hi link markdownH4 markdownHx
+hi link markdownH5 markdownHx
 
 hi link markdownId Normal
 hi link markdownIdDeclaration Normal
@@ -242,9 +243,9 @@ hi link markdownIdDelimiter Normal
 
 
 hi link markdownLinkDelimiter Normal
-hi link markdownLinkText Delimiter
-hi link markdownListMarker Delimiter
-hi link markdownOrderedListMarker Delimiter
+hi link markdownLinkText markdownHeadingDelimiter
+hi link markdownListMarker markdownHeadingDelimiter
+hi link markdownOrderedListMarker markdownHeadingDelimiter
 
 hi link markdownUrl markdownItalic
 hi link markdownRule markdownHHBold
