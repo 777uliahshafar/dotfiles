@@ -153,12 +153,19 @@ hi link htmlEndTag htmlTag
 hi link htmlTagName htmlTag
 hi link htmlArg htmlTag
 hi htmlSpecialChar  guifg=#D51015 ctermfg=160 gui=bold
-hi htmlH1 gui=bold
-hi link htmlH2 htmlH1
-hi link htmlH3 htmlH1
-hi link htmlH4 htmlH1
-hi link htmlH5 htmlH1
-hi link htmlH6 htmlH1
+
+hi htmlHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
+hi htmlHxBold  term=bold ctermfg=16 gui=bold guifg=#000000 cterm=bold
+hi htmlHyBold  term=bold ctermfg=238 gui=bold guifg=#444444 cterm=bold
+hi htmlHzBold  term=bold ctermfg=102 gui=bold guifg=#878787 cterm=bold
+hi htmlHx ctermfg=102 guifg=#878787
+
+hi link htmlH1 htmlHxBold
+hi link htmlH2 htmlHyBold
+hi link htmlH3 htmlHzBold
+hi link htmlH4 htmlHx
+hi link htmlH5 htmlHx
+hi link htmlH6 htmlHx
 
 " JavaScript: {{{1
 hi javaScriptFunction  guifg=#1E39F6 ctermfg=27 gui=bold
@@ -212,6 +219,7 @@ hi link vimHiGroup vimGroup
 hi vimCommentTitle  guifg=#3C4C72 ctermfg=240 gui=bold
 hi helpSpecial guifg=#6E79F1 ctermfg=69
 
+
 " Markdown: {{{1
 hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
 hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=italic
@@ -241,14 +249,15 @@ hi link markdownId Normal
 hi link markdownIdDeclaration Normal
 hi link markdownIdDelimiter Normal
 
-
 hi link markdownLinkDelimiter Normal
-hi link markdownLinkText markdownHeadingDelimiter
+hi link markdownLinkText markdownHx
 hi link markdownListMarker markdownHeadingDelimiter
 hi link markdownOrderedListMarker markdownHeadingDelimiter
 
-hi link markdownUrl markdownItalic
+hi link markdownUrl Visual
 hi link markdownRule markdownHHBold
+
+hi link markdownLink markdownHx
 
 " Coc-explorer: {{{1
 

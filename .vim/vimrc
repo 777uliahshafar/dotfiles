@@ -10,7 +10,7 @@ Plug 'airblade/vim-rooter'
 
 " Writing/Authoring Tools
 Plug 'reedes/vim-pencil'
-"Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
