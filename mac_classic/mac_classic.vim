@@ -155,10 +155,10 @@ hi link htmlArg htmlTag
 hi htmlSpecialChar  guifg=#D51015 ctermfg=160 gui=bold
 
 hi htmlHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi htmlHxBold  term=bold ctermfg=16 gui=bold guifg=#000000 cterm=bold
-hi htmlHyBold  term=bold ctermfg=238 gui=bold guifg=#444444 cterm=bold
-hi htmlHzBold  term=bold ctermfg=102 gui=bold guifg=#878787 cterm=bold
-hi htmlHx ctermfg=102 guifg=#878787
+hi htmlHxBold  term=bold,underline ctermfg=130 gui=bold,underline guifg=#AF5f00 cterm=bold,underline
+hi htmlHyBold  term=bold ctermfg=166 gui=bold guifg=#D75F00 cterm=bold
+hi htmlHzBold  term=bold ctermfg=208 gui=bold guifg=#FF8700 cterm=bold
+hi htmlHx ctermfg=208 guifg=#FF8700
 
 hi link htmlH1 htmlHxBold
 hi link htmlH2 htmlHyBold
