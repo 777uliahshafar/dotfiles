@@ -363,7 +363,11 @@ command! -bang -nargs=* GGrep
     au BufNewFile ~/vimwiki/diary/*.md :silent 0r !~/.vim/bin/generate-vimwiki-diary-template '%'
 	au Bufread,BufNewFile *.tex set filetype=tex
     au BufRead,BufNewFile *.Rnw  set filetype=rnoweb.tex
-    au FileType vimwiki set syntax=markdown "read vimwiki as md in first place
+    au Filetype vimwiki call SetWikiOptions()
+    function! SetWikiOptions()
+        set syntax=markdown
+        set cursorline
+    endfunction
 
 nmap <Leader>ws <Plug>VimwikiSplitLink
 

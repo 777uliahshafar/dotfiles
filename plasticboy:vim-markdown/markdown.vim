@@ -177,11 +177,11 @@ HtmlHiLink mkdCodeStart     String
 HtmlHiLink mkdCodeEnd       String
 HtmlHiLink mkdFootnote      Comment
 HtmlHiLink mkdBlockquote    Comment
-HtmlHiLink mkdListItem      Identifier
+HtmlHiLink mkdListItem      Number
 HtmlHiLink mkdRule          Identifier
 HtmlHiLink mkdLineBreak     Visual
 HtmlHiLink mkdFootnotes     String
-HtmlHiLink mkdLink          Conditional
+HtmlHiLink mkdLink          Number
 HtmlHiLink mkdURL           htmlString
 HtmlHiLink mkdInlineURL     String
 HtmlHiLink mkdID            Identifier
