@@ -1,3 +1,5 @@
+<!-- This is only for Installation method. The full how to should be place on vimwiki or cheatsheet should be place on vim-myhelp -->
+
 _Start_:
 
 - Change keyboard key for Caps Lock to escape mode. Go to System Preference -> keyboard -> Keyboard tab -> Modify Key -> Caps Lock to Esc.
@@ -89,7 +91,7 @@ Run: `:PlugStatus` to know information about plugin.
 brew install --cask xquartz
 ```
 
-1. Install colorout for colorized R terminal. This required to load `library(colorout)` in R.
+1. Install colorout for colorized R terminal. This required to load `library(colorout)` or recommend `require(colorout)` in R.
 
 ```
 git clone https://github.com/jalvesaq/colorout.git
