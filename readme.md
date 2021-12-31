@@ -1,4 +1,4 @@
-<!-- This is only for Installation method. The full how to should be place on vimwiki or cheatsheet should be place on vim-myhelp -->
+<!-- This is only for Installation method or configuration vim. The full how to should be place on vimwiki or cheatsheet should be place on vim-myhelp -->
 
 _Start_:
 
@@ -129,8 +129,16 @@ Install all below plugin by running vim-plug `:PlugInstall`
 - Vim-javascript and jsx for javascript code syntax.
 - Nvim-R for working with R
   - coc-r-lsp for autocompletion (required package languageserver)
-  - ale for linting (required package lintr)
-  - configure sync-Tex in skim. See manual(NvimR).
+  - ale for linting (required package lintr). Config file can be created in working directory (default file name: .lintr). For example .lintr
+
+```
+linters: with_defaults(
+  line_length_linter(120),
+  commented_code_linter = NULL
+  )
+```
+
+- configure sync-Tex in skim. See manual(NvimR).
 
 ## Vimtex software preview.
 
