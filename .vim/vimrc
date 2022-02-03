@@ -273,10 +273,9 @@ command! -bang -nargs=* GGrep
 
 "Goyo & Limelight
 	map <leader>g :Goyo<CR>
-	let g:goyo_width=72
+	let g:goyo_width=85
     let g:limelight_default_coefficient = 0.8
-    let g:limelight_bop = '^\s'
-"    let g:limelight_eop = '\ze\n^\s'
+    let g:limelight_paragraph_span = 0
 
 "Goyo Customazation
 	function! s:goyo_enter()
@@ -284,10 +283,11 @@ command! -bang -nargs=* GGrep
    	silent !tmux set status off
     	silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   	endif
-	set nonumber
+    hi CursorLine  guibg=NONE ctermbg=NONE cterm=NONE gui=NONE
+    set number
+    set cursorline
 	set linespace=2
 	set scrolloff=999
-"    set cursorcolumn
     Limelight
 	endfunction
 

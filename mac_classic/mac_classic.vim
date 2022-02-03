@@ -49,7 +49,7 @@ hi Visual  guibg=#C6DEFF ctermbg=189
 hi LineNr guifg=#808080 ctermfg=244 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
 hi Cursor  guifg=#FFFFFF ctermfg=15 guibg=#3C4C72 ctermbg=240
 hi CursorLine  guibg=#E4E4E4 ctermbg=254 cterm=NONE gui=NONE
-hi CursorColumn  guibg=#F0F6FF ctermbg=15
+hi CursorColumn ctermfg=15 ctermbg=242 guifg=#F0F6FF guibg=#6C6C6C
 hi CursorLineNr  guifg=#d75f00 ctermfg=166 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
 hi VertSplit  guifg=#FFFFFF ctermfg=15 guibg=#CFCFCF ctermbg=252 gui=NONE
 hi MatchParen  guifg=#1E39F6 ctermfg=27 guibg=NONE gui=bold
