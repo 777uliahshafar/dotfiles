@@ -57,6 +57,8 @@ hi Pmenu guibg=#EFEFEF ctermbg=7
 hi PmenuSel  guibg=#C6DEFF ctermbg=189
 hi Directory  guifg=#D51015 ctermfg=160 gui=bold
 hi Folded  guifg=#0000A2  ctermfg=19 guibg=#FFFFFF ctermbg=15
+hi SignatureMarkText guifg=#808080 ctermfg=244
+
 " StatusLine: {{{2
 hi StatusLine  guifg=#000000 ctermfg=0 guibg=#C6DEFF ctermbg=189 gui=italic
 hi StatusLineNC  guifg=#000000 ctermfg=0 guibg=#EFEFEF ctermbg=7 gui=NONE
