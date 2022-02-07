@@ -83,6 +83,8 @@ Run `:PlugInstall` to install plugin vimrc.
 Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
 Run: `:PlugStatus` to know information about plugin.
 
+11. Spellchecker includes on dotfiles. These contain three unseperated files. The .add extention meaning file has been added new word. These files have already rsycn to `$VIMRUNTIME SPELL` in `~/.vim/spell/`.
+
 # Setting up Vim for R
 
 1. Xquartz for viewing table from R.
