@@ -105,6 +105,11 @@ set statusline+=\ %{wordcount().words}\ words
 	nnoremap j gj
 	nnoremap k gk
 
+"Spell-Check set to <leader>o, 'o' for orthography
+    set spellsuggest+=4
+	map <leader>o :setlocal spell! spelllang=id<CR>
+	map <F7> :setlocal spell! spelllang=en_us<CR>
+
 " Syntax vim-javascript and vim-jsx
 let g:jsx_ext_required = 0
 
@@ -319,9 +324,6 @@ command! -bang -nargs=* GGrep
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
-"Spell-Check set to <leader>o, 'o' for orthography
-	map <leader>o :setlocal spell! spelllang=id<CR>
-	map <F7> :setlocal spell! spelllang=en_us<CR>
 
 "Runs a script that cleans out tex build files whenever I close out of a .text file
 	autocmd VimLeave *.tex !texclear %
