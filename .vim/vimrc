@@ -381,6 +381,14 @@ let g:vim_markdown_math = 1
 " Support front matter of various format
 let g:vim_markdown_frontmatter = 1  " for YAML format
 
+function! Compilemd()
+        let extension = expand('%:e')
+        if extension == "md"
+                execute "! pandoc % -s -o diary/ielts/eslnote.pdf"
+        endif
+endfunction
+
+noremap <leader>lc :call Compilemd()<CR><CR>
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
