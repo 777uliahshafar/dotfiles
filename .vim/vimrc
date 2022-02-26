@@ -24,6 +24,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
+Plug 'rhysd/vim-grammarous'
 Plug 'tpope/vim-surround'
 Plug 'kshenoy/vim-signature'
 Plug 'Konfekt/FastFold'
@@ -384,7 +385,7 @@ let g:vim_markdown_frontmatter = 1  " for YAML format
 function! Compilemd()
         let extension = expand('%:e')
         if extension == "md"
-                execute "! pandoc -V geometry:a5paper,margin=2cm -V linkcolor:blue -V fontsize=12pt --pdf-engine=xelatex % -s -o diary/ielts/eslnote.pdf"
+                execute "! pandoc -V geometry:a5paper,margin=2cm -V linkcolor:blue -V fontsize=12pt --pdf-engine=xelatex % -s -o diary/ingles/eslnote.pdf"
         endif
 endfunction
 
@@ -456,7 +457,8 @@ let g:ale_linters = {
 \   'javascript': ['standard'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
-\   'r': ['lintr']
+\   'r': ['lintr'],
+\   'markdown': ['languagetool'],
 \}
 
 let g:ale_fixers = {
@@ -617,6 +619,29 @@ let g:user_emmet_leader_key=','
 " Enable just for html/css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+
+" -   -   -   -   -   -   -   -
+"     Vim-Grammarous
+"
+" -   -   -   -   -   -   -   -
+
+nnoremap <c-g> :GrammarousCheck<cr>
+let g:grammarous#languagetool_cmd = 'languagetool'
+"    nmap <leader>x <Plug>(grammarous-close-info-window)
+let g:grammarous#hooks = {} "Unmap after grammarouscheck
+function! g:grammarous#hooks.on_check(errs) abort
+    nmap <buffer><C-n> <Plug>(grammarous-move-to-next-error)
+    nmap <buffer><C-p> <Plug>(grammarous-move-to-previous-error)
+endfunction
+
+function! g:grammarous#hooks.on_reset(errs) abort
+    nunmap <buffer><C-n>
+    nunmap <buffer><C-p>
+endfunction
+let g:grammarous#disabled_rules = {
+            \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START', 'ARROWS', 'WORD_CONTAINS_UNDERSCORE','COMMA_PARENTHESIS_WHITESPACE','NON_STANDARD_WORD','PUNCTUATION','EN_QUOTES','DOUBLE_PUNCTUATION'],
+            \ }
 
 " -   -   -   -   -   -   -   -
 "     LaTeX
