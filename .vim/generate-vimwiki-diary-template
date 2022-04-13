@@ -3,20 +3,22 @@ import sys
 import datetime
 
 template = """---
-title: "ESL "
+title: "Markdown"
+author: [Ingles]
 date: "{date}"
-image: ../images/howl650.jpg
-featured: true
-tags:
-- esl
+keywords: [Markdown, Example]
 ---
-#
+# Ingles Note\\
+resume|~~structure|paraphrase~~
 
-## Review Vocabulary
-* [ ]
+## Review Vocabulary\\
+* []
 
-## New Vocabulary
-* [ ]"""
+## New Vocabulary\\
+* []
+
+### P1
+Sentences belong here...\\"""
 
 # adding path to date
 #date = (datetime.date.today() if len(sys.argv) < 2
