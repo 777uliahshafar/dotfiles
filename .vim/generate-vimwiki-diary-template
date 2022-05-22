@@ -4,21 +4,19 @@ import datetime
 
 template = """---
 title: "Markdown"
-author: [Ingles]
+author: [uliah]
 date: "{date}"
-keywords: [Markdown, Example]
+keywords: [English, TBI]
 ---
-# Ingles Note\\
-resume|~~structure|paraphrase~~
+# Sub title \\
 
-## Review Vocabulary\\
-* []
+Write here..\\
 
-## New Vocabulary\\
-* []
+## Vocabulary review\\
+Here is a list of less common or new collacations, phrases, or word in the essay above:
+*
 
-### P1
-Sentences belong here...\\"""
+"""
 
 # adding path to date
 #date = (datetime.date.today() if len(sys.argv) < 2

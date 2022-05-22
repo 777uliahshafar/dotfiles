@@ -13,6 +13,7 @@ alias tt="cd /Volumes/hdd/tesis"
 alias ks="cd /Volumes/hdd/kuesioner2"
 alias an="cd /Volumes/hdd/analisis"
 alias kt="cd /Volumes/hdd/keynoteTesis"
+alias sc="cd /Volumes/hdd/lamaran/assets"
 
 alias ip="cd /Volumes/hdd/sttblog"
 alias ip2="~/git/dotfiles/autogithomesj.sh"
