@@ -384,9 +384,12 @@ let g:vim_markdown_frontmatter = 1  " for YAML format
 function! Compilemd()
         let extension = expand('%:e')
         if extension == "md"
-                execute "! pandoc -V geometry:a5paper,margin=15mm -V 'mainfont:Inconsolata' -V linkcolor:blue -V fontsize=12pt --pdf-engine=xelatex % -s -o diary/english.pdf"
+                execute "! pandoc -V geometry:a5paper,margin=15mm -V 'mainfont:Inconsolata' -V linkcolor:blue -V fontsize=12pt --pdf-engine=xelatex % --template=eisvogel -s -o diary/english.pdf"
         endif
 endfunction
+
+" Use pandoc-latex-template, move file template in pandoc template folder, info pandoc location --v
+" https://github.com/Wandmalfarbe/pandoc-latex-template
 
 noremap <leader>lc :call Compilemd()<CR><CR>
 
