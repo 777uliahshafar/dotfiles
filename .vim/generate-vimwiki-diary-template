@@ -3,19 +3,14 @@ import sys
 import datetime
 
 template = """---
-title: "Markdown"
-author: [uliah]
+title: "Task {date}"
+author: [english]
 date: "{date}"
-keywords: [English, TBI]
 ---
-# Sub title \\
+# title task \\
 
-Write here..\\
 
-## Vocabulary review\\
-Here is a list of less common or new collacations, phrases, or word in the essay above:
-*
-
+<!-- This document is an guidance for improve english skill -->
 """
 
 # adding path to date
