@@ -384,7 +384,7 @@ let g:vim_markdown_frontmatter = 1  " for YAML format
 function! Compilemd()
         let extension = expand('%:e')
         if extension == "md"
-                execute "! pandoc -V geometry:a5paper,margin=15mm -V 'mainfont:Inconsolata' -V linkcolor:blue -V fontsize=12pt --pdf-engine=xelatex % --template=eisvogel -s -o diary/english/englishtask.pdf"
+                execute "! pandoc -V geometry:a5paper,margin=15mm -V 'mainfont:OldStyle 1' -V linkcolor:blue -V fontsize=13pt --pdf-engine=xelatex % --template=eisvogel -s -o diary/english/englishtask.pdf"
         endif
 endfunction
 
