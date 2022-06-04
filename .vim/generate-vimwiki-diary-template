@@ -5,9 +5,17 @@ import datetime
 template = """---
 title: "Task {date}"
 author: [english]
-date: "{date}"
 ---
-# title task \\
+# Topic and resource of vocabulary and grammar\\
+
+<!-- Develop the topic by using ideas down below -->
+# 4-8 sentence ideas task \\
+* Ideas..
+
+
+<!-- Go on by using vocabulary down below  -->
+# 3-4 sentence vocabulary task \\
+* Vocabulary..
 
 
 <!-- This document is an guidance for improve english skill -->
