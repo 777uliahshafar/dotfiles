@@ -5,20 +5,17 @@ import datetime
 template = """---
 title: "Task {date}"
 author: [english]
+keyword: [productive]
 ---
-# Topic and resource of vocabulary and grammar\\
+# Ielts prompts\\
 
-<!-- Develop the topic by using ideas down below -->
-# 4-8 sentence ideas task \\
-* Ideas..
+# Story with New Vocabulary\\
 
+# Vocabulary review\\
+Here’s a list of the ‘less common’ collocations and phrases yesterday:
+* word
 
-<!-- Go on by using vocabulary down below  -->
-# 3-4 sentence vocabulary task \\
-* Vocabulary..
-
-
-<!-- This document is an guidance for improve english skill -->
+<!-- This mainly focusing on your writing so you don't have to turning notebook's paper. Type everything from the notebook then reparaphrase back in the notebook, include language, grammar and vocabulary study -->
 """
 
 # adding path to date
