@@ -83,7 +83,7 @@ hi Function  guifg=#0000A2 ctermfg=19 gui=bold
 hi Identifier  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Keyword  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Label  guifg=#007B22 ctermfg=28
-hi Number  guifg=#0000A2 ctermfg=19
+hi Number  guifg=#005faf ctermfg=25
 hi Operator  guifg=#1E39F6 ctermfg=27 gui=bold
 hi PreProc  guifg=#005F87 ctermfg=24 gui=bold
 hi Special  guifg=#000000 ctermfg=0
@@ -158,9 +158,9 @@ hi link htmlArg htmlTag
 hi htmlSpecialChar  guifg=#D51015 ctermfg=160 gui=bold
 
 hi htmlHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi htmlHxBold  term=bold,underline ctermfg=130 gui=bold,underline guifg=#AF5f00 cterm=bold,underline
-hi htmlHyBold  term=bold ctermfg=166 gui=bold guifg=#D75F00 cterm=bold
-hi htmlHzBold  term=bold ctermfg=208 gui=bold guifg=#FF8700 cterm=bold
+hi htmlHxBold  term=bold ctermfg=65 gui=bold guifg=#afd7af cterm=bold
+hi htmlHyBold  term=bold ctermfg=101 gui=bold,underline guifg=#87875f cterm=bold,underline
+hi htmlHzBold  term=bold ctermfg=101 gui=underline guifg=#87875f cterm=underline
 hi htmlHx ctermfg=208 guifg=#FF8700
 
 hi link htmlH1 htmlHxBold
@@ -225,10 +225,10 @@ hi helpSpecial guifg=#6E79F1 ctermfg=69
 
 " Markdown: {{{1
 hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
-hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=italic
+hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=bold
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi markdownHxBold  term=bold ctermfg=125 gui=bold guifg=#AF005F cterm=bold
+hi markdownHxBold  term=bold ctermfg=31 gui=bold guifg=#3d70b2 cterm=bold
 hi markdownHyBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
 hi markdownHzBold  term=bold  ctermfg=28 gui=bold guifg=#007B22 cterm=bold
 hi markdownHx ctermfg=28 guifg=#007B22
