@@ -51,11 +51,11 @@ endsnippet
 # Text formatting #
 ###################
 
-snippet * "italics"
+snippet it "italics"
 *${1:${VISUAL}}*$0
 endsnippet
 
-snippet ** "bold"
+snippet bf "bold"
 **${1:${VISUAL}}**$0
 endsnippet
 
@@ -67,6 +67,9 @@ snippet br "linebreak" i
 <br>
 endsnippet
 
+snippet - "horzontal line" i
+---
+endsnippet
 
 ################
 # Common stuff #
@@ -88,6 +91,14 @@ snippet cbl "Codeblock" b
 $1
 \`\`\`
 $0
+endsnippet
+
+snippet file "Open file"
+[${1:my link}](file:/Volumes/hdd/$2.pdf)$0
+endsnippet
+
+snippet admisi "Open file"
+[${1:name}](file:/Volumes/hdd/admisi/$2.pdf)$0
 endsnippet
 
 snippet refl "Reference Link"
