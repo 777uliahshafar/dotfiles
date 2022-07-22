@@ -83,7 +83,7 @@ hi Function  guifg=#0000A2 ctermfg=19 gui=bold
 hi Identifier  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Keyword  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Label  guifg=#007B22 ctermfg=28
-hi Number  guifg=#005faf ctermfg=25
+hi Number  guifg=#000087 ctermfg=18
 hi Operator  guifg=#1E39F6 ctermfg=27 gui=bold
 hi PreProc  guifg=#005F87 ctermfg=24 gui=bold
 hi Special  guifg=#000000 ctermfg=0
