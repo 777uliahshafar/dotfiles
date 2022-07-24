@@ -4,18 +4,22 @@ import datetime
 
 template = """---
 title: "Task {date}"
-author: [english]
-keyword: [productive]
+date: "{date}"
+image: ../images/howl650.jpg
+keywords: "english"
+tags:
+- english test
 ---
-# Ielts prompts\\
+# Ielts prompts\
 
-# Story with New Vocabulary\\
+# Story with New Vocabulary\
 
-# Vocabulary review\\
-Here’s a list of the ‘less common’ collocations and phrases yesterday:
+# Vocabulary review\
+
+Here's a list of the 'less common' collocations and phrases yesterday:
 * word
 
-<!-- This mainly focusing on your writing so you don't have to turning notebook's paper. Type everything from the notebook then reparaphrase back in the notebook, include language, grammar and vocabulary study -->
+<!-- This mainly focusing on your writing. It helps you to avoid turning page repeteadly and review everytime. Type everything from the notebook then reparaphrase back in the notebook, include language, grammar and vocabulary study!! If you do not use it, you'll lose it. Change dir by type :cd diary for save as :w filename.md the file for speaking tasks -->
 """
 
 # adding path to date
