@@ -390,8 +390,10 @@ endfunction
 
 " Use pandoc-latex-template, move file template in pandoc template folder, info pandoc location --v
 " https://github.com/Wandmalfarbe/pandoc-latex-template
-
 noremap <leader>lc :call Compilemd()<CR><CR>
+
+" In visual line, adding br in the end of each selected line
+vnoremap <leader>o :s/$/<br>/<CR>
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
