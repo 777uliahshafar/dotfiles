@@ -63,10 +63,6 @@ snippet *** "bold italics"
 ***${1:${VISUAL}}***$0
 endsnippet
 
-snippet br "linebreak" i
-<br>
-endsnippet
-
 snippet - "horzontal line" i
 ---
 endsnippet
@@ -83,7 +79,11 @@ snippet hg "highlighter"
 <span style="background-color:#39FF14">${1:${VISUAL}}</span>$0
 endsnippet
 
-
+snippet sum "summary"
+<details><summary>${1:sum}</summary>
+${2:details}
+</details>$0
+endsnippet
 
 ################
 # Common stuff #
