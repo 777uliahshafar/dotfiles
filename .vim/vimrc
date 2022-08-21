@@ -370,6 +370,8 @@ command! -bang -nargs=* GGrep
         set syntax=markdown
         set cursorline
     endfunction
+"Add bold surround command ysiw-
+    au Filetype vimwiki let b:surround_45 = "**\r**"
 
 nmap <Leader>ws <Plug>VimwikiSplitLink
 
@@ -391,9 +393,6 @@ endfunction
 " Use pandoc-latex-template, move file template in pandoc template folder, info pandoc location --v
 " https://github.com/Wandmalfarbe/pandoc-latex-template
 noremap <leader>lc :call Compilemd()<CR><CR>
-
-" In visual line, adding br in the end of each selected line
-vnoremap <leader>o :s/$/<br>/<CR>
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
