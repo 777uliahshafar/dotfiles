@@ -9,9 +9,6 @@ alias md="vim -c VimwikiMakeDiaryNote"
 alias ww="vim -c VimwikiIndex"
 alias wi="vim -c VimwikiDiaryIndex"
 
-alias pr="cd /Volumes/hdd/phdresearchplan"
+alias pp="cd /Volumes/hdd/phdproposal"
 alias at="cd /Volumes/hdd/artesis"
 alias sc="cd /Volumes/hdd/lamaran/assets"
-
-alias ip="cd /Volumes/hdd/sttblog"
-alias ip2="~/git/dotfiles/autogithomesj.sh"
