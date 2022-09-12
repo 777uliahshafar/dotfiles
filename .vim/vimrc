@@ -50,6 +50,9 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 
 " Determine main color scheme
+set termguicolors "enable true color vim
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme mac_classic
 
 "switch colorscheme
