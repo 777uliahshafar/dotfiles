@@ -46,11 +46,11 @@ let g:colors_name = "mac_classic"
 
 " GUI: {{{1
 hi Visual  guibg=#C6DEFF ctermbg=189
-hi LineNr guifg=#b57614 ctermfg=136 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
+hi LineNr guifg=#98971a ctermfg=106 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
 hi Cursor  guifg=#FFFFFF ctermfg=15 guibg=#3C4C72 ctermbg=240
 hi CursorLine  guibg=#E4E4E4 ctermbg=254 cterm=NONE gui=NONE
 hi CursorColumn ctermfg=15 ctermbg=242 guifg=#F0F6FF guibg=#6C6C6C
-hi CursorLineNr  guifg=#d75f00 ctermfg=166 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
+hi CursorLineNr  guifg=#98971a ctermfg=106 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
 hi VertSplit  guifg=#FFFFFF ctermfg=15 guibg=#CFCFCF ctermbg=252 gui=NONE
 hi MatchParen  guifg=#1E39F6 ctermfg=27 guibg=NONE gui=bold
 hi Pmenu guibg=#EFEFEF ctermbg=7
