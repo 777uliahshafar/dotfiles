@@ -431,10 +431,10 @@ highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
  let g:loaded_netrwFileHandlers = 1
 
 "Enter desirable explorer when enter VIM
-augroup my-fern-startup
-  autocmd! *
-  autocmd VimEnter * ++nested CocCommand explorer
-augroup END
+"augroup my-fern-startup
+"  autocmd! *
+"  autocmd VimEnter * ++nested CocCommand explorer
+"augroup END
 " 	/*OR*/
 "	augroup ProjectDrawer
 "   	autocmd!
