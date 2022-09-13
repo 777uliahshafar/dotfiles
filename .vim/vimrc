@@ -282,13 +282,9 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 "Goyo & Limelight
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 248
-let g:limelight_conceal_guifg = 'DarkGray'
-let g:limelight_conceal_guifg = '#AAAAAA'
 	map <leader>g :Goyo<CR>
 	let g:goyo_width=68
-    let g:limelight_default_coefficient = 0.5
+    let g:limelight_default_coefficient = 0.8
     let g:limelight_paragraph_span = 0
 
 "Goyo Customazation
