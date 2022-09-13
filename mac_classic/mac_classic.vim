@@ -22,7 +22,7 @@ let g:colors_name = "mac_classic"
 " #3C4C72 - BLUE/GREY - cursor, rails helpers
 " #0000A2 - D.BLUE - folds, numbers & function names
 " #005f87 - D.BLUE2 - PreProc, Tex command
-" #1E39F6 - BLUE
+" #0000A2 - BLUE
 " #AF005F - DARK PINK - Statement, TeX command
 " #0066FF - L.BLUE - TODOs
 " #878787 - D. GRAY - Comment
@@ -56,7 +56,7 @@ hi MatchParen  guifg=#1E39F6 ctermfg=27 guibg=NONE gui=bold
 hi Pmenu guibg=#EFEFEF ctermbg=7
 hi PmenuSel  guibg=#C6DEFF ctermbg=189
 hi Directory  guifg=#D51015 ctermfg=160 gui=bold
-hi Folded  guifg=#0000A2  ctermfg=19 guibg=#dddddd ctermbg=251
+hi Folded  guifg=#04530d  ctermfg=22 guibg=#d0ead0 ctermbg=151
 hi SignatureMarkText guifg=#808080 ctermfg=244
 
 " StatusLine: {{{2
@@ -69,10 +69,11 @@ hi IncSearch  guifg=NONE guibg=#FFCE77 ctermbg=222 gui=NONE
 hi Search  guibg=#FFE6BB ctermbg=223
 
 " Syntax: {{{1
-hi Normal  guifg=#000000 ctermfg=0 guibg=#eeeeee ctermbg=253
+" None in guibg normal means use terimanl iterm color
+hi Normal  guifg=#2e2e2e ctermfg=234 guibg=#f0f0e5 ctermbg=255
 hi Boolean  guifg=#6E79F1 ctermfg=69 gui=bold
 hi Character  guifg=#D51015 ctermfg=160 gui=bold
-hi Comment  guibg=bg guifg=#878787 ctermbg=bg ctermfg=102 gui=italic
+hi Comment  guibg=bg guifg=#878965 ctermbg=bg ctermfg=101 gui=italic
 hi Conditional  guifg=#1E39F6 ctermfg=27 gui=bold
 hi Constant  guifg=#D51015 ctermfg=160 gui=bold
 hi Define  guifg=#1E39F6 ctermfg=27 gui=bold

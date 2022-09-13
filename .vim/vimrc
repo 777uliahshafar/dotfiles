@@ -67,6 +67,7 @@ nnoremap <silent> <F5> :exec "color " .
 	set nocompatible
 	set number
 	syntax on
+    set t_Co=256 "colorscheme syntax
 	set encoding=utf-8
 	filetype plugin indent on
 	set visualbell
