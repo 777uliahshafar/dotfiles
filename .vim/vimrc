@@ -25,6 +25,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'rhysd/vim-grammarous'
+Plug 'ron89/thesaurus_query.vim'
 Plug 'tpope/vim-surround'
 Plug 'kshenoy/vim-signature'
 Plug 'Konfekt/FastFold'
@@ -649,6 +650,16 @@ endfunction
 let g:grammarous#disabled_rules = {
             \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START', 'ARROWS', 'WORD_CONTAINS_UNDERSCORE','COMMA_PARENTHESIS_WHITESPACE','NON_STANDARD_WORD','PUNCTUATION','EN_QUOTES','DOUBLE_PUNCTUATION'],
             \ }
+
+" -   -   -   -   -   -   -   -
+"     Thesaurus-query
+"
+" -   -   -   -   -   -   -   -
+
+nnoremap <localleader>k :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap <localleader>k y:ThesaurusQueryReplace <C-r>"<CR>
+let g:tq_enabled_backends=["openoffice_en","mthesaur_txt","datamuse_com"]
+let g:tq_openoffice_en_file="~/.vim/thesaurus/th_en_US_new"
 
 " -   -   -   -   -   -   -   -
 "     LaTeX
