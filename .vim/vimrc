@@ -634,13 +634,14 @@ autocmd FileType html,css EmmetInstall
 "
 " -   -   -   -   -   -   -   -
 
-nnoremap <c-g> :GrammarousCheck<cr>
+nnoremap <localleader>g :GrammarousCheck<cr>
 let g:grammarous#languagetool_cmd = 'languagetool'
 "    nmap <leader>x <Plug>(grammarous-close-info-window)
 let g:grammarous#hooks = {} "Unmap after grammarouscheck
 function! g:grammarous#hooks.on_check(errs) abort
     nmap <buffer><C-n> <Plug>(grammarous-move-to-next-error)
     nmap <buffer><C-p> <Plug>(grammarous-move-to-previous-error)
+    nmap <buffer><localleader>g <Plug>(grammarous-open-info-window)
 endfunction
 
 function! g:grammarous#hooks.on_reset(errs) abort
