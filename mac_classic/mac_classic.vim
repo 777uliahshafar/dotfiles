@@ -164,11 +164,11 @@ hi htmlHyBold  term=bold ctermfg=101 gui=bold,underline guifg=#87875f cterm=bold
 hi htmlHzBold  term=bold ctermfg=101 gui=underline guifg=#87875f cterm=underline
 hi htmlHx ctermfg=208 guifg=#FF8700
 
-hi link htmlH1 htmlHxBold
-hi link htmlH2 htmlHyBold
-hi link htmlH3 htmlHzBold
-hi link htmlH4 htmlHx
-hi link htmlH5 htmlHx
+hi link htmlH1 markdownHHBold
+hi link htmlH2 markdownHxBold
+hi link htmlH3 markdownHyBold
+hi link htmlH4 markdownHzBold
+hi link htmlH5 markdownHx
 hi link htmlH6 htmlHx
 
 " JavaScript: {{{1
@@ -229,9 +229,9 @@ hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
 hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=bold
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi markdownHxBold  term=bold ctermfg=31 gui=bold guifg=#3d70b2 cterm=bold
-hi markdownHyBold  term=bold ctermfg=19 gui=bold guifg=#0000A2 cterm=bold
-hi markdownHzBold  term=bold  ctermfg=28 gui=bold guifg=#007B22 cterm=bold
+hi markdownHxBold  term=bold ctermfg=235 gui=bold guifg=#282828 cterm=bold
+hi markdownHyBold  term=bold  ctermfg=106 gui=bold guifg=#98971a cterm=bold
+hi markdownHzBold  term=bold ctermfg=142 gui=bold guifg=#b8bb26 cterm=bold
 hi markdownHx ctermfg=28 guifg=#007B22
 
 hi link markdownBlockquote String
@@ -244,9 +244,9 @@ hi markdownHeadingDelimiter guifg=#005F87 ctermfg=24 gui=bold
 hi link markdownHeadingRule markdownHHBold
 
 hi link markdownH1 markdownHxBold
-hi link markdownH2 markdownHyBold
-hi link markdownH3 markdownHzBold
-hi link markdownH4 markdownHx
+hi link markdownH2 markdownHxBold
+hi link markdownH3 markdownHyBold
+hi link markdownH4 markdownHzBold
 hi link markdownH5 markdownHx
 
 hi link markdownId Normal

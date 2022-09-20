@@ -14,3 +14,5 @@ alias vpp="mvim -v /Volumes/data/proposalphd/proposalphd.tex"
 alias ml="cd /Volumes/data/motlet"
 alias vml="mvim -v /Volumes/data/motlet/motlet.tex"
 alias sc="cd /Volumes/data/lamaran/assets"
+
+alias bpi="cd /Volumes/data/admisi/bpi"
