@@ -641,7 +641,8 @@ let g:grammarous#hooks = {} "Unmap after grammarouscheck
 function! g:grammarous#hooks.on_check(errs) abort
     nmap <buffer><C-n> <Plug>(grammarous-move-to-next-error)
     nmap <buffer><C-p> <Plug>(grammarous-move-to-previous-error)
-    nmap <buffer><localleader>g <Plug>(grammarous-open-info-window)
+    nmap <buffer><C-g> <Plug>(grammarous-reset)
+    nmap <buffer><C-o> <Plug>(grammarous-open-info-window)
 endfunction
 
 function! g:grammarous#hooks.on_reset(errs) abort
