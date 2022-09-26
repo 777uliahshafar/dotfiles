@@ -662,6 +662,9 @@ vnoremap <localleader>k y:ThesaurusQueryReplace <C-r>"<CR>
 let g:tq_enabled_backends=["openoffice_en","mthesaur_txt","datamuse_com"]
 let g:tq_openoffice_en_file="~/.vim/thesaurus/th_en_US_new"
 
+" This is built-in dictonary completion
+set dictionary+=/usr/share/dict/words
+
 " -   -   -   -   -   -   -   -
 "     LaTeX
 "
