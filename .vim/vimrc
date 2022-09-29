@@ -375,6 +375,10 @@ command! -bang -nargs=* GGrep
         set syntax=markdown
         set cursorline
     endfunction
+
+" Todo list
+let g:vimwiki_listsyms = ' ◐✗'
+
 "Add bold surround command ysiw-
     au Filetype vimwiki let b:surround_45 = "**\r**"
 
