@@ -285,7 +285,7 @@ command! -bang -nargs=* GGrep
 
 "Goyo & Limelight
 	map <leader>g :Goyo<CR>
-	let g:goyo_width=68
+	let g:goyo_width=58
     let g:limelight_default_coefficient = 0.8
     let g:limelight_paragraph_span = 0
 
