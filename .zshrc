@@ -9,6 +9,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# gruvbox pallete
+source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette_osx.sh"
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }

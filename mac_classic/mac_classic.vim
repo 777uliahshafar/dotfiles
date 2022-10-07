@@ -46,9 +46,9 @@ let g:colors_name = "mac_classic"
 
 " GUI: {{{1
 hi Visual  guibg=#C6DEFF ctermbg=189
-hi LineNr guifg=#98971a ctermfg=106 guibg=#dddddd ctermbg=251 cterm=NONE gui=NONE
+hi LineNr guifg=#98971a ctermfg=106 guibg=#bdae93 ctermbg=248 cterm=NONE gui=NONE
 hi Cursor  guifg=#FFFFFF ctermfg=15 guibg=#3C4C72 ctermbg=240
-hi CursorLine  guibg=#E4E4E4 ctermbg=254 cterm=NONE gui=NONE
+hi CursorLine guifg=#f9f5d7 ctermfg=230 guibg=#bdae93 ctermbg=248 cterm=NONE gui=NONE
 hi CursorColumn ctermfg=15 ctermbg=242 guifg=#F0F6FF guibg=#6C6C6C
 hi CursorLineNr  guifg=#98971a ctermfg=106 guibg=#EFEFEF ctermbg=7 cterm=NONE gui=NONE
 hi VertSplit  guifg=#FFFFFF ctermfg=15 guibg=#CFCFCF ctermbg=252 gui=NONE
@@ -56,7 +56,7 @@ hi MatchParen  guifg=#1E39F6 ctermfg=27 guibg=NONE gui=bold
 hi Pmenu guibg=#EFEFEF ctermbg=7
 hi PmenuSel  guibg=#C6DEFF ctermbg=189
 hi Directory  guifg=#D51015 ctermfg=160 gui=bold
-hi Folded  guifg=#04530d  ctermfg=22 guibg=#d0ead0 ctermbg=151
+hi Folded  guifg=#98971a  ctermfg=106 guibg=#bdae93 ctermbg=248
 hi SignatureMarkText guifg=#808080 ctermfg=244
 
 " StatusLine: {{{2
@@ -70,7 +70,7 @@ hi Search  guibg=#FFE6BB ctermbg=223
 
 " Syntax: {{{1
 " None in guibg normal means use terimanl iterm color
-hi Normal  guifg=#1b1d1e ctermfg=234 guibg=white ctermbg=255
+hi Normal  guifg=#1b1d1e ctermfg=234 guibg=#f9f5d7 ctermbg=230
 hi Boolean  guifg=#6E79F1 ctermfg=69 gui=bold
 hi Character  guifg=#D51015 ctermfg=160 gui=bold
 hi Comment  guibg=bg guifg=#878965 ctermbg=bg ctermfg=101 gui=italic
