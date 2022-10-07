@@ -70,7 +70,7 @@ hi Search  guibg=#FFE6BB ctermbg=223
 
 " Syntax: {{{1
 " None in guibg normal means use terimanl iterm color
-hi Normal  guifg=#2e2e2e ctermfg=234 guibg=white ctermbg=255
+hi Normal  guifg=#1b1d1e ctermfg=234 guibg=white ctermbg=255
 hi Boolean  guifg=#6E79F1 ctermfg=69 gui=bold
 hi Character  guifg=#D51015 ctermfg=160 gui=bold
 hi Comment  guibg=bg guifg=#878965 ctermbg=bg ctermfg=101 gui=italic

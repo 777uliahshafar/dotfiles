@@ -31,7 +31,7 @@ For accessing configuration file run this command `p10k configure`.Additional Fe
 - Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
 - Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
 
-Another font has installed for vim called Inconsolata regular 18 created by Raph Levien. It is a monospace font, designed for code listings and the like, in print. In order to get maximum result, ensure you enable anti-aliased, and use ligatures.
+Another font has installed for vim called Inconsolata regular 20 created by Raph Levien. It is a monospace font, designed for code listings and the like, in print. In order to get maximum result, ensure you enable anti-aliased, and use ligatures.
 You can simply download iterm profile on your google drive.
 
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
