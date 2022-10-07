@@ -309,7 +309,7 @@ command! -bang -nargs=* GGrep
   	endif
 
 	set number
-	set linespace=0
+	set linespace=3
 	set scrolloff=5
     Limelight!
 
