@@ -116,15 +116,15 @@ $0
 endsnippet
 
 snippet file "Open file"
-[${1:my link}](file:/Volumes/hdd/$2.pdf)$0
+[${1:my link}](file:/Volumes/data/$2.pdf)$0
 endsnippet
 
-snippet admisi "Open file"
-[${1:name}](file:/Volumes/hdd/admisi/$2.pdf)$0
+snippet pdf "Open file"
+[${1:${VISUAL:Text}}][file:/Volumes/data/${2:id}.pdf]$0
 endsnippet
 
 snippet refl "Reference Link"
-[${1:${VISUAL:Text}}][${2:id}]$0
+[${1:${VISUAL:Text}}][file:/Volumes/data/${2:id}]$0
 
 [$2]:${4:http://${3:www.url.com}} "${5:$4}"
 endsnippet
