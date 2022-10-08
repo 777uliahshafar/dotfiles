@@ -36,7 +36,7 @@ You can simply download iterm profile on your google drive.
 
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
-7. Mac_classic and dracula are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles.
+7. Mac_classic and dracula are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles. Use gruvbox palette by source its shellscript from dotfiles to .zshrc.
 
 8. Tmux for multiplex terminal.
 
