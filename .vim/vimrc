@@ -285,7 +285,7 @@ command! -bang -nargs=* GGrep
 
 "Goyo & Limelight
 	map <leader>g :Goyo<CR>
-"	let g:goyo_width=62
+	let g:goyo_width=58
     let g:limelight_default_coefficient = 0.8
     let g:limelight_paragraph_span = 0
 
@@ -297,7 +297,7 @@ command! -bang -nargs=* GGrep
   	endif
     hi CursorLine  guibg=NONE ctermbg=NONE cterm=NONE gui=NONE
 "    set number
-	set linespace=3
+	set linespace=5
 	set scrolloff=999
     Limelight
 	endfunction
@@ -309,7 +309,7 @@ command! -bang -nargs=* GGrep
   	endif
 
 	set number
-	set linespace=3
+	set linespace=0
 	set scrolloff=5
     Limelight!
 
