@@ -9,6 +9,7 @@ alias md="vim -c VimwikiMakeDiaryNote"
 alias wi="vim -c VimwikiIndex"
 alias wd="vim -c VimwikiDiaryIndex"
 
+alias dt="cd /Volumes/data"
 alias vp="cd /Volumes/data/proposalphd"
 alias vpp="mvim -v /Volumes/data/proposalphd/proposalphd.tex"
 alias vm="cd /Volumes/data/motlet"
