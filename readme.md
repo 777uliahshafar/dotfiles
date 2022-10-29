@@ -14,11 +14,13 @@ _Start_:
 
 2.  Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
 
-3.  Zsh auto-suggestion, install it using homebrew `brew install zsh-autosuggestions`.
+3.  Install oh-my-zsh, then install power10k through oh-my-zsh. Configure the p10k theme by changing value of zsh-theme in .zshrc. Install and write plugin (git, zsh-autosuggestion, fzf) through zshrc. Skip 4 and 6 if you use oh-my-zsh.
 
-4.  Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
+4.  Zsh auto-suggestion, install it using homebrew `brew install zsh-autosuggestions`.
 
-5.  Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
+5.  Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
+
+6.  Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
 
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
