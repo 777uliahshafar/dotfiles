@@ -56,7 +56,7 @@ hi MatchParen  guifg=#1E39F6 ctermfg=27 guibg=NONE gui=bold
 hi Pmenu guibg=#EFEFEF ctermbg=7
 hi PmenuSel  guibg=#C6DEFF ctermbg=189
 hi Directory  guifg=#D51015 ctermfg=160 gui=bold
-hi Folded  guifg=#98971a  ctermfg=106 guibg=#bdae93 ctermbg=248
+hi Folded  guifg=#98971a  ctermfg=106 guibg=#ebdbb2 ctermbg=223
 hi SignatureMarkText guifg=#808080 ctermfg=244
 
 " StatusLine: {{{2
