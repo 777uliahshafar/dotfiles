@@ -8,6 +8,7 @@ alias df="cd ~/git/dotfiles"
 alias md="vim -c VimwikiMakeDiaryNote"
 alias wi="vim -c VimwikiIndex"
 alias wd="vim -c VimwikiDiaryIndex"
+alias s="v vimwiki/Scholarship\ Information.md "
 
 alias dt="cd /Volumes/data"
 alias vp="cd /Volumes/data/proposalphd"

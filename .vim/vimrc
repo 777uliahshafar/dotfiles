@@ -377,7 +377,7 @@ command! -bang -nargs=* GGrep
     endfunction
 
 " Todo list
-let g:vimwiki_listsyms = ' ◐✗'
+let g:vimwiki_listsyms = ' ◐●✗'
 
 "Add bold surround command ysiw-
     au Filetype vimwiki let b:surround_45 = "**\r**"
