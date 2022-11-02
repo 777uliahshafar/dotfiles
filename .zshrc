@@ -77,11 +77,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions fzf)
+plugins=(git zsh-autosuggestions fzf z)
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
+
+# .z Plugin
+
+source $HOME/z/z.sh
 
 # gruvbox pallete
 source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette_osx.sh"
