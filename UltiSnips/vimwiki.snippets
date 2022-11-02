@@ -22,6 +22,19 @@ endglobal
 ###########################
 # Sections and Paragraphs #
 ###########################
+snippet meta "Meta" b
+---
+title: "$1"
+date: "$2"
+image: ../images/howl650.jpg
+keywords: "${3:keywords}"
+tags:
+- ${4:tags}
+---
+
+#$0
+endsnippet
+
 snippet sec "Section" b
 # ${1:Section Name} #
 $0
