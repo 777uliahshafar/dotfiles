@@ -14,7 +14,7 @@ _Start_:
 
 2.  Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
 
-3.  Install oh-my-zsh, then install power10k through oh-my-zsh. Configure the p10k theme by changing value of zsh-theme in .zshrc. Install and write plugin (git, zsh-autosuggestion, fzf) through zshrc. Skip 4 and 6 if you use oh-my-zsh.
+3.  Install oh-my-zsh, then install power10k through oh-my-zsh. Configure the p10k theme by changing value of zsh-theme in .zshrc. To install plugin through oh-my-zsh, you need the plugin in your system, after that write in your .zshrc (in dotfiles). Some plugins are git, zsh-autosuggestion, fzf, z. You can skip 4-6 if you use oh-my-zsh.
 
 4.  Zsh auto-suggestion, install it using homebrew `brew install zsh-autosuggestions`.
 
@@ -38,7 +38,7 @@ You can simply download iterm profile on your google drive.
 
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
-7. Mac_classic and dracula are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles. Use gruvbox palette by source its shellscript from dotfiles to .zshrc.
+7. Mac_classic and molokai are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles. Use gruvbox palette by source its shellscript from dotfiles to .zshrc.
 
 8. Tmux for multiplex terminal.
 
@@ -87,6 +87,16 @@ Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
 Run: `:PlugStatus` to know information about plugin.
 
 11. Spellchecker includes on dotfiles. These contain three unseperated files. The .add extention meaning file has been added new word. These files have already rsycn to `$VIMRUNTIME SPELL` in `~/.vim/spell/`.
+
+12. Use vimdiff in gitdiff. It can be installed with command:
+
+```
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
+```
+
+alias git d. You can check in ~/.gitconfig
 
 # Setting up Vim for R
 
