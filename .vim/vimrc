@@ -102,8 +102,13 @@ set statusline+=\ %{wordcount().words}\ words
 
 "Long lines
 	set wrap
-    au VimEnter * if &diff | execute 'windo set wrap' | endif "wrap in vimdiff/gitdiff
 	"set linebreak
+    "
+"Vimdiff
+    au VimEnter * if &diff | execute 'windo set wrap' | endif "wrap in vimdiff/gitdiff
+    if &diff
+        set noreadonly
+    endif "make vimdiff writeable
 
 "Ignore case when searching
 	set ignorecase
