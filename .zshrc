@@ -105,7 +105,7 @@ PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 # Colorized dir/ ls command
 
 export CLICOLOR=1
-export LSCOLORS=gxfxcxDxBxegedabagaced
+export LSCOLORS=dxBxcxDxfxegedabagaced
 
 # Turn off all beeps
 unsetopt BEEP
