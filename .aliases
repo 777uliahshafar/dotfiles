@@ -2,13 +2,14 @@ alias graph="git log --all --decorate --oneline --graph"
 alias v="mvim -v"
 alias compilescss="npm run scss"
 alias ls="ls -G"
+alias lc='colorls --sd'
 
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
 alias df="cd ~/git/dotfiles"
 alias md="vim -c VimwikiMakeDiaryNote"
 alias wi="vim -c VimwikiIndex"
 alias wd="vim -c VimwikiDiaryIndex"
-alias s="v vimwiki/Scholarship\ Information.md "
+alias sch="v vimwiki/Scholarship\ Information.md "
 
 alias dt="cd /Volumes/data"
 alias vp="cd /Volumes/data/proposalphd"

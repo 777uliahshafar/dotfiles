@@ -20,21 +20,21 @@ _Start_:
 
 5.  Symlink .zshrc to home directory ~/.zshrc from dotfiles to add some customization zsh shell, like adding branch name git in the prompt.
 
-6.  Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). Then install the p10k by:
+6.  Powerlevel10k for enhance customization iterm2 and zsh prompt. Requires **MesloLGS** font which can be found in [P10K](https://github.com/romkatv/powerlevel10k). However, for writing convinience keep using Inconsolata.Then install the p10k by:
 
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 ```
 
-For accessing configuration file run this command `p10k configure`.Additional Feature of terminal or iterm2 should be changed for convenient:
+For accessing configuration file run this command `p10k configure`. The configration p10k already copied in dotfiles. Additional Feature of terminal or iterm2 should be changed for convenient:
 
 - Change profile text by go to Preference -> Profile -> Text -> Change Font to MesloLGS -> Restart Iterm2.
 - Change margin left-right by go to Preferenced -> Advanced tab -> Search for margin -> Change 'width of left...' to 15 -> Restart Iterm2.
 - Standar column and row of iterm should be set up to 80columns and 40rows with Normal style in window in Profile Tab.
 
 Another font has installed for vim called Inconsolata regular 20 created by Raph Levien. It is a monospace font, designed for code listings and the like, in print. In order to get maximum result, ensure you enable anti-aliased, and use ligatures.
-You can simply download iterm profile on your google drive.
+You can simply download iterm profile on dotfiles.
 
 6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
 
@@ -66,7 +66,13 @@ ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
-9. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
+9. athityakumar/colorls is A Ruby gem that beautifies the terminal's ls command, with color and font-awesome icons.
+
+- Install ruby using homebrew. You may face a vim conflict, try to reinstall `brew reinstall ruby macvim`.
+- Follow the instruction on athityakumar. All configuration may have been added in .zshrc.
+- There is a color customization (yaml file) of colorls in dotfiles. Source it in `~/.config/colorls/`.
+
+10. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
@@ -75,7 +81,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 - To view listing package run the command `npm ls --depth=0`.
 - To install node run the command `nvm install 10.18.0`
 
-10. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
+11. Vim-plug is plugin manager for Vim. It can be installed using curl by this command:
 
 ```
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -86,9 +92,9 @@ Run `:PlugInstall` to install plugin vimrc.
 Run `:PlugClean` to remove plugin after remove plugin line in vimrc.
 Run: `:PlugStatus` to know information about plugin.
 
-11. Spellchecker includes on dotfiles. These contain three unseperated files. The .add extention meaning file has been added new word. These files have already rsycn to `$VIMRUNTIME SPELL` in `~/.vim/spell/`.
+12. Spellchecker includes on dotfiles. These contain three unseperated files. The .add extention meaning file has been added new word. These files have already rsycn to `$VIMRUNTIME SPELL` in `~/.vim/spell/`.
 
-12. Use vimdiff in gitdiff. It can be installed with command:
+13. Use vimdiff in gitdiff. It can be installed with command:
 
 ```
 git config --global diff.tool vimdiff

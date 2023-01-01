@@ -1,5 +1,9 @@
 {
-  "Thin Strokes" : 4,
+  "Ansi 5 Color" : {
+    "Green Component" : 0,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
+  },
   "Working Directory" : "\/Users\/uliah",
   "Prompt Before Closing 2" : false,
   "Selected Text Color" : {
@@ -15,9 +19,11 @@
   },
   "Use Italic Font" : true,
   "Foreground Color" : {
-    "Green Component" : 0.73333334922790527,
-    "Blue Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527
+    "Red Component" : 0.97254901960784312,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.94901960784313721,
+    "Alpha Component" : 1,
+    "Green Component" : 0.97254901960784312
   },
   "Right Option Key Sends" : 0,
   "Character Encoding" : 4,
@@ -45,6 +51,7 @@
     "slogin",
     "telnet"
   ],
+  "Non-ASCII Ligatures" : true,
   "Scrollback Lines" : 1000,
   "Draw Powerline Glyphs" : false,
   "Flashing Bell" : false,
@@ -61,7 +68,7 @@
     "Blue Component" : 0,
     "Red Component" : 0.73333334922790527
   },
-  "Use Non-ASCII Font" : false,
+  "Use Non-ASCII Font" : true,
   "Link Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -312,7 +319,7 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0.1491314172744751
   },
-  "Smart Cursor Color" : true,
+  "Smart Cursor Color" : false,
   "Ambiguous Double Width" : false,
   "Blur Radius" : 0.10000000000000001,
   "Cursor Type" : 2,
@@ -340,7 +347,7 @@
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Unicode Version" : 9,
+  "Unicode Version" : 8,
   "Ansi 6 Color" : {
     "Green Component" : 0.73333334922790527,
     "Blue Component" : 0.73333334922790527,
@@ -349,30 +356,26 @@
   "Transparency" : 0,
   "Initial Text" : "tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}",
   "Background Color" : {
-    "Red Component" : 0.20000000000000001,
+    "Red Component" : 0.10000000000000001,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.20000000000000001,
+    "Blue Component" : 0.10000000000000001,
     "Alpha Component" : 1,
-    "Green Component" : 0.20000000000000001
+    "Green Component" : 0.10000000000000001
   },
   "Screen" : 0,
   "Bound Hosts" : [
 
   ],
-  "Non Ascii Font" : "Monaco 12",
+  "Non Ascii Font" : "InconsolataNerdFontComplete-Regular 20",
   "Ansi 13 Color" : {
     "Green Component" : 0.3333333432674408,
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Columns" : 80,
+  "Columns" : 70,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
   "ASCII Ligatures" : true,
-  "Custom Directory" : "No",
-  "Ansi 5 Color" : {
-    "Green Component" : 0,
-    "Blue Component" : 0.73333334922790527,
-    "Red Component" : 0.73333334922790527
-  }
+  "Thin Strokes" : 0,
+  "Custom Directory" : "No"
 }

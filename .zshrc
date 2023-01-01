@@ -8,6 +8,12 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Ruby's environment variable
+if [ -d "/usr/local/opt/ruby/bin" ]; then
+  export PATH=/usr/local/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -91,6 +97,9 @@ source $HOME/z/z.sh
 # gruvbox pallete
 source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette_osx.sh"
 
+# Tab completion for flags for colorls ruby athityakumar
+source $(dirname $(gem which colorls))/tab_complete.sh
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
@@ -104,8 +113,6 @@ PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 # Colorized dir/ ls command
 
-export CLICOLOR=1
-export LSCOLORS=dxBxcxDxfxegedabagaced
 
 # Turn off all beeps
 unsetopt BEEP
