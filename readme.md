@@ -66,6 +66,8 @@ ln -s -f ~/git/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new -s ${tmux_session:-def}
 ```
 
+- Install tmux plugin manager
+
 9. athityakumar/colorls is A Ruby gem that beautifies the terminal's ls command, with color and font-awesome icons.
 
 - Install ruby using homebrew. You may face a vim conflict, try to reinstall `brew reinstall ruby macvim`.

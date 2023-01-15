@@ -1,7 +1,7 @@
 alias graph="git log --all --decorate --oneline --graph"
 alias v="mvim -v"
 alias compilescss="npm run scss"
-alias ls="ls -G"
+alias ls="colorls -tr "
 alias lc='colorls --sd'
 
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"

@@ -538,12 +538,14 @@ set signcolumn=yes
 " Disable completion suggestions only (disable because already disable in coc-config)
 autocmd FileType markdown,tex,rnoweb let b:coc_suggest_disable = 1
 
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin. Default c-n & c-p
 inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
+			\ pumvisible() ? "\<C-j>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-k>" : "\<C-h>"
+
+
 
 " Use tab for trigger completion with characters ahead and navigate.
 function! s:check_back_space() abort
