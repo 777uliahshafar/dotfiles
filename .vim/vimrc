@@ -132,6 +132,11 @@ autocmd FileType scss setl iskeyword+=@-@
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+" Save
+cab tstamp <C-R>=strftime("%Y-%m-%d:%H")<CR>
+nnoremap <F1> :update /Volumes/Data/uliahweb/src/markdown/
+cmap <F2> <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
+
 " -   -   -   -   -   -   -   -
 "  NVIM-R
 "
@@ -383,7 +388,7 @@ command! -bang -nargs=* GGrep
     endfunction
 
 " Todo list
-let g:vimwiki_listsyms = ' ◐●✓'
+let g:vimwiki_listsyms = ' ○●✓'
 
 "Add bold surround command ysiw-
     au Filetype vimwiki let b:surround_45 = "**\r**"
