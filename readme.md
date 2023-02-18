@@ -106,6 +106,8 @@ git config --global alias.d difftool
 
 alias git d. You can check in ~/.gitconfig
 
+Use better syntax highlight in vimdiff with `https://github.com/dandavison/delta`
+
 # Setting up Vim for R
 
 1. Xquartz for viewing table from R.
