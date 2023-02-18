@@ -1,5 +1,5 @@
 alias graph="git log --all --decorate --oneline --graph"
-alias gl="git log --decorate --pretty=format:'%h > %<(20)%s' -10 | column -s '|'"
+alias gl="git log --pretty=format:'%h > %<(20)%s' -10 | column -s '|'"
 alias v="mvim -v"
 alias compilescss="npm run scss"
 alias ls="colorls -tr "
