@@ -113,8 +113,13 @@ snippet link "Link to something"
 [${1:${VISUAL:Text}}](${3:http://${2:www.url.com}})$0
 endsnippet
 
-snippet img "Image"
-![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
+snippet img "image"
+![${2}](/Volumes/Data/icgeneral/assets/${1})
+${0}
+endsnippet
+
+snippet file "Open file"
+[${1:my link}](file:/Volumes/data/$2.pdf)$0
 endsnippet
 
 snippet ilc "Inline Code" i
@@ -126,10 +131,6 @@ snippet cbl "Codeblock" b
 $1
 \`\`\`
 $0
-endsnippet
-
-snippet file "Open file"
-[${1:my link}](file:/Volumes/data/$2.pdf)$0
 endsnippet
 
 snippet pdf "Open file"
