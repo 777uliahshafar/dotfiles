@@ -67,6 +67,7 @@ tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new 
 ```
 
 - Install tmux plugin manager
+- install tmux-resurrect (prefix+ ctrl-s/ctrl-r)
 
 9. athityakumar/colorls is A Ruby gem that beautifies the terminal's ls command, with color and font-awesome icons.
 
