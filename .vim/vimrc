@@ -11,6 +11,7 @@ Plug 'airblade/vim-rooter'
 " Writing/Authoring Tools
 Plug 'reedes/vim-pencil'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -416,6 +417,13 @@ endfunction
 " Use pandoc-latex-template, move file template in pandoc template folder, info pandoc location --v
 " https://github.com/Wandmalfarbe/pandoc-latex-template
 noremap <leader>lc :call Compilemd()<CR><CR>
+
+" -   -   -   -   -   -   -   -
+"  Vim preview markdown
+"
+" -   -   -   -   -   -   -   -
+let g:mkdp_refresh_slow=1
+nmap <C-s> <Plug>MarkdownPreviewToggle
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
