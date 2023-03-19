@@ -423,7 +423,9 @@ noremap <leader>lc :call Compilemd()<CR><CR>
 "
 " -   -   -   -   -   -   -   -
 let g:mkdp_refresh_slow=1
+let g:mkdp_preview_options = {'disable_sync_scroll': 1}
 nmap <C-s> <Plug>MarkdownPreviewToggle
+let g:mkdp_browser = 'safari'
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
@@ -730,9 +732,9 @@ set dictionary+=/usr/share/dict/words
 
 "Shortcutting Vimtex compilation
 	function! VimtexLoadShortcuts()
-	nmap <buffer> <leader>lc <plug>(vimtex-compile)
+	nmap <buffer> <leader>cc <plug>(vimtex-compile)
 	nmap <buffer> <leader>le <plug>(vimtex-errors)
-	nmap <buffer> <leader>lv <plug>(vimtex-view)
+	nmap <buffer> <leader>vv <plug>(vimtex-view)
 	nmap <buffer> <leader>ls <plug>(vimtex-toggle-main)
 	endfunction
 
@@ -748,6 +750,7 @@ set dictionary+=/usr/share/dict/words
 	let g:vimtex_view_general_viewer
         \ = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 	let g:vimtex_view_general_options = '-r @line @pdf @tex'
+    let g:vimtex_view_skim_activate=1 "view pdf and put it on front screen
 
 " This adds a callback hook that updates Skim after compilation
 	let g:vimtex_view_general_viewer
