@@ -40,6 +40,8 @@ You can simply download iterm profile on dotfiles.
 
 7. Mac_classic and molokai are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles. Use gruvbox palette by source its shellscript from dotfiles to .zshrc.
 
+Mac_classic uses gruvbox palette which sometimes make colors is off in a terminal. A fix already works however for references see: https://github.com/morhetz/gruvbox/wiki/Terminal-specific
+
 8. Tmux for multiplex terminal.
 
 - Install using homebrew by `brew install tmux`.
