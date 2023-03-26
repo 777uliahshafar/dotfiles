@@ -14,6 +14,9 @@
   "prettier.disableSuccessMessage": true,
   "suggest.autoTrigger": "always",
   "suggest.snippetIndicator": "[+] ",
+  "snippet.extend": {
+    "latex": ["tex", "texmath"]
+  },
   "suggest.maxCompleteItemCount": 12,
   "explorer.quitOnOpen": true,
   "explorer.position": "left",

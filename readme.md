@@ -132,7 +132,7 @@ Install all below plugin by running vim-plug `:PlugInstall`
 
 - Vimtex Plugin for better latex workflow.
 - FastFold for better and fast folding
-- UltiSnips and coc-snippets for adding snippet. The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. You may symlink snippet.tex from dotfiles.
+- UltiSnips and coc-snippets for adding snippet. The default location for snippet in coc-snippets is in ~/.config/coc/ultisnips. Symlink for snippet is not work here, it must be copied.
 - Goyo for free writing distraction.
 - Vimagit for git local execution.
 - Vim-myhelp for cheatsheet :h. This has its own config in my repo '777uliahshafar/vim-myhelp'. You can modify/add this somewhere that Vim looks when loading plugins. eg ~/.vim/plugged/..

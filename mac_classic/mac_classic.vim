@@ -238,7 +238,7 @@ hi link markdownBlockquote String
 
 hi markdownCode  guifg=#E18AC7 ctermfg=176
 hi markdownCodeBlock guifg=#E18AC7 ctermfg=176
-hi markdownCodeDelimiter term=bold guifg=#E18AC7 ctermfg=176 cterm=bold
+hi markdownCodeDelimiter guifg=#0000AF ctermfg=19 cterm=bold
 
 hi markdownHeadingDelimiter guifg=#005F87 ctermfg=24 gui=bold
 hi link markdownHeadingRule markdownHHBold

@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/z/z.sh
 
 # gruvbox pallete
-source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette_osx.sh"
+source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette.sh"
 
 # Tab completion for flags for colorls ruby athityakumar
 source $(dirname $(gem which colorls))/tab_complete.sh
