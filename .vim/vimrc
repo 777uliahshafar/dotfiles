@@ -136,6 +136,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Save
+map <leader>D :put =strftime('# %m-%d')<CR>
 cab tstamp <C-R>=strftime("%Y-%m-%d:%H")<CR>
 nnoremap <F1> :w! /Volumes/Data/uliahweb/src/markdown/
 cmap <F2> <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
