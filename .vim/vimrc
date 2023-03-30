@@ -301,7 +301,7 @@ command! -bang -nargs=* GGrep
 	map <leader>g :Goyo<CR>
 	let g:goyo_width=58
 " Color name (:help cterm-colors) or ANSI code
-    let g:limelight_conceal_ctermfg = 240
+    let g:limelight_conceal_ctermfg = 244
 
     let g:limelight_paragraph_span = 1
     let g:limelight_default_coefficient = 0.6
