@@ -17,7 +17,10 @@ alias vp="cd /Volumes/data/proposalphd"
 alias vpp="mvim -v /Volumes/data/proposalphd/proposalphd.tex"
 alias vm="cd /Volumes/data/motlet"
 alias vml="mvim -v /Volumes/data/motlet/motlet.tex"
+alias it="mvim -v /Volumes/data/issuetesis/issuetesis.tex"
 
+
+alias web="cd /Volumes/Data/uliahweb"
 alias rcom="mvim -v ~/vimwiki/ReadingOps.md"
 alias lcom="mvim -v ~/vimwiki/ListeningOps.md"
 alias wcom="mvim -v ~/vimwiki/WritingOps.md"

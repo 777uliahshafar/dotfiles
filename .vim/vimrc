@@ -35,7 +35,7 @@ Plug 'sirver/ultisnips'
 Plug 'junegunn/vim-easy-align'
 
 " Statistic Prog. Tools
-"Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 
 call plug#end()
 
@@ -44,20 +44,19 @@ call plug#end()
 "
 " -   -   -   -   -   -   -   -
 syntax enable
-
 " COLOR SCHEME
-" Molokai settings
-let g:molokai_original = 1
-let g:rehash256 = 1
-
 if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+
+" Molokai settings
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 colorscheme mac_classic
 
 "switch colorscheme
-"
 nnoremap <silent> <F5> :exec "color " .
     \ ((g:colors_name == "mac_classic") ? "molokai" : "mac_classic")<CR>
 
@@ -136,7 +135,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Save
-map <leader>D :put =strftime('# %m-%d')<CR>
+map <leader>D :put =strftime('## %m-%d')<CR>
 cab tstamp <C-R>=strftime("%Y-%m-%d:%H")<CR>
 nnoremap <F1> :w! /Volumes/Data/uliahweb/src/markdown/
 cmap <F2> <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
@@ -302,13 +301,10 @@ command! -bang -nargs=* GGrep
 	map <leader>g :Goyo<CR>
 	let g:goyo_width=58
 " Color name (:help cterm-colors) or ANSI code
-    let g:limelight_conceal_ctermfg = 'gray'
-    let g:limelight_conceal_ctermfg = 228
+    let g:limelight_conceal_ctermfg = 240
 
     let g:limelight_paragraph_span = 1
-    let g:limelight_default_coefficient = 0.5
-
-    let g:limelight_priority = -1
+    let g:limelight_default_coefficient = 0.6
 
 "Goyo Customazation
 	function! s:goyo_enter()
@@ -738,9 +734,9 @@ set dictionary+=/usr/share/dict/words
 
 "Shortcutting Vimtex compilation
 	function! VimtexLoadShortcuts()
-	nmap <buffer> <leader>cc <plug>(vimtex-compile)
+	nmap <buffer> <leader>lc <plug>(vimtex-compile)
 	nmap <buffer> <leader>le <plug>(vimtex-errors)
-	nmap <buffer> <leader>vv <plug>(vimtex-view)
+	nmap <buffer> <leader>lv <plug>(vimtex-view)
 	nmap <buffer> <leader>ls <plug>(vimtex-toggle-main)
 	endfunction
 
