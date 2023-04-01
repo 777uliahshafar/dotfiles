@@ -12,6 +12,8 @@ _Start_:
     Then Homebrew itself:
     `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
+1.1 Macport is similiar to homebrew. Install it through source form.
+
 2.  Iterm2 is very similar to terminal, but with extra addition feature. Installation using homebrew: `brew install Iterm2`.
 
 3.  Install oh-my-zsh, then install power10k through oh-my-zsh. Configure the p10k theme by changing value of zsh-theme in .zshrc. To install plugin through oh-my-zsh, you need the plugin in your system, after that write in your .zshrc (in dotfiles). Some plugins are git, zsh-autosuggestion, fzf, z. You can skip 4-6 if you use oh-my-zsh.
@@ -36,7 +38,7 @@ For accessing configuration file run this command `p10k configure`. The configra
 Another font has installed for vim called Inconsolata regular 20 created by Raph Levien. It is a monospace font, designed for code listings and the like, in print. In order to get maximum result, ensure you enable anti-aliased, and use ligatures.
 You can simply download iterm profile on dotfiles.
 
-6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdate version. Install it using homebrew by this command `brew install macvim`.
+6. **MacVim** is simply a text editor that can be open in terminal. MacVim also has large feature that can bost our writing. The difference between Macvim and Vim is that it enables you using mouse and arrow in the workflow. By the way, Vim has already installed in Mac but in outdated version. Macvim has been deprecated by homebrew in Macos Catalina, use another package manager instead.
 
 7. Mac_classic and molokai are schemes for vim. Mac_classic is a customized colorscheme by drewneil. The mac_classic.vim already copied to dotfiles. Use gruvbox palette by source its shellscript from dotfiles to .zshrc.
 
@@ -71,11 +73,7 @@ tmux ls && read tmux_session && tmux attach -t ${tmux_session:-def} || tmux new 
 - Install tmux plugin manager
 - install tmux-resurrect (prefix+ ctrl-s/ctrl-r)
 
-9. athityakumar/colorls is A Ruby gem that beautifies the terminal's ls command, with color and font-awesome icons.
-
-- Install ruby using homebrew. You may face a vim conflict, try to reinstall `brew reinstall ruby macvim`.
-- Follow the instruction on athityakumar. All configuration may have been added in .zshrc.
-- There is a color customization (yaml file) of colorls in dotfiles. Source it in `~/.config/colorls/`.
+9. colorls exa
 
 10. NVM is a robust package node manager, installation node.js and npm could be done by NVM instead brew.
 

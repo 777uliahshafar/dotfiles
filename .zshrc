@@ -6,13 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Ruby's environment variable
-if [ -d "/usr/local/opt/ruby/bin" ]; then
-  export PATH=/usr/local/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
-fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -98,7 +93,7 @@ source $HOME/z/z.sh
 source "$HOME/git/dotfiles/mac_classic/gruvbox_256palette.sh"
 
 # Tab completion for flags for colorls ruby athityakumar
-source $(dirname $(gem which colorls))/tab_complete.sh
+#source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Load version control information
 autoload -Uz vcs_info
@@ -111,7 +106,9 @@ zstyle ':vcs_info:git:*' formats 'on branch %b'
 setopt PROMPT_SUBST
 PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
-# Colorized dir/ ls command
+# Colorized dir/ ls command (configuration exa)
+export CLICOLOR=1
+LS_COLORS="di=33:*.tex=33:*.cls=33:*.pdf=36:*.aux=37:*.fdb_latexmk=37:*.fls=37:*.log=37:*.xdv=37:*.out=37"
 
 
 # Turn off all beeps

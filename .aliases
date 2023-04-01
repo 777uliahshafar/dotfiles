@@ -1,9 +1,9 @@
 alias graph="git log --all --decorate --oneline --graph"
 alias gl="git log --pretty=format:'%h > %<(20)%s' -10 | column -s '|'"
-alias v="mvim -v"
+alias v="vim -v"
 alias compilescss="npm run scss"
-alias ls="colorls -tr "
-alias lc='colorls --sd'
+alias ls="exa --grid --icons"
+alias lg="exa --grid --git"
 
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
 alias df="cd ~/git/dotfiles"
