@@ -400,6 +400,7 @@ let g:vimwiki_listsyms = ' ○●✓'
     au Filetype vimwiki let b:surround_45 = "**\r**"
 
 nmap <Leader>ws <Plug>VimwikiSplitLink
+nnoremap <Leader>wt :VimwikiTOC<CR>
 
 " Disable math tex conceal feature
 let g:tex_conceal = ''
