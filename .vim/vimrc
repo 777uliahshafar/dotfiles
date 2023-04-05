@@ -361,7 +361,7 @@ command! -bang -nargs=* GGrep
 	nnoremap <Leader>l :bnext<CR>
 
 "Automatically deletes all trailing whitespace on save.
-	autocmd BufWritePre * %s/\s\+$//e
+"	autocmd BufWritePre * %s/\s\+$//e
 
 "Ultisnip
 	let g:UltiSnipsExpandTrigger = '<nop>'
