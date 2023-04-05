@@ -94,7 +94,7 @@ hi String  guifg=#007B22 ctermfg=28
 hi Title  guifg=#000000 ctermfg=0 gui=bold
 hi Todo  guifg=#0066FF ctermfg=27 gui=inverse,bold,italic
 hi Delimiter guifg=#00afaf guibg=NONE guisp=NONE gui=NONE ctermfg=37 ctermbg=NONE cterm=NONE
-hi Underlined  gui=underline
+hi Underlined  guifg=#000087 ctermfg=18 gui=underline
 
 " Invisible character colors
 hi NonText  guifg=#DFDFDF ctermfg=253 guibg=#FFFFFF ctermbg=15

@@ -95,9 +95,10 @@ set statusline+=%=              " right align
 set statusline+=%#CursorLineNr#   " colour
 set statusline+=\ %Y\                   " file type
 set statusline+=%#Cursor#   " colour
-set statusline+=\ %3p%%\                " percentage
+set statusline+=\%3p%%\                " percentage
 set statusline+=%#CursorLine#       " colour
-set statusline+=\ %{wordcount().words}\ words
+set statusline +=\ %{strftime(\"[%d/%m\]\")}
+"set statusline+=\ %{wordcount().words}
 
 "Long lines
 	set wrap
