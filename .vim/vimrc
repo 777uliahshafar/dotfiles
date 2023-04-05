@@ -266,8 +266,8 @@ command! -bang -nargs=? -complete=dir Files
 " Get text in files with Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+  \   'rg --column --line-number --no-heading --color=always --colors "path:fg:0,123,34" --colors "line:fg:128,128,128" --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview('up', 'ctrl-/'), <bang>0)
 
 " Ripgrep advanced
 function! RipgrepFzf(query, fullscreen)
@@ -429,7 +429,6 @@ noremap <leader>lc :call Compilemd()<CR><CR>
 let g:mkdp_refresh_slow=1
 let g:mkdp_preview_options = {'disable_sync_scroll': 1}
 nmap <C-s> <Plug>MarkdownPreviewToggle
-let g:mkdp_browser = 'safari'
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
