@@ -97,7 +97,7 @@ set statusline+=\ %Y\                   " file type
 set statusline+=%#Cursor#   " colour
 set statusline+=\%3p%%\                " percentage
 set statusline+=%#CursorLine#       " colour
-set statusline +=\ %{strftime(\"[%d/%m\]\")}
+set statusline +=\ %{strftime(\"[%m/%d\]\")}
 "set statusline+=\ %{wordcount().words}
 
 "Long lines
@@ -484,7 +484,6 @@ highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
 "Opening Coc Explorer
 nmap <space>e :CocCommand explorer<CR>
 
-
 " -   -   -   -   -   -   -   -
 "  Linting and Fixing
 "
@@ -503,11 +502,12 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'r': ['styler']
 \}
+
+"\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
