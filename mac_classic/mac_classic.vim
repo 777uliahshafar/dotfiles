@@ -45,9 +45,9 @@ let g:colors_name = "mac_classic"
 " }}}
 
 " GUI: {{{1
-hi Visual  guibg=#C6DEFF ctermbg=189
+hi Visual guibg=#C6DEFF ctermbg=189
 hi LineNr guifg=#7c6f64 ctermfg=243 guibg=#bdae93 ctermbg=248 cterm=NONE gui=NONE
-hi Cursor  guifg=#FFFFFF ctermfg=15 guibg=#3C4C72 ctermbg=240
+hi Cursor guifg=#FFFFFF ctermfg=15 guibg=#3C4C72 ctermbg=240
 hi CursorLine guifg=#1d2021 ctermfg=234 guibg=#ebdbb2 ctermbg=223 cterm=NONE gui=NONE
 hi CursorColumn ctermfg=15 ctermbg=242 guifg=#F0F6FF guibg=#6C6C6C
 hi CursorLineNr  guifg=#1d2021 ctermfg=234 guibg=#ebdbb2 ctermbg=223 cterm=NONE gui=NONE
@@ -97,8 +97,8 @@ hi Delimiter guifg=#00afaf guibg=NONE guisp=NONE gui=NONE ctermfg=37 ctermbg=NON
 hi Underlined  guifg=#000087 ctermfg=18 gui=underline
 
 " Invisible character colors
-hi NonText  guifg=#DFDFDF ctermfg=253 guibg=#FFFFFF ctermbg=15
-hi SpecialKey  guifg=#DFDFDF ctermfg=253 guibg=#FFFFFF ctermbg=15
+hi NonText  guifg=#DFDFDF ctermfg=253 guibg=#fbf1c7 ctermbg=229
+hi SpecialKey  guifg=#DFDFDF ctermfg=253 guibg=#fbf1c7 ctermbg=229
 
 " Diff styles {{{1
 hi diffAdded guifg=#007B22 guibg=#FFFFFF ctermfg=28 ctermbg=15
@@ -164,6 +164,7 @@ hi htmlHyBold  term=bold ctermfg=101 gui=bold,underline guifg=#87875f cterm=bold
 hi htmlHzBold  term=bold ctermfg=101 gui=underline guifg=#87875f cterm=underline
 hi htmlHx ctermfg=208 guifg=#FF8700
 
+hi link mkdLineBreak Normal
 hi link htmlH1 markdownHHBold
 hi link htmlH2 markdownHxBold
 hi link htmlH3 markdownHyBold
