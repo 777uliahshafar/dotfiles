@@ -1,3 +1,4 @@
+alias anm="less /Volumes/Data/aliases.md"
 alias graph="git log --all --decorate --oneline --graph"
 alias gl="git log --pretty=format:'%h > %<(20)%s' -10 | column -s '|'"
 alias v="mvim -v"
@@ -25,6 +26,7 @@ alias rcom="mvim -v ~/vimwiki/ReadingOps.md"
 alias lcom="mvim -v ~/vimwiki/ListeningOps.md"
 alias wcom="mvim -v ~/vimwiki/WritingOps.md"
 alias scom="mvim -v ~/vimwiki/SpeakingOps.md"
+alias gen="open /Volumes/Data/icomgeneral"
 
 alias ve="cd /Volumes/data/essay"
 alias ves="mvim -v /Volumes/data/essay/essay.tex"
