@@ -78,7 +78,7 @@ nnoremap <silent> <F5> :exec "color " .
 	set expandtab
     set laststatus=2
 
-" Status line(bar) VIM
+    " Status line(bar) VIM
 set statusline=
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
@@ -428,7 +428,7 @@ noremap <leader>lc :call Compilemd()<CR><CR>
 " -   -   -   -   -   -   -   -
 let g:mkdp_refresh_slow=1
 let g:mkdp_preview_options = {'disable_sync_scroll': 1}
-nmap <C-s> <Plug>MarkdownPreviewToggle
+nmap <leader>s <Plug>MarkdownPreviewToggle
 
 " -   -   -   -   -   -   -   -
 "  Vim-Sneak Config
