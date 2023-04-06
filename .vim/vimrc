@@ -393,7 +393,6 @@ command! -bang -nargs=* GGrep
     function! SetWikiOptions()
         set syntax=markdown
         set cursorline
-        set list
     endfunction
 
 "mapping set list 
