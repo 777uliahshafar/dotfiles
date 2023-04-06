@@ -76,7 +76,8 @@ nnoremap <silent> <F5> :exec "color " .
 	set tabstop=4
 	set shiftwidth=4
 	set expandtab
-    set laststatus=2
+    set laststatus=2  
+    set listchars=tab:\|\-,trail:~ "show a trail whitespace as characters, actived by set list
 
     " Status line(bar) VIM
 set statusline=
@@ -392,7 +393,11 @@ command! -bang -nargs=* GGrep
     function! SetWikiOptions()
         set syntax=markdown
         set cursorline
+        set list
     endfunction
+
+"mapping set list 
+nnoremap <F3> :set list!<CR>
 
 " Todo list
 let g:vimwiki_listsyms = ' ○●✓'
