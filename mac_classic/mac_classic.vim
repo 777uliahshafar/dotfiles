@@ -230,7 +230,7 @@ hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
 hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=bold
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi markdownHxBold  term=bold ctermfg=235 gui=bold guifg=#282828 cterm=bold
+hi markdownHxBold  term=bold ctermfg=72 gui=bold guifg=#689d6a cterm=bold
 hi markdownHyBold  term=bold  ctermfg=106 gui=bold guifg=#98971a cterm=bold
 hi markdownHzBold  term=bold ctermfg=142 gui=bold guifg=#b8bb26 cterm=bold
 hi markdownHx ctermfg=28 guifg=#007B22
