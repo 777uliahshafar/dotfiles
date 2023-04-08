@@ -160,7 +160,7 @@ hi htmlSpecialChar  guifg=#D51015 ctermfg=160 gui=bold
 
 hi htmlHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
 hi htmlHxBold  term=bold ctermfg=65 gui=bold guifg=#afd7af cterm=bold
-hi htmlHyBold  term=bold ctermfg=101 gui=bold,underline guifg=#87875f cterm=bold,underline
+hi htmlHyBold  term=bold ctermfg=72 gui=bold guifg=#689d6a cterm=bold
 hi htmlHzBold  term=bold ctermfg=101 gui=underline guifg=#87875f cterm=underline
 hi htmlHx ctermfg=208 guifg=#FF8700
 
@@ -230,7 +230,7 @@ hi markdownBold guibg=#d7d7d7 ctermbg=188 gui=bold
 hi markdownItalic guibg=#C6DEFF ctermbg=189 gui=bold
 
 hi markdownHHBold  term=bold ctermfg=28 gui=bold guifg=#007B22 cterm=bold
-hi markdownHxBold  term=bold ctermfg=72 gui=bold guifg=#689d6a cterm=bold
+hi markdownHxBold  term=bold ctermfg=100 gui=bold guifg=#79740E cterm=bold
 hi markdownHyBold  term=bold  ctermfg=106 gui=bold guifg=#98971a cterm=bold
 hi markdownHzBold  term=bold ctermfg=142 gui=bold guifg=#b8bb26 cterm=bold
 hi markdownHx ctermfg=28 guifg=#007B22
