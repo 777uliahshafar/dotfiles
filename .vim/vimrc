@@ -138,10 +138,10 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Save
-map <leader>D :put =strftime('## %m-%d')<CR>
+map <leader>d :put =strftime('## %m-%d')<CR>
 cab tstamp <C-R>=strftime("%Y-%m-%d:%H")<CR>
-nnoremap <F1> :w! /Volumes/Data/uliahweb/src/markdown/
-cmap <F2> <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
+nnoremap <leader>W :w! /Volumes/Data/uliahweb/src/markdown/
+cmap <leader>D <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
 
 " -   -   -   -   -   -   -   -
 "  NVIM-R
@@ -397,7 +397,7 @@ command! -bang -nargs=* GGrep
     endfunction
 
 "mapping set list 
-nnoremap <F3> :set list!<CR>
+nmap <F9> :set list!<CR>
 
 " Todo list
 let g:vimwiki_listsyms = ' ○●✓'
