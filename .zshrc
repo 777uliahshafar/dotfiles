@@ -8,8 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to basictex
-export PATH=/usr/texbin:/opt/local/bin:/opt/local/sbin:$PATH;
+# Path to mactex, solve multiple tex installation
+export PATH=/usr/local/texlive/2023/bin/universal-darwin:$PATH
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
