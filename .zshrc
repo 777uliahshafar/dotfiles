@@ -9,7 +9,7 @@ fi
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to basictex
-export PATH=/usr/local/texlive/2023basic/bin/universal-darwin/:$PATH
+export PATH=/usr/texbin:/opt/local/bin:/opt/local/sbin:$PATH;
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
