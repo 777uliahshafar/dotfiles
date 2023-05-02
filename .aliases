@@ -25,6 +25,7 @@ alias web="cd /Volumes/Data/uliahweb"
 alias rcom="mvim -v ~/vimwiki/ReadingOps.md"
 alias lcom="mvim -v ~/vimwiki/ListeningOps.md"
 alias wcom="mvim -v ~/vimwiki/WritingOps.md"
+alias wwcom="mvim -v ~/vimwiki/WritingOps2.md"
 alias scom="mvim -v ~/vimwiki/SpeakingOps.md"
 alias gen="open /Volumes/Data/icomgeneral"
 
