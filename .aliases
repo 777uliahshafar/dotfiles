@@ -30,4 +30,4 @@ alias scom="mvim -v ~/vimwiki/SpeakingOps.md"
 alias gen="open /Volumes/Data/icomgeneral"
 
 alias ve="cd /Volumes/data/essay"
-alias ves="mvim -v /Volumes/data/essay/essay.tex"
+alias ves="mvim -v /Volumes/data/essay/esai.tex"
