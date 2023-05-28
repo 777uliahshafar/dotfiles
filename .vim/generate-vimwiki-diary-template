@@ -6,9 +6,9 @@ template = """---
 title: "Task {date}"
 date: "{date}"
 image: ../images/howl650.jpg
-keywords: "english"
+keywords: "tpa"
 tags:
-- english test
+- tpa
 ---
 #
 
