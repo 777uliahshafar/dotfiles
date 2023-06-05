@@ -5,6 +5,7 @@ alias v="mvim -v"
 alias compilescss="npm run scss"
 alias ls="exa --grid --icons"
 alias lg="exa --grid --git"
+alias lc="exa --all --icons"
 
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
 alias df="cd ~/git/dotfiles"
