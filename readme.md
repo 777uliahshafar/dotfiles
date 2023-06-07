@@ -370,6 +370,28 @@ By doing so, you're suppose to be able install Winget
         },
 ```
 
+- Change the keybinding windows terminal by adding:
+    ```
+"keybindings":
+[
+    {"command": {"action":"copy","singleLine":false}, "keys" :"ctrl+c"},
+    {"command": "paste", "keys" : "ctrl+v"},
+    {"command": "closePane", "keys" :"ctrl+w"},
+    {"command": "splitPane", "keys" :"ctrl+_"},
+    { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
+    { "command": { "action": "moveFocus", "direction": "down" }, "keys": "ctrl+shift+j" },
+    { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+shift+h" },
+    { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+shift+l" },
+    { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+shift+k" },
+    {"command": "newTab", "keys" :"ctrl+T"},
+    {"command": "toggleFocusMode", "keys" :"shift+f11"},
+    {"command": "toggleAlwaysOnTop", "keys" :"ctrl+d"},
+    {"command": "commandPalette", "keys" :"ctrl+shift+p"},
+    {"command": "find", "keys" :"ctrl+shift+f"}
+],
+    
+    ```
+
 1. Replace caps lock to esp. Find caps lock to esc registry.
 - Open regedit, go to file > import > choose the registry capslock to esc.
 

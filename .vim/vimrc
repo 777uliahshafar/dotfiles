@@ -106,45 +106,45 @@ set statusline +=\ %{strftime(\"[%m/%d\]\")}
 	set wrap
 	"set linebreak
     "
-"Vimdiff
+"Vimdiff 0
     au VimEnter * if &diff | execute 'windo set wrap' | endif "wrap in vimdiff/gitdiff
     if &diff
         set noreadonly
     endif "make vimdiff writeable
 
-"Ignore case when searching
+"Ignore case when searching  1
 	set ignorecase
 
-" Map j and k to go down a visual line rather than an actual line
+" Map j and k to go down a visual line rather than an actual line 1
 	nnoremap j gj
 	nnoremap k gk
 
-"Spell-Check set to <leader>o, 'o' for orthography
+"Spell-Check set to <leader>o, 'o' for orthography 1
     set spellsuggest+=4
 	map <leader>o :setlocal spell! spelllang=id<CR>
 	map <F7> :setlocal spell! spelllang=en_us<CR>
 
-"Cursor line
+"Cursor line 0
     map <F8> :set cursorline!<CR>
 
-" Syntax vim-javascript and vim-jsx
+" Syntax vim-javascript and vim-jsx 0
 let g:jsx_ext_required = 0
 
-" Syntax scss from coc-css
+" Syntax scss from coc-css 0
 autocmd FileType scss setl iskeyword+=@-@
 
-" Do easyalign for a motion/text object (e.g. gaip)
+" Do easyalign for a motion/text object (e.g. gaip) 0 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" Save
+" Save 0
 map <leader>d :put =strftime('## %m-%d')<CR>
 cab tstamp <C-R>=strftime("%Y-%m-%d:%H")<CR>
 nnoremap <leader>W :w! /Volumes/Data/uliahweb/src/markdown/
 cmap <leader>D <C-R>=strftime("%Y-%m-%d:%H")<CR>.md
 
 " -   -   -   -   -   -   -   -
-"  NVIM-R
+"  NVIM-R 0
 "
 " -   -   -   -   -   -   -   -
 " Tabstop using R
@@ -199,7 +199,7 @@ nnoremap <silent> gz :ZoomToggle<CR>
     nmap <localleader>lN <Plug>RPreviousRChunk
 
 " -   -   -   -   -   -   -   -
-"   FZF Configuration
+"   FZF Configuration 0
 "
 " -   -   -   -   -   -   -   -
 " This is the default extra key bindings of FZF fuzzy finder
@@ -282,10 +282,10 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-" Pencil / Writing Controls
+" Pencil / Writing Controls 1
 let g:pencil#wrapModeDefault = 'soft'
 
-" Vim Pencil
+" Vim Pencil 1
 augroup pencil
   autocmd!
   autocmd FileType vimwiki call pencil#init()
@@ -294,7 +294,7 @@ augroup pencil
   autocmd FileType markdown,mkd call pencil#init()
 augroup END
 
-" Git grep
+" Git grep 0 
 command! -bang -nargs=* GGrep
   \ call fzf#vim#grep(
   \   'git grep --line-number '.shellescape(<q-args>), 0,
@@ -356,16 +356,16 @@ command! -bang -nargs=* GGrep
 " Copy selected text to system clipboard (requires
 	set clipboard=unnamed
 
-" Flying with buffer list
+" Flying with buffer list 1
 	set hidden 	"open other buffer without write the current"
 	nnoremap <C-b> :ls<CR>:b<Space>
 	nnoremap <Leader>h :bprevious<CR>
 	nnoremap <Leader>l :bnext<CR>
 
-"Automatically deletes all trailing whitespace on save.
+"Automatically deletes all trailing whitespace on save. 1
 "	autocmd BufWritePre * %s/\s\+$//e
 
-"Ultisnip
+"Ultisnip 0
 	let g:UltiSnipsExpandTrigger = '<nop>'
     let g:UltiSnipsJumpForwardTrigger = '<tab>'
     let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'

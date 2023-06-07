@@ -1,34 +1,20 @@
 alias anm="less /Volumes/Data/aliases.md"
+
+# git 
 alias graph="git log --all --decorate --oneline --graph"
 alias gl="git log --pretty=format:'%h > %<(20)%s' -10 | column -s '|'"
-alias v="mvim -v"
-alias compilescss="npm run scss"
-alias ls="exa --grid --icons"
-alias lg="exa --grid --git"
-alias lc="exa --all --icons"
 
-alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
+# program
+alias v="nvim"
+alias compilescss="npm run scss"
+
+
+# program directtory
+alias cn="cd ~/.config/nvim"
 alias df="cd ~/git/dotfiles"
+alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
+
+# vimwiki
 alias md="v -c VimwikiMakeDiaryNote"
 alias wi="v -c VimwikiIndex"
 alias wd="v -c VimwikiDiaryIndex"
-alias sch="v vimwiki/Scholarship\ Information.md "
-
-alias dt="cd /Volumes/data"
-alias vp="cd /Volumes/data/proposalphd"
-alias vpp="mvim -v /Volumes/data/proposalphd/proposalphd.tex"
-alias vm="cd /Volumes/data/motlet"
-alias vml="mvim -v /Volumes/data/motlet/motlet.tex"
-alias it="mvim -v /Volumes/data/issuetes/issuetes.tex"
-
-
-alias web="cd /Volumes/Data/uliahweb"
-alias rcom="mvim -v ~/vimwiki/ReadingOps.md"
-alias lcom="mvim -v ~/vimwiki/ListeningOps.md"
-alias wcom="mvim -v ~/vimwiki/WritingOps.md"
-alias wwcom="mvim -v ~/vimwiki/WritingOps2.md"
-alias scom="mvim -v ~/vimwiki/SpeakingOps.md"
-alias gen="open /Volumes/Data/icomgeneral"
-
-alias ve="cd /Volumes/data/essay"
-alias ves="mvim -v /Volumes/data/essay/esai.tex"
