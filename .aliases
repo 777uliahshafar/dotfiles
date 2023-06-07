@@ -11,6 +11,7 @@ alias compilescss="npm run scss"
 
 # program directtory
 alias cn="cd ~/.config/nvim"
+alias cnl="cd ~/.config/nvim/lua/core"
 alias df="cd ~/git/dotfiles"
 alias myh="cd ~/.vim/plugged/vim-myhelp/doc"
 
